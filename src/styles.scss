@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: "Fira Code", serif;
+    src: url('./assets/fonts/FiraCode-VariableFont_wght.ttf');
+}
+
+@mixin flexbox($justify: center, $align: center, $direction: row, $wrap: nowrap){ 
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+}
+
+*{
+    margin: 0;
+    color: whitesmoke;
+}
