@@ -1,6 +1,6 @@
 section{
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     background-color: #1c1c1c;
     display: flex;
     justify-content: center;
@@ -12,6 +12,7 @@ section{
     }
     >div{
         >h3{
+            margin-top: 200px;
             font-family: 'Karla';
             font-size: 24px;
             font-weight: 500;
@@ -25,7 +26,9 @@ section{
 }
 
 .img-box{
-    margin-bottom: 150px;
+    >img{
+        width: 568px;
+    }
 }
 
 .about-me{
@@ -34,7 +37,7 @@ section{
     border-radius: 10px;
     padding: 16px;
     width: 450px;
-    margin-top: 150px;
+    margin-top: 20px;
     >h2{
         color: #3DCFB6;
         font-family: Fira Code;
@@ -44,17 +47,28 @@ section{
         letter-spacing: -0.03em;
         text-align: left;
         text-underline-position: from-font;
-        text-decoration-skip-ink: none;
-        padding: 16px; 
+        text-decoration-skip-ink: none; 
+        margin-bottom: 16px;
     }
     >p{
         color:#FFFFFF;
+        font-family: Karla;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 21.6px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        margin-bottom: 24px;
     }
     >div{
         >img{
             width: 20px;
             height: 20px;
             padding: 8px;
+        }
+        >span{
+            margin-bottom: 16px;
         }
     }
 }

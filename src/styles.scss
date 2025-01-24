@@ -1,7 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @font-face {
-    font-family: "Fira Code", serif;
-    src: url('./assets/fonts/FiraCode-VariableFont_wght.ttf');
+    font-family: Fira;
+    src: url('./assets/fonts/FiraCode-VariableFont_wght.ttf') format(truetype);
+}
+
+@font-face {
+    font-family: Karla;
+    src: url('./assets/fonts/Karla-VariableFont_wght.ttf') format(truetype);
 }
 
 @mixin flexbox($justify: center, $align: center, $direction: row, $wrap: nowrap){ 
@@ -13,6 +18,7 @@
 }
 
 *{
+    font-family: Fira;
     margin: 0;
     color: whitesmoke;
 }

@@ -1,10 +1,120 @@
 section{
-    width: 100%;
-    height: 100vh;
-    background-color: #1c1c1c;
-    border: 3px solid rgb(172, 172, 172);
+    height: 70vh;
+    background-image: url(./../../../assets/img/background/Background_2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 48px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #1C1C1C;
     >h2{
         background-color: transparent;
         color: rgb(172, 172, 172);
+    }
+    >h3{
+        font-family: Karla;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 28.06px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        margin-bottom: 16px;
+        color: #3DCFB6;
+    }
+    >div{
+        display: flex;
+        justify-content: space-between;
+        gap: 64px;
+    }
+}
+
+.skill-set{
+    background-color: #3DCFB61A;
+    border-radius: 30px;
+    border: 1px solid #3DCFB6;
+    padding: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 35%;
+    >h2{
+        color: #3DCFB6;
+        font-family: Fira;
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 64px;
+        letter-spacing: -0.03em;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        margin-bottom: 24px;
+    }
+    >p{
+        margin-bottom: 24px;
+        font-family: Karla;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 21.6px;
+        text-align: justified;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+    >div{
+        display: flex;
+        gap: 10px;
+        >h3{
+            font-family: Fira;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 28.8px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            margin-bottom: 10px;
+        }
+    }
+    >span{
+        font-family: Karla;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19.2px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        margin-bottom: 24px;
+    }
+    >button{
+        background-color: transparent;
+        border: 1px solid white;
+        width: 7rem;
+        height: 2rem;
+        border-radius: 100px;
+    }
+}
+
+.another_skill{
+    color: #3DCFB6;
+}
+
+.icons{
+    width: 45%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 6 Spalten */
+    gap: 32px;
+    >div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        >img{
+            width: 64px;
+        }
+        >span{
+            
+        }
     }
 }

@@ -1,3 +1,6 @@
+@import './../../../styles.scss';
+
+
 section{
     background-image: url('./../../../assets/img/background/background.png');
     background-size: cover;
@@ -27,7 +30,6 @@ section{
             align-items: center;
             padding: 16px;
             >a{
-                font-family:"Fira Code", serif;
                 font-size: 20px;
                 font-weight: 400;
                 text-decoration: none;
@@ -45,7 +47,6 @@ section{
     align-items: center;
     flex-direction: column;
     >h2{
-        font-family: Fira Code;
         font-size: 40px;
         font-weight: 400;
         line-height: 40px;
