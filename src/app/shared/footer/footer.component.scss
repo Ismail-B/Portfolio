@@ -1,0 +1,50 @@
+section{
+    background-color: #1c1c1c;
+    height: 20%;
+    padding: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    >h4{
+        color: #3DCFB6;
+    }
+    >div{
+        >div{
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+            >h3{
+                color: whitesmoke;
+                font-family: "Fira Code", serif;
+                font-size: 24px;
+                text-align: start;
+            }
+        }
+    }
+}
+
+.links{
+    display: flex;
+    flex-direction: column;
+    >a{
+        text-decoration: none;
+        font-family: Karla;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19.2px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        margin-bottom: 8px;
+    }
+    >p{
+        font-family: Karla;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19.2px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        margin-bottom: 8px;
+    }
+}
