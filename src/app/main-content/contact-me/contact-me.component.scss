@@ -1,10 +1,160 @@
 section{
-    width: 100%;
-    height: 100vh;
+    height: 60vh;
     background-color: #1c1c1c;
-    border: 3px solid rgb(172, 172, 172);
-    >h2{
+    display: flex;
+    align-items: flex-start;
+    padding: 48px;
+    gap: 52px;
+    >div{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        >h2{
+            margin-top: 24px;
+            margin-bottom: 24px;
+            background-color: transparent;
+            color: #3DCFB6;
+            font-family: Fira;
+            font-size: 64px;
+            font-weight: 700;
+            line-height: 64px;
+            letter-spacing: -0.03em;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+        }
+        >h3{
+            font-family: Karla;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 28.06px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            color: #3DCFB6;
+        }
+        >p{
+            color: #3DCFB6;
+            margin-bottom: 16px;
+            font-family: Fira;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 28.8px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+        }
+        >div{
+            display: flex;
+            justify-content: center;
+            >span{
+                font-family: Karla;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 19.2px;
+                text-align: left;
+                text-underline-position: from-font;
+                text-decoration-skip-ink: none;
+            }
+            >button{
+                background-color: transparent;
+                border: 2px solid grey;
+                border-radius: 100px;
+                height: 40px;
+                width: 150px;
+            }
+        }
+    }
+}
+
+.title{
+    font-family: Fira!important;
+    font-size: 24px!important;
+    font-weight: 500!important;
+    line-height: 28.8px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #3DCFB6;
+}
+
+.green{
+    color: #3DCFB6;
+}
+
+.contact-text{
+    display: flex;
+    flex-direction: column;
+    >div{
+        margin-top: 24px;
+        display: flex;
+        gap: 8px;
+        >span{
+            font-family: Karla;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 19.2px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+        }
+    }
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+    border-width: 1px 0px 0px 0px;
+    border-style: solid;
+    border-color: #3DCFB680;
+    >div{
+        display: flex;
+        padding: 32px;
+        >input{
+            margin-right: 8px;
+        }
+        >p{
+            font-family: Karla;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 18px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+        }
+        >a{
+            margin-left: 8px;
+            margin-right: 8px;
+            font-family: Fira;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 18px;
+            letter-spacing: -0.03em;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            color: #3DCFB6;
+            text-decoration: none;
+        }
+    }
+    >span{
+        padding-top: 32px;
+        padding-left: 32px;
+    }
+    >input{
         background-color: transparent;
-        color: rgb(172, 172, 172);
+        border: none;
+        padding-top: 32px;
+        padding-left: 32px;
+        padding-bottom: 32px;
+        font-family: Karla;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 21.6px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: rgba(255, 255, 255, 0.8);
     }
 }
