@@ -6,6 +6,10 @@ section{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     width: 100%;
     height: 100vh;
     >.navbar{
@@ -38,10 +42,92 @@ section{
             }
         }
     }
+
+
+.animation{
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    >div{
+        width: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+}
+
+.container-img{
+    display: flex;
+    flex-direction: column;
+    width: 60px;
+    margin-right: 50px;
+    >img{
+        width: 30px;
+        height: 30px;
+        margin-top: 10px;
+    }
+}
+
+.mail-address{
+    position: relative;
+    top: -120px;
+    margin-right: 80px;
+}
+
+.banner{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    left:0;
+    bottom: 60px;
+    transform: rotate(-5deg);
+    background: rgba(240, 233, 233, 0.1);
+    z-index: 2;
+    backdrop-filter: blur(2px);
+}
+
+.container-links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    >p{
+        transform: rotate(270deg);
+        display: inline-block;
+    }
+    >img{
+        width: 30px;
+    }
+}
+
+.container-left{
+    width: 80px;
+    >img{
+        margin-left: 78px;
+        margin-bottom: 20px;
+    }
+}
+
+.left-line{
+    width: 80px;
+    height: 400px;
+    border-right: 1px solid #3DCFB6;
+}
+
+.right-line{
+    position: relative;
+    margin-top: 20px;
+    height: 200px;
+    width: 80px;
+    border-left: 1px solid #ffffff;
+    z-index: 1;
 }
 
 .title{
-    height: 80vh;
+    height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
