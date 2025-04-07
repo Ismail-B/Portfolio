@@ -43,6 +43,12 @@ section{
         }
     }
 
+.title-btn{
+    >button:hover{
+        cursor: pointer;
+    }
+}
+
 
 .animation{
     height: 300px;
