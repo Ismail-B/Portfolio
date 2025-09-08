@@ -112,10 +112,36 @@ section{
 .container-left{
     width: 80px;
     >img{
-        margin-left: 78px;
-        margin-bottom: 20px;
+        margin-left: 80px;
+        margin-bottom: 40px;
+        animation: floatY 3s ease-in-out infinite;
     }
 }
+
+@keyframes floatY {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(20px); /* nach unten */
+    }
+    100% {
+        transform: translateY(0); /* zurück nach oben */
+    }
+}
+
+.arrow-frame {
+    margin-left: 80px;
+    margin-bottom: 14px;
+    width: 30px;
+    height: 74px;
+    border: 1px solid rgba(61, 207, 182, 1); /* dein Rahmen */
+    border-radius: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* optional: verhindert, dass der Pfeil rauswandert */
+  }
 
 .left-line{
     width: 80px;
