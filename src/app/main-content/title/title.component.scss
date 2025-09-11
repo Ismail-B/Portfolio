@@ -109,38 +109,35 @@ section{
     }
 }
 
-.container-left{
+.container-left {
     width: 80px;
-    >img{
-        margin-left: 80px;
-        margin-bottom: 40px;
-        animation: floatY 3s ease-in-out infinite;
+  
+    .arrow-frame {
+      img {
+        margin-left: 0;   // optional
+        margin-bottom: 0; // optional
+        animation: floatY 2s ease-in-out infinite;
+      }
     }
-}
-
-@keyframes floatY {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(20px); /* nach unten */
-    }
-    100% {
-        transform: translateY(0); /* zurück nach oben */
-    }
-}
-
-.arrow-frame {
+  }
+  
+  @keyframes floatY {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(10px); }
+    100% { transform: translateY(0); }
+  }
+  
+  .arrow-frame {
     margin-left: 80px;
     margin-bottom: 14px;
     width: 30px;
     height: 74px;
-    border: 1px solid rgba(61, 207, 182, 1); /* dein Rahmen */
+    border: 1px solid rgba(61, 207, 182, 1);
     border-radius: 32px;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* optional: verhindert, dass der Pfeil rauswandert */
+    overflow: hidden;
   }
 
 .left-line{
