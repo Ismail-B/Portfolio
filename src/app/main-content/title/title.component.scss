@@ -266,3 +266,57 @@ section{
       background-image: url("./../../../assets/img/icon/Linkedin (1).png");
     }
   }
+
+
+  .language-switch {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border-radius: 999px;
+    border: 1px solid #3DCFB6;
+    width: 100px;   // Gesamtbreite anpassen
+    height: 32px;   // Höhe anpassen
+    cursor: pointer;
+    overflow: hidden;
+    &:hover{
+        border: 1px solid white;
+    }
+  
+    .lang {
+      flex: 1;
+      text-align: center;
+      z-index: 2;
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 36px;
+      user-select: none;
+      transition: color 0.3s ease;
+    }
+  
+    .highlight {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;           // genau Hälfte
+      height: 100%;         // volle Höhe
+      background: #3DCFB6;
+      border-radius: 999px;
+      z-index: 1;
+      transition: left 0.3s ease;
+    }
+  
+    &.en-active {
+      .highlight { left: 0; }
+      .en { color: #fff; }
+      .de { color: rgba(61, 207, 182, 0.5); }
+    }
+  
+    &.de-active {
+      .highlight { left: 50%; }
+      .en { color: rgba(61, 207, 182, 0.5); }
+      .de { color: #fff; }
+    }
+  }
+  
+  
