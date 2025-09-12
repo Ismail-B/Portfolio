@@ -101,6 +101,10 @@ section{
     position: relative;
     top: -120px;
     margin-right: 80px;
+    &:hover{
+        cursor: pointer;
+        color: #3DCFB6;
+    }
 }
 
 .banner{
