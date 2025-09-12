@@ -72,7 +72,7 @@ section{
 
 
 .animation{
-    height: 300px;
+    height: 360px;
     display: flex;
     justify-content: space-between;
     >div{
@@ -88,7 +88,7 @@ section{
 .container-img{
     display: flex;
     flex-direction: column;
-    width: 60px;
+    width: 84px;
     margin-right: 50px;
     >img{
         width: 30px;
@@ -222,3 +222,28 @@ section{
         }
     }
 }
+
+.icon {
+    width: 40px; // deine Icon-Größe
+    height: 40px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    margin: 8px;
+  }
+  
+  .github {
+    background-image: url("./../../../assets/img/icon/Github.png");
+  
+    &:hover {
+      background-image: url("./../../../assets/img/icon/Github (1).png");
+    }
+  }
+  
+  .linkedin {
+    background-image: url("./../../../assets/img/icon/Linkedin.png");
+  
+    &:hover {
+      background-image: url("./../../../assets/img/icon/Linkedin (1).png");
+    }
+  }
