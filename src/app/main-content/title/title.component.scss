@@ -230,6 +230,25 @@ section{
     background-position: center;
     cursor: pointer;
     margin: 8px;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 100%; // direkt rechts vom Icon
+        transform: translateY(-50%) translateX(8px); // 8px Abstand nach rechts
+        width: 6px;
+        height: 6px;
+        background-color: rgba(106, 215, 191, 1);
+        border-radius: 50%;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+    
+      &:hover::after {
+        opacity: 1;
+    }
   }
   
   .github {
