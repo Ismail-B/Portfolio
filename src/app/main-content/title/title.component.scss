@@ -107,17 +107,47 @@ section{
     }
 }
 
-.banner{
+.banner {
     width: 100%;
-    height: 50px;
+    height: 62px;
     position: absolute;
-    left:0;
+    left: 0;
     bottom: 60px;
     transform: rotate(-5deg);
     background: rgba(240, 233, 233, 0.1);
     z-index: 2;
     backdrop-filter: blur(2px);
-}
+    overflow: hidden;
+  
+    display: flex;
+    align-items: center;
+  }
+  
+  .marquee {
+    display: flex;
+    flex-wrap: nowrap;
+    min-width: 200%;                  // Platz für 2 Kopien
+    animation: scroll 10s linear infinite;
+  }
+  
+  .marquee__group {
+    display: flex;
+    gap: 40px;
+    flex-shrink: 0;                    // verhindert, dass sie gestaucht werden
+  }
+  
+  .marquee span {
+    font-family: Karla;
+    font-size: 32px;
+    color: rgba(61, 207, 182, 1);
+    white-space: nowrap;
+  }
+  
+  @keyframes scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }  // nur bis -50%, dann beginnt die 2. Kopie
+  }
+  
 
 .container-links{
     display: flex;
