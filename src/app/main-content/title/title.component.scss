@@ -123,30 +123,28 @@ section{
     align-items: center;
   }
   
-  .marquee {
+  .track {
     display: flex;
-    flex-wrap: nowrap;
-    min-width: 200%;                  // Platz für 2 Kopien
     animation: scroll 10s linear infinite;
   }
   
-  .marquee__group {
-    display: flex;
-    gap: 40px;
-    flex-shrink: 0;                    // verhindert, dass sie gestaucht werden
-  }
-  
-  .marquee span {
-    font-family: Karla;
+  .track span {
+    font-family: Karla, sans-serif;
     font-size: 32px;
-    color: rgba(61, 207, 182, 1);
+    color: #3DCFB6;
     white-space: nowrap;
+    padding-right: 40px; /* Abstand zwischen den beiden Kopien */
   }
   
   @keyframes scroll {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-50%); }  // nur bis -50%, dann beginnt die 2. Kopie
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%); /* Nach der Hälfte (eine Kopie durch) von vorn */
+    }
   }
+  
   
 
 .container-links{
