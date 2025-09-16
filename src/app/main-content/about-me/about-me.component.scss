@@ -52,6 +52,7 @@ section{
     }
     >p{
         color:#FFFFFF;
+        cursor: default;
         font-family: Karla;
         font-size: 18px;
         font-weight: 400;
@@ -75,4 +76,13 @@ section{
 
 .flex{
     display: flex;
+}
+
+.my-attributes{
+    color: #dbd8d8;
+    cursor: default;
+
+    &:hover{
+        color: whitesmoke;
+    }
 }
