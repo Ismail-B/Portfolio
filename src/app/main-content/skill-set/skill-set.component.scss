@@ -41,6 +41,7 @@ section{
     align-items: flex-start;
     flex-direction: column;
     width: 35%;
+    cursor: default;
     >h2{
         color: #3DCFB6;
         font-family: Fira;
@@ -129,6 +130,7 @@ section{
   
       > span {
         text-align: center;
+        cursor: default;
       }
   
       /* Tooltip Styles */
