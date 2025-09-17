@@ -105,25 +105,94 @@ section{
     color: #3DCFB6;
 }
 
-.icons{
+.icons {
     width: 45%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 6 Spalten */
+    grid-template-columns: repeat(4, 1fr);
     gap: 32px;
-    >div{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        >img{
-            width: 64px;
-            transition: transform 0.3s ease; // Animation hinzufügen
+  
+    > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      position: relative; // wichtig für Tooltip Position
+  
+      > img {
+        width: 64px;
+        transition: transform 0.3s ease;
+      }
+  
+      &:hover > img {
+        transform: scale(1.1);
+      }
+  
+      > span {
+        text-align: center;
+      }
+  
+      /* Tooltip Styles */
+      .tooltip {
+        position: absolute;
+        bottom: 100%; // oberhalb anzeigen
+        left: 50%;
+        transform: translateX(-50%);
+        background: #fff;
+        color: #222;
+        padding: 12px 16px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease;
+        white-space: nowrap;
+        z-index: 10;
+  
+        /* Pfeil */
+        &::after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+          border-width: 8px;
+          border-style: solid;
+          border-color: #fff transparent transparent transparent;
         }
-        &:hover > img {
-            transform: scale(1.1); // Bild beim Hover vergrößern
+  
+        p {
+          margin: 0 0 8px 0;
+          font-size: 14px;
+          color: #3DCFB6;
+          text-align: center;
         }
-        >span{
-            text-align: center;
+  
+        .tooltip-icons {
+          display: flex;
+          gap: 16px;
+          justify-content: center;
+  
+          div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+  
+            img {
+              width: 32px;
+            }
+  
+            span {
+              font-size: 12px;
+              margin-top: 4px;
+              color: #3DCFB6;
+            }
+          }
         }
+      }
+  
+      &:hover .tooltip {
+        opacity: 1;
+        visibility: visible;
+      }
     }
-}
+  }
