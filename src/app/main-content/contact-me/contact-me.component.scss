@@ -5,6 +5,7 @@ section{
     align-items: flex-start;
     padding: 48px;
     gap: 52px;
+    cursor: default;
     >div{
         width: 50%;
         display: flex;
@@ -156,5 +157,17 @@ section{
         text-underline-position: from-font;
         text-decoration-skip-ink: none;
         color: rgba(255, 255, 255, 0.8);
+        border-bottom: 1px solid #3DCFB680; // ✅ NEU: Linie unter dem Input**
+        transition: border-color 0.3s ease, color 0.3s ease; // ✅ NEU: smooth effect**
+
+        &::placeholder {
+            color: rgba(255, 255, 255, 0.4); // ✅ NEU: dezenter Placeholder
+        }
+
+        &:focus {
+            outline: none; // ✅ NEU: Standardrahmen entfernen**
+            border-color: #3DCFB6; // ✅ NEU: Akzentfarbe bei Fokus**
+            color: #fff; // ✅ NEU: Textfarbe bei Fokus etwas klarer**
+        }
     }
 }
