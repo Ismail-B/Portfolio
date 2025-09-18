@@ -109,36 +109,6 @@ section{
     border-width: 1px 0px 0px 0px;
     border-style: solid;
     border-color: #3DCFB680;
-    >div{
-        display: flex;
-        padding: 32px;
-        >input{
-            margin-right: 8px;
-        }
-        >p{
-            font-family: Karla;
-            font-size: 15px;
-            font-weight: 400;
-            line-height: 18px;
-            text-align: left;
-            text-underline-position: from-font;
-            text-decoration-skip-ink: none;
-        }
-        >a{
-            margin-left: 8px;
-            margin-right: 8px;
-            font-family: Fira;
-            font-size: 15px;
-            font-weight: 400;
-            line-height: 18px;
-            letter-spacing: -0.03em;
-            text-align: left;
-            text-underline-position: from-font;
-            text-decoration-skip-ink: none;
-            color: #3DCFB6;
-            text-decoration: none;
-        }
-    }
     >span{
         padding-top: 32px;
         padding-left: 32px;
@@ -161,13 +131,97 @@ section{
         transition: border-color 0.3s ease, color 0.3s ease; // ✅ NEU: smooth effect**
 
         &::placeholder {
-            color: rgba(255, 255, 255, 0.4); // ✅ NEU: dezenter Placeholder
+            color: rgb(225, 223, 223); // ✅ NEU: dezenter Placeholder
         }
 
         &:focus {
             outline: none; // ✅ NEU: Standardrahmen entfernen**
             border-color: #3DCFB6; // ✅ NEU: Akzentfarbe bei Fokus**
             color: #fff; // ✅ NEU: Textfarbe bei Fokus etwas klarer**
+        }
+    }
+}
+
+.checkbox{
+    display: flex;
+    align-items: center;
+    min-width: 50vw;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    > input[type="checkbox"] {
+        appearance: none;       // ✅ Standard-Design entfernen
+        aspect-ratio: 1 / 1; 
+        width: 18px;
+        height: 18px;
+        border: 2px solid #3DCFB6;
+        border-radius: 3px;
+        cursor: pointer;
+        position: relative;
+        transition: background-color 0.2s ease, border-color 0.2s ease;
+
+        &:hover::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 24px;              // Größe des Kreises
+            height: 24px;
+            border-radius: 50%;
+            background-color: #3dcfb778;
+            transform: translate(-50%, -50%); // exakt zentrieren
+          }
+  
+        &:checked {
+          background-color: transparent;
+          border-color: #3DCFB6;
+        }
+  
+        &:checked::after {
+          content: "";
+          position: absolute;
+          top: 2px;
+          left: 4px;
+          width: 4px;
+          height: 8px;
+          border: solid #3DCFB6;   // dunkler Haken auf grünem Hintergrund
+          border-width: 0 2px 2px 0;
+          transform: rotate(45deg);
+        }
+      }
+}
+
+.checkbox-text{
+    display: flex;
+    margin-left: 12px;
+    >p{
+        font-family: Karla;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 18px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        white-space: nowrap;
+    }
+    >a{
+        margin-left: 8px;
+        margin-right: 8px;
+        font-family: Fira;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: -0.03em;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #3DCFB6;
+        text-decoration: none;
+        white-space: nowrap;
+        &:hover{
+            color: white;
+            text-decoration: underline;
+            text-decoration-color: #3DCFB6;
+            text-underline-offset: 8px;
         }
     }
 }
