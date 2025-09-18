@@ -130,7 +130,12 @@ section{
         transition: border-color 0.3s ease, color 0.3s ease; // ✅ NEU: smooth effect**
 
         &::placeholder {
-            color: rgb(225, 223, 223); // ✅ NEU: dezenter Placeholder
+            color: rgb(213, 213, 213); // ✅ NEU: dezenter Placeholder
+            transition: color 0.3s ease;
+        }
+
+        &:hover::placeholder {
+            color: #ffffff; // Farbe bei Hover ändern
         }
 
         &:focus {
