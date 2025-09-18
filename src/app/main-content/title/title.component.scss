@@ -23,9 +23,10 @@ section{
             padding-right: 16px;
             >h3{
                 color: whitesmoke;
-                font-family: "Fira Code", serif;
+                font-family: "Karla", serif;
                 font-size: 24px;
-                text-align: center;
+                font-weight: 900;
+                text-align: start;
             }
         }
         >nav{
@@ -39,6 +40,10 @@ section{
                 text-decoration: none;
                 margin: 16px;
                 color: white;
+
+                &:hover{
+                  cursor: pointer;
+                }
             
                 &::after {
                   content: '';
@@ -202,7 +207,7 @@ section{
     position: relative;
     margin-top: 20px;
     height: 200px;
-    width: 80px;
+    width: 79px;
     border-left: 1px solid #ffffff;
     z-index: 1;
 }
