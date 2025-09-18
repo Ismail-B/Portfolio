@@ -15,8 +15,9 @@ section{
             margin-bottom: 16px;
             >h3{
                 color: whitesmoke;
-                font-family: "Fira Code", serif;
+                font-family: "Karla", serif;
                 font-size: 24px;
+                font-weight: 900;
                 text-align: start;
             }
         }
@@ -26,7 +27,8 @@ section{
 .links{
     display: flex;
     flex-direction: column;
-    >a{
+    > a {
+        position: relative;           // wichtig, damit ::before relativ positioniert wird
         text-decoration: none;
         font-family: Karla;
         font-size: 16px;
@@ -36,7 +38,30 @@ section{
         text-underline-position: from-font;
         text-decoration-skip-ink: none;
         margin-bottom: 8px;
-    }
+        color: inherit;               // gleiche Textfarbe wie Eltern
+    
+        &::before {
+          content: "";
+          position: absolute;
+          left: -12px;                // Abstand links vom Text
+          top: 50%;
+          transform: translateY(-50%);
+          width: 6px;                 // Größe des Punkts
+          height: 6px;
+          border-radius: 50%;
+          background-color: #3DCFB6;
+          opacity: 0;                 // unsichtbar im Normalzustand
+          transition: opacity 0.2s ease;
+        }
+    
+        &:hover {
+          color: #3DCFB6;
+    
+          &::before {
+            opacity: 1;               // Punkt sichtbar beim Hover
+          }
+        }
+      }
     >p{
         font-family: Karla;
         font-size: 16px;
