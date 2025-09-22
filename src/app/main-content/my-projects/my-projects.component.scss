@@ -36,40 +36,63 @@ section{
         text-decoration-skip-ink: none;
         margin-bottom: 24px;
     }
-    >div{
-        border-top: 1px solid #3DCFB6;
-        width: 60%;
-        height: 6rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 16px;
-        >span{
-            font-family: Fira;
-            font-size: 24px;
-            font-weight: 700;
-            line-height: 28.8px;
-            text-align: left;
-            text-underline-position: from-font;
-            text-decoration-skip-ink: none; 
-        }
-        >p{
-            font-family: Karla;
-            font-size: 18px;
-            font-weight: 400;
-            line-height: 21.6px;
-            text-align: left;
-            text-underline-position: from-font;
-            text-decoration-skip-ink: none;
-
-            span.pipe {
-                color: #3DCFB6;
-                font-weight: bold;
-            }
-        }
-    }
 }
 
 .border-bottom{
     border-bottom: 1px solid #3DCFB6;
 }
+
+.project {
+    border-top: 1px solid #3DCFB6;
+    width: 60%;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+  
+    &:hover {
+      background-color: rgba(61, 207, 182, 0.3);
+  
+      > span::after {
+        opacity: 1;
+        transform: translateX(6px); // fährt leicht rein
+      }
+    }
+  
+    > span {
+      font-family: Fira;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 28.8px;
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+  
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: url("/assets/img/my_projects/arrow_outward.png") no-repeat center;
+        background-size: contain;
+        margin-left: 4px;
+        opacity: 0;
+        transition: all 0.3s ease;
+      }
+      
+    }
+  
+    > p {
+      font-family: Karla;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 21.6px;
+  
+      span.pipe {
+        color: #3DCFB6;
+        font-weight: bold;
+      }
+    }
+  }
+  
