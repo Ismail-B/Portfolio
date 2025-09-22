@@ -111,50 +111,43 @@ section{
     }
 }
 
-.banner-clip {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0px;
-  height: 182px;
-  overflow: hidden;   // clippt den gedrehten Inhalt -> keine Scrollbar
-  z-index: 2;
-}
-
-/* Das eigentliche, gedrehte Band */
-.banner-tilt {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 100.7%;                 /* extra Breite für die 5°-Drehung */
+.banner {
+  width: 100%;              /* breiter machen */
   height: 62px;
-  transform: translate(-50%, -50%) rotate(-5deg);
+  position: absolute;
+  left: 0;               /* etwas nach links schieben */
+  bottom: 60px;
+  transform: rotate(-5deg);
   background: rgba(240, 233, 233, 0.1);
+  z-index: 2;
   backdrop-filter: blur(2px);
+  overflow: hidden;
+
   display: flex;
   align-items: center;
-  overflow: hidden;            /* Text bleibt im Band */
 }
-
-/* Lauftext wie gehabt */
-.track {
-  display: flex;
-  animation: scroll 10s linear infinite;
-}
-
-.track span {
-  font-family: Karla, sans-serif;
-  font-size: 32px;
-  color: #3DCFB6;
-  white-space: nowrap;
-  padding-right: 40px;
-}
-
-@keyframes scroll {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
-}
-
+  
+  .track {
+    display: flex;
+    animation: scroll 45s linear infinite;
+  }
+  
+  .track span {
+    font-family: Karla, sans-serif;
+    font-size: 32px;
+    color: #3DCFB6;
+    white-space: nowrap;
+    padding-right: 64px; /* Abstand zwischen den beiden Kopien */
+  }
+  
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%); /* Nach der Hälfte (eine Kopie durch) von vorn */
+    }
+  }
   
   
 
