@@ -1,48 +1,40 @@
-section{
+section {
     height: 70vh;
     background-color: #1c1c1c;
     padding: 48px;
-    >h2{
-        background-color: transparent;
-        color: #3DCFB6;
-        font-family: Fira;
-        font-size: 64px;
-        font-weight: 700;
-        line-height: 64px;
-        letter-spacing: -0.03em;
-        text-align: left;
-        text-underline-position: from-font;
-        text-decoration-skip-ink: none;
-        margin-bottom: 24px;
+  
+    > h2 {
+      color: #3DCFB6;
+      font-family: Fira;
+      font-size: 64px;
+      font-weight: 700;
+      line-height: 64px;
+      margin-bottom: 24px;
     }
-    >h3{
-        color: #3DCFB6;
-        font-family: Karla;
-        font-size: 24px;
-        font-weight: 700;
-        line-height: 28.06px;
-        text-align: left;
-        text-underline-position: from-font;
-        text-decoration-skip-ink: none;
-        margin-bottom: 24px;
+  
+    > h3 {
+      color: #3DCFB6;
+      font-family: Karla;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 28px;
+      margin-bottom: 24px;
     }
-    >p{
-        font-family: Karla;
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 21.6px;
-        text-align: justified;
-        text-underline-position: from-font;
-        text-decoration-skip-ink: none;
-        margin-bottom: 24px;
+  
+    > p {
+      font-family: Karla;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 22px;
+      margin-bottom: 24px;
     }
-}
-
-.border-bottom{
+  }
+  
+  .border-bottom {
     border-bottom: 1px solid #3DCFB6;
-}
-
-.project {
+  }
+  
+  .project {
     border-top: 1px solid #3DCFB6;
     width: 60%;
     height: 6rem;
@@ -51,40 +43,22 @@ section{
     justify-content: space-between;
     padding: 16px;
     position: relative;
-  
-    &:hover {
-      background-color: rgba(61, 207, 182, 0.3);
-  
-      > span::after {
-        opacity: 1;
-        transform: translateX(6px);
-      }
-  
-      &::after,
-      &::before {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
+    cursor: pointer;
   
     > span {
       font-family: Fira;
       font-size: 24px;
       font-weight: 700;
-      line-height: 28.8px;
-      position: relative;
+      line-height: 29px;
       display: inline-flex;
       align-items: center;
   
-      &::after {
-        content: "";
-        display: inline-block;
+      .arrow {
         width: 20px;
         height: 20px;
-        background: url("/assets/img/my_projects/arrow_outward.png") no-repeat center;
-        background-size: contain;
         margin-left: 4px;
         opacity: 0;
+        transform: translateX(-6px);
         transition: all 0.3s ease;
       }
     }
@@ -93,7 +67,7 @@ section{
       font-family: Karla;
       font-size: 18px;
       font-weight: 400;
-      line-height: 21.6px;
+      line-height: 22px;
   
       span.pipe {
         color: #3DCFB6;
@@ -101,56 +75,44 @@ section{
       }
     }
   
-    // Standard Hintergrundbild
-    &::after {
-      content: "";
+    .bg-img,
+    .preview-img {
       position: absolute;
-      top: 10%;
+      top: 50%;
       right: -60%;
       transform: translateY(-50%) translateX(30px);
       width: 350px;
       height: 220px;
-      background: url("/assets/img/background/img-background.png") no-repeat center;
-      background-size: cover;
+      object-fit: cover;
+      border-radius: 16px;
       opacity: 0;
       transition: all 0.4s ease;
       pointer-events: none;
-      border-radius: 16px;
-      overflow: hidden;
-      z-index: 1;
     }
   
-    // Projektspezifisches Bild (liegt darüber, leicht versetzt)
-    &::before {
-      content: "";
-      position: absolute;
-      top: -10%;           // etwas höher
-      right: -56%;       // etwas weiter links
-      transform: translateY(-50%) translateX(30px);
-      width: 350px;      // etwas kleiner, damit man das Background noch sieht
-      height: 220px;
-      background-size: cover;
-      opacity: 0;
-      transition: all 0.4s ease;
-      pointer-events: none;
-      border-radius: 16px;
-      overflow: hidden;
+    .preview-img {
+      top: 40%;
+      right: -56%;
       z-index: 2;
     }
   
-    // 👇 Projektspezifische Varianten
-    &.join:hover::before {
-      background-image: url("/assets/img/my_projects/join_example.jpg");
+    .bg-img {
+      z-index: 1;
     }
   
-    &.shadow-shinobi:hover::before {
-      background-image: url("/assets/img/my_projects/shadow_shinobi_preview.png");
-    }
+    &:hover {
+      background-color: rgba(61, 207, 182, 0.3);
   
-    &.pokedex:hover::before {
-      background-image: url("/assets/img/my_projects/pokedex_preview.png");
+      > span .arrow {
+        opacity: 1;
+        transform: translateX(0);
+      }
+  
+      .bg-img,
+      .preview-img {
+        opacity: 1;
+        transform: translateX(0);
+      }
     }
   }
-  
-  
   
