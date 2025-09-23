@@ -108,7 +108,7 @@ section{
       top: 10%;
       right: -60%;
       transform: translateY(-50%) translateX(30px);
-      width: 300px;
+      width: 350px;
       height: 220px;
       background: url("/assets/img/background/img-background.png") no-repeat center;
       background-size: cover;
@@ -127,7 +127,7 @@ section{
       top: -10%;           // etwas höher
       right: -56%;       // etwas weiter links
       transform: translateY(-50%) translateX(30px);
-      width: 300px;      // etwas kleiner, damit man das Background noch sieht
+      width: 350px;      // etwas kleiner, damit man das Background noch sieht
       height: 220px;
       background-size: cover;
       opacity: 0;
@@ -144,11 +144,11 @@ section{
     }
   
     &.shadow-shinobi:hover::before {
-      background-image: url("/assets/img/my_projects/shadow_shinobi_example.jpg");
+      background-image: url("/assets/img/my_projects/shadow_shinobi_preview.png");
     }
   
     &.pokedex:hover::before {
-      background-image: url("/assets/img/my_projects/pokedex_example.jpg");
+      background-image: url("/assets/img/my_projects/pokedex_preview.png");
     }
   }
   
