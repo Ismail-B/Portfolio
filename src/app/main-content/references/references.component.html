@@ -1,0 +1,42 @@
+<section>
+    <h2>What my colleagues say about me</h2>
+  
+    <div class="carousel">
+      <div
+        class="card"
+        *ngFor="let r of references; let i = index"
+        [ngClass]="{
+          active: i === currentIndex,
+          left: isLeft(i),
+          right: isRight(i)
+        }"
+      >
+        <img class="quote-icon" src="assets/img/references/quotation mark.png" alt="Quote" />
+        <p>{{ r.text }}</p>
+        <div class="author">
+          <hr />
+          <span>{{ r.author }}</span>
+        </div>
+      </div>
+    </div>
+  
+    <div class="carousel-nav">
+      <button class="prev" (click)="prev()">
+        <img src="assets/img/references/arrow-left.png" alt="Previous" />
+      </button>
+  
+      <div class="dots">
+        <span
+          *ngFor="let r of references; let i = index"
+          class="dot"
+          [class.active]="i === currentIndex"
+          (click)="goTo(i)"
+        ></span>
+      </div>
+  
+      <button class="next" (click)="next()">
+        <img src="assets/img/references/arrow-right.png" alt="Next" />
+      </button>
+    </div>
+  </section>
+  

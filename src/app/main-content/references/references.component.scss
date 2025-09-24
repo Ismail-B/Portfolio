@@ -1,10 +1,149 @@
+@import './../../../styles.scss';
+
+
 section{
     width: 100%;
-    height: 100vh;
+    height: 60vh;
     background-color: #1c1c1c;
-    border: 3px solid rgb(172, 172, 172);
-    >h2{
-        background-color: transparent;
-        color: rgb(172, 172, 172);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    overflow: hidden;
+  
+    > h2 {
+      font-size: 32px;
+      color: #3dcfb6;
+      font-family: "Fira", sans-serif;
+      margin-bottom: 16px;
     }
+  
+    .carousel {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-width: 900px;
+      height: 280px;
+    }
+  
+.card {
+  position: absolute;
+  width: 400px;
+  min-height: 220px;
+  background-color: #21443f;
+  border: 1px solid #3dcfb6;
+  border-radius: 16px;
+  padding: 32px;
+  color: #fff;
+  font-family: "Karla", sans-serif;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.5s ease;
+
+  &.active {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    z-index: 3;
+  }
+
+  &.left {
+    opacity: 0.6;
+    transform: translateX(-120%) scale(0.9);
+    z-index: 2;
+  }
+
+  &.right {
+    opacity: 0.6;
+    transform: translateX(120%) scale(0.9);
+    z-index: 2;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .author {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    hr {
+      flex: 1;
+      border: none;
+      border-bottom: 1px solid #fff;
+      opacity: 0.6;
+    }
+
+    span {
+      font-size: 14px;
+      color: #ccc;
+    }
+  }
+
+  /* 🔽 Anführungszeichen-Bild */
+  .quote-icon {
+    position: absolute;
+    top: -10px;
+    left: -20px;
+    width: 64px;   // Größe anpassen
+    height: auto;
+    pointer-events: none; // verhindert, dass das Bild Klicks blockiert
+  }
 }
+
+  
+    .carousel-nav {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      
+        button {
+          background: none;
+          border: none;
+          padding: 0;
+          cursor: pointer;
+      
+          img {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            transition: filter 0.2s ease-in-out, transform 0.2s ease-in-out;
+          }
+        }
+      
+        .prev:hover img {
+          filter: brightness(0) saturate(100%) invert(67%) sepia(57%) saturate(444%) hue-rotate(115deg) brightness(95%) contrast(90%);
+          transform: translateX(-4px); // nach links rutschen
+        }
+      
+        .next:hover img {
+          filter: brightness(0) saturate(100%) invert(67%) sepia(57%) saturate(444%) hue-rotate(115deg) brightness(95%) contrast(90%);
+          transform: translateX(4px); // nach rechts rutschen
+        }
+      
+        .dots {
+          display: flex;
+          gap: 8px;
+      
+          .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #555;
+            cursor: pointer;
+      
+            &.active {
+              background: #3dcfb6;
+            }
+          }
+        }
+      }
+      
+      
+  }
+  
