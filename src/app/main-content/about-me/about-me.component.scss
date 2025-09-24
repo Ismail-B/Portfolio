@@ -28,11 +28,37 @@ section{
     }
 }
 
-.img-box{
-    >img{
-        width: 568px;
+.img-box {
+    position: relative;
+    display: inline-block;
+  
+    .img-main {
+      width: 528px;
+      border-radius: 36px;
+      z-index: 2;
+      position: relative;
+      display: block;
     }
-}
+  
+    .img-background {
+      width: 536px;
+      height: 528px;
+      border-radius: 36px;
+      position: absolute;
+      top: 20px;
+      left: -14px;
+      z-index: 1;
+      opacity: 0;                // unsichtbar standard
+      transform: translate(0,0); // Ausgangsposition
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+  
+    &:hover .img-background {
+      opacity: 1;
+      transform: translate(-12px, 12px); // leicht nach links-unten verschoben
+    }
+  }
+  
 
 .about-me{
     background-color: #3DCFB61A;
