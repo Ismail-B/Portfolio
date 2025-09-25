@@ -228,3 +228,15 @@ section{
         }
     }
 }
+
+.error {
+    color: #d17a7a;
+    font-size: 14px;
+    margin-left: 32px;
+    margin-top: -24px;
+    margin-bottom: 12px;
+  }
+  
+  input.error-input {
+    color: #d17a7a !important; // Fehlertexte rot
+  }

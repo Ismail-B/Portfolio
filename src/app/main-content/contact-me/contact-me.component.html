@@ -1,41 +1,73 @@
 <section>
     <div>
-        <h3>Contact me</h3>
-        <h2>Let's work <br> together</h2>
-        <p>Got a problem to solve?</p>
-        <div class="contact-text">
-            <span>Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.</span>
-            <div>
-                <span>Need a Frontend developer?</span>
-                <span class="green">Let’s talk!</span>
-            </div>
-        </div>
-    </div>
-    <div>
-        <div class="input-box">
-            <span class="title">What's your name?</span>
-            <input type="text" placeholder="Your name goes here">
-        </div>
-        <div class="input-box">
-            <span class="title">What's your email?</span>
-            <input type="text" placeholder="yourEmail@email.com">
-        </div>
-        <div class="input-box">
-            <span class="title">How can I help you?</span>
-            <input type="text" placeholder="Hello Ismail, I am interested in...">
-        </div>
-        <div class="input-box">
-            <div class="checkbox">
-                <input type="checkbox" name="" id="" required>
-                <div class="checkbox-text">
-                    <p>I've read the</p>
-                    <a href="">privacy policy</a>
-                    <p>and agree to the processing of my data as outlined.</p>
-                </div>
-            </div>
-        </div>
+      <h3>Contact me</h3>
+      <h2>Let's work <br> together</h2>
+      <p>Got a problem to solve?</p>
+      <div class="contact-text">
+        <span>
+          Contact me through this form, I am interested in hearing from you, 
+          knowing your ideas and contributing to your projects with my work.
+        </span>
         <div>
-            <button>Say Hello ;)</button>
+          <span>Need a Frontend developer?</span>
+          <span class="green">Let’s talk!</span>
         </div>
+      </div>
     </div>
-</section>
+  
+    <div>
+      <!-- Name -->
+      <div class="input-box">
+        <span class="title">What's your name?</span>
+        <input type="text"
+               [placeholder]="errors.name ? '' : 'Your name goes here'"
+               [ngClass]="{'error-input': errors.name}"
+               [value]="errors.name ? 'Oops! It seems your name is missing' : name"
+               (input)="name = $any($event.target).value"
+               (focus)="clearError('name')">
+      </div>
+  
+      <!-- Email -->
+      <div class="input-box">
+        <span class="title">What's your email?</span>
+        <input type="text"
+               [placeholder]="errors.email ? '' : 'yourEmail@email.com'"
+               [ngClass]="{'error-input': errors.email}"
+               [value]="errors.email ? 'Hoppla! Your E-mail is required' : email"
+               (input)="email = $any($event.target).value"
+               (focus)="clearError('email')">
+      </div>
+  
+      <!-- Message -->
+      <div class="input-box">
+        <span class="title">How can I help you?</span>
+        <input type="text"
+               [placeholder]="errors.message ? '' : 'Hello Ismail, I am interested in...'"
+               [ngClass]="{'error-input': errors.message}"
+               [value]="errors.message ? 'What do you need to develop?' : message"
+               (input)="message = $any($event.target).value"
+               (focus)="clearError('message')">
+      </div>
+  
+      <!-- Checkbox -->
+      <div class="input-box">
+        <div class="checkbox">
+          <input type="checkbox" [(ngModel)]="accepted" (change)="clearError('privacy')">
+          <div class="checkbox-text">
+            <p>I've read the</p>
+            <a href="">privacy policy</a>
+            <p>and agree to the processing of my data as outlined.</p>
+          </div>
+        </div>
+        <small *ngIf="errors.privacy" class="error">
+          Please accept the privacy policy.
+        </small>
+      </div>
+  
+      <!-- Button -->
+      <div>
+        <button (click)="onSubmit()">Say Hello ;)</button>
+      </div>
+    </div>
+  </section>
+  
