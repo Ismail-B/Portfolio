@@ -56,10 +56,12 @@ export class MyProjectsComponent {
 
   openModal(index: number) {
     this.selectedProjectIndex = index;
+    document.body.style.overflow = 'hidden';   // Scrollen deaktivieren
   }
-
+  
   closeModal() {
     this.selectedProjectIndex = null;
+    document.body.style.overflow = 'auto';     // Scrollen wieder aktivieren
   }
 
   updateProjectIndex(newIndex: number) {

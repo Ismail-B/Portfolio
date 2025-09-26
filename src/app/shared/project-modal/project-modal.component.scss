@@ -41,7 +41,15 @@
     align-items: start;
     width: 520px;
 }
-  
+
+.modal-subtitle{
+    color: #3DCFB6;
+    font-family: fira !important;
+    font-size: 24px;
+    font-weight: bold;
+    max-width: 400px;
+    margin-bottom: 18px;
+}
 
 .content{
     h2{
@@ -60,27 +68,20 @@
     }
 }
 
-.modal-subtitle{
-    color: #3DCFB6;
-    font-family: fira !important;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 16px;
-    max-width: 400px;
-}
 
 .tech-icons {
     margin-top: 16px;
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
+    margin-top: 32px;
   
     span {
       display: inline-flex;
       align-items: center;
       font-family: Karla, sans-serif;
       font-size: 16px;
-      color: #3DCFB6;
+      color: white;
   
       img.tech-icon {
         width: 24px;
@@ -146,14 +147,50 @@
     }
 }
 
-.close-btn{
+.close-btn {
     background-color: transparent;
     border: none;
     margin-top: 32px;
-    img{
-        width: 20px;
+    cursor: pointer;
+  
+    img {
+      width: 20px;
+      transition: all 0.2s ease; // Animation für Hover
     }
-}
+  
+    &:hover img {
+      cursor: pointer;
+      transform: scale(1.2);   // leicht vergrößern
+      filter: invert(58%) sepia(88%) saturate(395%) hue-rotate(115deg) brightness(100%) contrast(92%);
+      // ergibt die Farbe #3DCFB6
+    }
+  }
+  
+  .forward-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+      border: none;
+      color: #3DCFB6;
+      cursor: pointer;
+  
+      img {
+        width: 18px;
+        margin-left: 12px;
+        transition: transform 0.2s ease; // Animation für Hover
+      }
+  
+      &:hover {
+        color: white;
+  
+        img {
+          transform: translateX(4px); // leicht nach rechts verschieben
+        }
+      }
+    }
+  
+
 //   .close-btn {
 //     position: absolute;
 //     top: 16px;

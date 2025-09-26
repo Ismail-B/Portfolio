@@ -36,13 +36,13 @@
             <h3>{{ project.title }}</h3>
             <p class="modal-subtitle">What is this project about?</p>
             <p>{{ project.description }}</p>
+            <div class="tech-icons">
+                <span *ngFor="let tech of project.techStack">
+                    <img [src]="tech.icon" [alt]="tech.name" class="tech-icon" />
+                    {{ tech.name }}
+                </span>
+            </div>
         </div>
-        <div class="tech-icons">
-            <span *ngFor="let tech of project.techStack">
-              <img [src]="tech.icon" [alt]="tech.name" class="tech-icon" />
-              {{ tech.name }}
-            </span>
-          </div>
     <div class="buttons">
         <a [href]="project.github" target="_blank">GitHub </a>
         <a [href]="project.live" target="_blank">Live Test </a>
@@ -51,7 +51,7 @@
 <div class="right-content">
     <button class="close-btn" (click)="close.emit()"><img src="../../../assets/img/icon/close_small.png" alt=""></button>
     <img [src]="project.image" [alt]="project.title" />
-    <button (click)="nextProject()">Next project →</button>
+    <button class="forward-btn" (click)="nextProject()">Next project <img src="../../../assets/img/references/arrow-right-colored.png" alt=""></button>
 </div>
     </div>
   </div>
