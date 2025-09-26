@@ -1,0 +1,44 @@
+section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    color: #fff;
+    font-family: "Karla", sans-serif;
+  
+    .bg-img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;          // Hintergrund hinter allem
+      }
+    h1 {
+      font-size: 32px;
+      margin-bottom: 24px;
+      color: #3DCFB6;
+    }
+  
+    h2 {
+      font-size: 20px;
+      margin-top: 24px;
+      margin-bottom: 12px;
+      color: #3DCFB6;
+    }
+  
+    p, ul {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+  
+    a {
+      color: #3DCFB6;
+      text-decoration: underline;
+  
+      &:hover {
+        color: #2aa88e;
+      }
+    }
+  }
+  
