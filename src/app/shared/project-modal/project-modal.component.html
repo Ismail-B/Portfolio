@@ -1,11 +1,13 @@
 <div class="modal-backdrop" (click)="onBackdropClick()">
     <div class="modal-content" (click)="$event.stopPropagation()">
+      <img class="bg-img" src="./../../../assets/img/background/background.png" alt="Background">
       <button class="close-btn" (click)="close.emit()">×</button>
   
       <div class="modal-left">
-        <h2>{{ (currentIndex + 1) | number:'2.0' }}</h2>
-        <h3>{{ project.title }}</h3>
-  
+        <div>
+            <h2>{{ (currentIndex + 1) | number:'2.0' }}</h2>
+            <h3>{{ project.title }}</h3>
+        </div>
         <p class="modal-subtitle">What is this project about?</p>
         <p>{{ project.description }}</p>
   

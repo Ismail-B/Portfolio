@@ -9,17 +9,31 @@
   }
   
   .modal-content {
-    background: linear-gradient(135deg, #07332f, #0d403d);
     padding: 32px;
-    border-radius: 16px;
+    border: 1px solid #3DCFB6;
+    border-radius: 32px;
     display: flex;
     gap: 32px;
     max-width: 1000px;
     width: 90%;
-    position: relative;
+    height: 60vh;
+    position: relative;   // wichtig: neuer stacking-context
     color: #fff;
     animation: fadeIn 0.3s ease;
+    z-index: 1;           // Inhalt über Hintergrund
+    overflow: hidden;     // damit bg-img nicht raussteht
   }
+  
+  .bg-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 32px;
+    z-index: -1;          // Hintergrund hinter allem
+  }
+  
   
   .close-btn {
     position: absolute;
@@ -37,17 +51,21 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    >div{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        h2 {
+        font-size: 94px;
+        color: #3DCFB6;
+        margin: 0;
+        }
   
-    h2 {
-      font-size: 48px;
-      color: #3DCFB6;
-      margin: 0;
-    }
-  
-    h3 {
-      font-size: 32px;
-      font-weight: bold;
-      margin-bottom: 16px;
+        h3 {
+        font-size: 64px;
+        font-weight: bold;
+        margin-bottom: 16px;
+        }
     }
   
     .modal-subtitle {
@@ -90,4 +108,3 @@
     max-width: 400px;
     border-radius: 8px;
   }
-  
