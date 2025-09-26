@@ -1,15 +1,16 @@
 <div class="modal-backdrop" (click)="onBackdropClick()">
     <div class="modal-content" (click)="$event.stopPropagation()">
-      <img class="bg-img" src="./../../../assets/img/background/background.png" alt="Background">
-      <button class="close-btn" (click)="close.emit()">×</button>
+      <!-- <img class="bg-img" src="./../../../assets/img/background/background.png" alt="Background">
   
       <div class="modal-left">
-        <div>
+        <div class="title">
             <h2>{{ (currentIndex + 1) | number:'2.0' }}</h2>
             <h3>{{ project.title }}</h3>
         </div>
+        <div class="description">
         <p class="modal-subtitle">What is this project about?</p>
         <p>{{ project.description }}</p>
+        </div>
   
         <div class="tech-icons">
           <span *ngFor="let tech of project.techStack">{{ tech }}</span>
@@ -18,13 +19,35 @@
         <div class="buttons">
           <a [href]="project.github" target="_blank">GitHub ↗</a>
           <a [href]="project.live" target="_blank">Live Test ↗</a>
-          <button (click)="nextProject()">Next project →</button>
         </div>
-      </div>
-  
-      <div class="modal-right">
+    </div>
+    
+    <div class="modal-right">
+        <div class="close-img">
+        <button class="close-btn" (click)="close.emit()">×</button>
         <img [src]="project.image" [alt]="project.title" />
-      </div>
+        </div>
+        <button (click)="nextProject()">Next project →</button>
+    </div> -->
+    <img class="bg-img" src="./../../../assets/img/background/background.png" alt="Background">
+    <div class="left-content">
+        <div class="content">
+            <h2>{{ (currentIndex + 1) | number:'2.0' }}</h2>
+            <h3>{{ project.title }}</h3>
+            <p class="modal-subtitle">What is this project about?</p>
+            <p>{{ project.description }}</p>
+        </div>
+        <div class="tech-icons">
+            <span *ngFor="let tech of project.techStack">
+              <img [src]="tech.icon" [alt]="tech.name" class="tech-icon" />
+              {{ tech.name }}
+            </span>
+          </div>
+    <div class="buttons">
+        <a [href]="project.github" target="_blank">GitHub ↗</a>
+        <a [href]="project.live" target="_blank">Live Test ↗</a>
+    </div>
+</div>
     </div>
   </div>
   

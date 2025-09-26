@@ -14,15 +14,25 @@ export class MyProjectsComponent {
     {
       title: 'Join',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-      techStack: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
+      techStack: [
+        { name: 'CSS', icon: 'assets/img/icon/css-project-icon.png' },
+        { name: 'HTML', icon: 'assets/img/icon/html-project-icon.png' },
+        { name: 'Firebase', icon: 'assets/img/icon/firebase-project-icon.png' },
+        { name: 'Angular', icon: 'assets/img/icon/angular-project-icon.png' },
+        { name: 'TypeScript', icon: 'assets/img/icon/typescript-project-icon.png' }
+      ],
       github: 'https://github.com/Ismail-B/join',
       live: 'https://join-live-link.com',
       image: 'assets/img/my_projects/join_preview.png'
     },
     {
       title: 'Shadow Shinobi',
-      description: 'Jump & run ninja game with fun mechanics and pixel art style.',
-      techStack: ['HTML', 'CSS', 'JavaScript'],
+      description: 'Jump & run ninja game with fun mechanics and pixel art style. asdadwd dsadolaj jasjdo asdjosadj dasj oid oiajosiadjodj jsao jdoiasj oij sdiajoijd iosaj dj jasoij oidj aoij.',
+      techStack: [
+        { name: 'HTML', icon: 'assets/img/icon/html-project-icon.png' },
+        { name: 'CSS', icon: 'assets/img/icon/css-project-icon.png' },
+        { name: 'JavaScript', icon: 'assets/img/icon/javascript-project-icon.png' }
+      ],
       github: 'https://github.com/Ismail-B/Shadow-Shinobi',
       live: 'https://shadow-shinobi-live.com',
       image: 'assets/img/my_projects/shadow_shinobi_preview.png'
@@ -30,7 +40,12 @@ export class MyProjectsComponent {
     {
       title: 'Pokedex',
       description: 'Simple app to browse Pokémon using an API.',
-      techStack: ['HTML', 'CSS', 'API', 'JavaScript'],
+      techStack: [
+        { name: 'HTML', icon: 'assets/img/icon/html-project-icon.png' },
+        { name: 'CSS', icon: 'assets/img/icon/css-project-icon.png' },
+        { name: 'API', icon: 'assets/img/icon/api-project-icon.png' },
+        { name: 'JavaScript', icon: 'assets/img/icon/javascript-project-icon.png' }
+      ],
       github: 'https://github.com/Ismail-B/Pokedex',
       live: 'https://pokedex-live.com',
       image: 'assets/img/my_projects/pokedex_preview.png'
