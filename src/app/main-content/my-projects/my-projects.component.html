@@ -1,45 +1,54 @@
 <section id="projects">
-    <h3>Portfolio</h3>
-    <h2>Featured Projects</h2>
+  <h3>Portfolio</h3>
+  <h2>Featured Projects</h2>
+  <p>
+    Explore a selection of my work here - Interact with<br>
+    projects to see my skills in action.
+  </p>
+
+  <div class="project join" (click)="openModal(0)">
+    <span>
+      Join 
+      <img class="arrow" src="/assets/img/my_projects/arrow_outward.png" alt="">
+    </span>
     <p>
-      Explore a selection of my work here - Interact with<br>
-      projects to see my skills in action.
+      Angular <span class="pipe">|</span> 
+      TypeScript <span class="pipe">|</span> 
+      HTML <span class="pipe">|</span> 
+      CSS <span class="pipe">|</span> 
+      Firebase
     </p>
+    <img class="bg-img" src="/assets/img/background/img-background.png" alt="">
+    <img class="preview-img" src="/assets/img/my_projects/join_preview.png" alt="">
+  </div>
   
-    <div class="project join">
-      <span>
-        Join 
-        <img class="arrow" src="/assets/img/my_projects/arrow_outward.png" alt="">
-      </span>
-      <p>
-        Angular <span class="pipe">|</span> 
-        TypeScript <span class="pipe">|</span> 
-        HTML <span class="pipe">|</span> 
-        CSS <span class="pipe">|</span> 
-        Firebase
-      </p>
-      <img class="bg-img" src="/assets/img/background/img-background.png" alt="">
-      <img class="preview-img" src="/assets/img/my_projects/join_preview.png" alt="">
-    </div>
-    
-    <div class="project shadow-shinobi">
-      <span>
-        Shadow Shinobi 
-        <img class="arrow" src="/assets/img/my_projects/arrow_outward.png" alt="">
-      </span>
-      <p>HTML <span class="pipe">|</span> CSS <span class="pipe">|</span> JavaScript</p>
-      <img class="bg-img" src="/assets/img/background/img-background.png" alt="">
-      <img class="preview-img" src="/assets/img/my_projects/shadow_shinobi_preview.png" alt="">
-    </div>
-    
-    <div class="project pokedex border-bottom">
-      <span>
-        Pokedex 
-        <img class="arrow" src="/assets/img/my_projects/arrow_outward.png" alt="">
-      </span>
-      <p>HTML <span class="pipe">|</span> CSS <span class="pipe">|</span> API <span class="pipe">|</span> JavaScript</p>
-      <img class="bg-img" src="/assets/img/background/img-background.png" alt="">
-      <img class="preview-img" src="/assets/img/my_projects/pokedex_preview.png" alt="">
-    </div>
-  </section>
+  <div class="project shadow-shinobi" (click)="openModal(1)">
+    <span>
+      Shadow Shinobi 
+      <img class="arrow" src="/assets/img/my_projects/arrow_outward.png" alt="">
+    </span>
+    <p>HTML <span class="pipe">|</span> CSS <span class="pipe">|</span> JavaScript</p>
+    <img class="bg-img" src="/assets/img/background/img-background.png" alt="">
+    <img class="preview-img" src="/assets/img/my_projects/shadow_shinobi_preview.png" alt="">
+  </div>
   
+  <div class="project pokedex border-bottom" (click)="openModal(2)">
+    <span>
+      Pokedex 
+      <img class="arrow" src="/assets/img/my_projects/arrow_outward.png" alt="">
+    </span>
+    <p>HTML <span class="pipe">|</span> CSS <span class="pipe">|</span> API <span class="pipe">|</span> JavaScript</p>
+    <img class="bg-img" src="/assets/img/background/img-background.png" alt="">
+    <img class="preview-img" src="/assets/img/my_projects/pokedex_preview.png" alt="">
+  </div>
+
+  <!-- 🔹 Modal hier einfügen -->
+  <app-project-modal
+    *ngIf="selectedProjectIndex !== null"
+    [project]="projects[selectedProjectIndex!]"
+    [projectList]="projects"
+    [currentIndex]="selectedProjectIndex!"
+    (close)="closeModal()"
+    (updateIndex)="updateProjectIndex($event)">
+  </app-project-modal>
+</section>
