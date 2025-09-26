@@ -44,9 +44,14 @@
             </span>
           </div>
     <div class="buttons">
-        <a [href]="project.github" target="_blank">GitHub ↗</a>
-        <a [href]="project.live" target="_blank">Live Test ↗</a>
+        <a [href]="project.github" target="_blank">GitHub </a>
+        <a [href]="project.live" target="_blank">Live Test </a>
     </div>
+</div>
+<div class="right-content">
+    <button class="close-btn" (click)="close.emit()"><img src="../../../assets/img/icon/close_small.png" alt=""></button>
+    <img [src]="project.image" [alt]="project.title" />
+    <button (click)="nextProject()">Next project →</button>
 </div>
     </div>
   </div>

@@ -39,6 +39,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: start;
+    width: 520px;
 }
   
 
@@ -61,6 +62,7 @@
 
 .modal-subtitle{
     color: #3DCFB6;
+    font-family: fira !important;
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 16px;
@@ -87,6 +89,71 @@
       }
     }
   }
+
+  .buttons {
+    display: flex;
+    justify-content: flex-start;
+    width: 500px;
+  
+    a {
+      font-size: 16px;
+      background-color: transparent;
+      border: 1px solid white;
+      width: 139px;
+      height: 32px;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 100px;
+      margin: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px; // etwas Abstand zwischen Text und Pfeil
+  
+      // Standardfarbe Pfeil grün
+      &::after {
+        content: "↗";
+        color: #3DCFB6;
+        display: inline-block;
+        transition: transform 0.2s ease;
+      }
+  
+      // Entfernt das extra "↗" im HTML, wenn du willst
+      // → Dann einfach im HTML "GitHub" / "Live Test" ohne den Pfeil schreiben
+  
+      &:hover {
+        cursor: pointer;
+        border: 1px solid #3DCFB6;
+        color: #3DCFB6;
+  
+        &::after {
+          transform: translate(3px, -3px); // nach rechts oben verschieben
+        }
+      }
+    }
+  }
+  
+.right-content{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+    width: 420px;
+    height: 570px;
+    img{
+        width: 420px;
+        border-radius: 32px;
+    }
+}
+
+.close-btn{
+    background-color: transparent;
+    border: none;
+    margin-top: 32px;
+    img{
+        width: 20px;
+    }
+}
 //   .close-btn {
 //     position: absolute;
 //     top: 16px;
