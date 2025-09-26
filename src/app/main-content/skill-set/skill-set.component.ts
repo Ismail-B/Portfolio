@@ -8,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './skill-set.component.scss'
 })
 export class SkillSetComponent {
-
+  scrollToSection(sectionId: string) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
 }

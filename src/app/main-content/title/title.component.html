@@ -8,9 +8,9 @@
           <span class="lang de">DE</span>
           <div class="highlight"></div>
         </div>              
-        <a href="">About me</a>
-        <a href="">Skills</a>
-        <a href="">Projects</a>
+        <a (click)="scrollToSection('about-me')">About me</a>
+        <a (click)="scrollToSection('skills')">Skills</a>
+        <a (click)="scrollToSection('projects')">Projects</a>
       </nav>
       <div>
         <img src="./../../../assets/img/about_me/My-logo.png" alt="My Logo">
@@ -22,8 +22,8 @@
       <h2>Software Developer</h2>
       <h1>Ismail Baris</h1>
       <div class="title-btn">
-        <button>Check my work</button>
-        <button>Contact me</button>
+        <button (click)="scrollToSection('projects')">Check my work</button>
+        <button (click)="scrollToSection('contact-me')">Contact me</button>
       </div>
     </div>
   
