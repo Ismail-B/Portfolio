@@ -125,17 +125,6 @@ section {
   }
 }
 
-.mail-address {
-  position: relative;
-  top: -120px;
-  margin-right: 80px;
-
-  &:hover {
-    cursor: pointer;
-    color: #3DCFB6;
-  }
-}
-
 .banner {
   width: 100%;
   height: 80px;
@@ -180,11 +169,25 @@ section {
     transform: rotate(270deg);
     display: inline-block;
   }
+}
 
-  > img {
-    width: 30px;
+.mail-address {
+  position: relative;
+  top: -120px;
+  margin-right: 80px;
+
+  a {
+    color: white;              /* Standardfarbe */
+    text-decoration: none;     /* Kein Unterstrich */ /* wie bisher gedreht */
+    display: inline-block;
+
+    &:hover {
+      cursor: pointer;
+      color: #3DCFB6;          /* Hover-Farbe */
+    }
   }
 }
+
 
 .container-left {
   width: 80px;
