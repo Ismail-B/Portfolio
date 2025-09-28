@@ -42,21 +42,30 @@ section {
   h1 {
     font-family: Karla;
     font-size: 64px;
-    margin-bottom: 24px;
+    margin-bottom: 64px;
     color: #3DCFB6;
   }
 
   h2 {
-    font-size: 20px;
+    font-family: Karla;
+    font-size: 19px;
     margin-top: 24px;
     margin-bottom: 12px;
-    color: #3DCFB6;
+    color: white;
   }
 
   p, ul {
+    font-family: Karla;
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 16px;
+    color: #3DCFB6;
+
+  }
+
+  li{
+    font-family: Karla;
+    color: #3DCFB6;
   }
 
   a {
