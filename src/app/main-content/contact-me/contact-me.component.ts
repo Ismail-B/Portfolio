@@ -28,11 +28,35 @@ export class ContactMeComponent {
     this.errors.email = !this.email;
     this.errors.message = !this.message;
     this.errors.privacy = !this.accepted;
-
+  
     if (this.name && this.email && this.message && this.accepted) {
-      console.log("funktionier");
+      // Daten an sendmail.php senden
+      fetch("https://ismail-baris.de/sendmail.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({
+          name: this.name,
+          email: this.email,
+          message: this.message
+        })
+      })
+      .then(res => res.text())
+      .then(result => {
+        if (result.includes("success")) {
+          alert("Danke! Deine Nachricht wurde verschickt ✅");
+          // Felder leeren
+          this.name = "";
+          this.email = "";
+          this.message = "";
+          this.accepted = false;
+        } else {
+          alert("Fehler beim Senden ❌: " + result);
+        }
+      })
+      .catch(() => alert("Serverfehler – bitte später nochmal versuchen."));
     }
   }
+  
 
   clearError(field: 'name' | 'email' | 'message' | 'privacy') {
     this.errors[field] = false;
