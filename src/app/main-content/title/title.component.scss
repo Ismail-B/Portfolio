@@ -18,71 +18,11 @@ section {
     z-index: 0;
   }
 
-  > .navbar,
   > .title,
   > .animation,
   > .banner {
     position: relative;
     z-index: 1;
-  }
-
-  > .navbar {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 8px;
-    padding-right: 8px;
-
-    > div {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding-right: 16px;
-
-      > h3 {
-        color: whitesmoke;
-        font-family: "Karla", serif;
-        font-size: 24px;
-        font-weight: 900;
-        text-align: start;
-      }
-    }
-
-    > nav {
-      display: flex;
-      align-items: center;
-      padding: 16px;
-
-      > a {
-        position: relative;
-        font-size: 20px;
-        font-weight: 400;
-        text-decoration: none;
-        margin: 16px;
-        color: white;
-
-        &:hover {
-          cursor: pointer;
-        }
-
-        &::after {
-          content: '';
-          position: absolute;
-          bottom: -6px;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 6px;
-          height: 6px;
-          background-color: rgba(106, 215, 191, 1);
-          border-radius: 50%;
-          opacity: 0;
-          transition: opacity 0.3s ease;
-        }
-
-        &:hover::after {
-          opacity: 1;
-        }
-      }
-    }
   }
 }
 
@@ -105,9 +45,7 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    /* NEU: macht jede Spalte zum Anker für absolute Kinder */
-    position: relative;
+    position: relative; /* macht jede Spalte zum Anker für absolute Kinder */
   }
 }
 
@@ -177,17 +115,16 @@ section {
   margin-right: 80px;
 
   a {
-    color: white;              /* Standardfarbe */
-    text-decoration: none;     /* Kein Unterstrich */ /* wie bisher gedreht */
+    color: white;
+    text-decoration: none;
     display: inline-block;
 
     &:hover {
       cursor: pointer;
-      color: #3DCFB6;          /* Hover-Farbe */
+      color: #3DCFB6;
     }
   }
 }
-
 
 .container-left {
   width: 80px;
@@ -216,40 +153,27 @@ section {
   overflow: hidden;
 }
 
-/* ERSETZT die bisherigen .left-line und .right-line Blöcke komplett */
-
 .left-line {
   position: absolute;
-  /* Von ganz oben der Section (innerhalb der linken Spalte) bis ganz unten */
   top: 229px;
   bottom: -69px;
-
-  /* An rechte Kante der linken Spalte andocken, wie vorher */
   right: 0;
-
-  /* nur die Linie zeichnen, kein „Block“ schieben */
   width: 0;
-
   border-right: 1px solid #3DCFB6;
   z-index: 1;
-  pointer-events: none; /* klickt nichts zu */
+  pointer-events: none;
 }
 
 .right-line {
   position: absolute;
-
   top: 229px;
   bottom: -69px;
-
-  /* an linke Kante der rechten Spalte andocken */
   left: 0;
-
   width: 0;
   border-left: 1px solid #ffffff;
   z-index: 1;
   pointer-events: none;
 }
-
 
 .title {
   height: 60vh;
@@ -295,13 +219,13 @@ section {
 .icon-wrapper {
   position: relative;
   width: 50px;
-  display: inline-block; /* macht den Wrapper nur so groß wie das Bild */
+  display: inline-block;
 
   &::after {
     content: '';
     position: absolute;
     top: 50%;
-    left: 100%; /* rechts vom Bild */
+    left: 100%;
     transform: translateY(-50%) translateX(8px);
     width: 6px;
     height: 6px;
@@ -340,57 +264,5 @@ section {
 
   &:hover::after {
     opacity: 1;
-  }
-}
-
-
-.language-switch {
-  position: relative;
-  display: flex;
-  align-items: center;
-  border-radius: 999px;
-  border: 1px solid #3DCFB6;
-  width: 100px;
-  height: 32px;
-  cursor: pointer;
-  overflow: hidden;
-
-  &:hover {
-    border: 1px solid white;
-  }
-
-  .lang {
-    flex: 1;
-    text-align: center;
-    z-index: 2;
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 36px;
-    user-select: none;
-    transition: color 0.3s ease;
-  }
-
-  .highlight {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 100%;
-    background: #3DCFB6;
-    border-radius: 999px;
-    z-index: 1;
-    transition: left 0.3s ease;
-  }
-
-  &.en-active {
-    .highlight { left: 0; }
-    .en { color: #fff; }
-    .de { color: rgba(61, 207, 182, 0.5); }
-  }
-
-  &.de-active {
-    .highlight { left: 50%; }
-    .en { color: rgba(61, 207, 182, 0.5); }
-    .de { color: #fff; }
   }
 }

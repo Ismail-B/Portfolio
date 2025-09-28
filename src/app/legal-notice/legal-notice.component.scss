@@ -1,44 +1,85 @@
+/* --- Layout: Footer immer unten --- */
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, #002a24, #0a2f2a 60%, #000 100%); 
+  /* Beispiel: anpassen an dein Background-Image */
+  background-attachment: fixed;
+}
+
+/* Inhalt füllt den Platz über dem Footer */
 section {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    color: #fff;
-    font-family: "Karla", sans-serif;
-  
-    .bg-img {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: -1;          // Hintergrund hinter allem
-      }
-    h1 {
-      font-size: 32px;
-      margin-bottom: 24px;
-      color: #3DCFB6;
-    }
-  
-    h2 {
-      font-size: 20px;
-      margin-top: 24px;
-      margin-bottom: 12px;
-      color: #3DCFB6;
-    }
-  
-    p, ul {
-      font-size: 16px;
-      line-height: 1.6;
-      margin-bottom: 16px;
-    }
-  
-    a {
-      color: #3DCFB6;
-      text-decoration: underline;
-  
-      &:hover {
-        color: #2aa88e;
-      }
+  flex: 1 0 auto;              /* nimmt restliche Höhe ein */
+  position: relative;          /* für das bg-img */
+  margin: 0 auto;
+  color: #fff;
+  font-family: "Karla", sans-serif;
+
+  .content{
+    padding-left: 140px;
+    padding-right: 140px;
+    margin-top: 48px;
+    margin-bottom: 0;          /* kein „Spalt“ vor dem Footer */
+    padding-bottom: 48px;      /* stattdessen Innenabstand */
+  }
+
+  .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bg-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;               /* Hintergrund hinter allem */
+  }
+
+  h1 {
+    font-family: Karla;
+    font-size: 64px;
+    margin-bottom: 24px;
+    color: #3DCFB6;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-top: 24px;
+    margin-bottom: 12px;
+    color: #3DCFB6;
+  }
+
+  p, ul {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  a {
+    color: #3DCFB6;
+    text-decoration: underline;
+
+    &:hover {
+      color: #2aa88e;
     }
   }
-  
+}
+
+/* --- Footer-Theme nur auf Legal Notice ---
+   (keine Linie, transparent, keine feste Höhe) */
+:host ::ng-deep app-footer.footer-legal section {
+  background: transparent;
+  border: none;
+  margin-top: 0;
+  height: auto;
+  box-shadow: none;
+}
+
+/* optional, nur falls noch ein Restabstand oben bleibt */
+app-footer {
+  margin-top: auto;            /* schiebt den Footer ans Seitenende */
+}

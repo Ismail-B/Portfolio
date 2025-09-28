@@ -1,102 +1,69 @@
 <section>
-    <img class="bg-img" src="./../../../assets/img/background/background.png" alt="Background">
-  
-    <div class="navbar">
-      <nav>
-        <div class="language-switch en-active">
-          <span class="lang en">EN</span>
-          <span class="lang de">DE</span>
-          <div class="highlight"></div>
-        </div>              
-        <a (click)="scrollToSection('about-me')">About me</a>
-        <a (click)="scrollToSection('skills')">Skills</a>
-        <a (click)="scrollToSection('projects')">Projects</a>
-      </nav>
-      <div>
-        <img src="./../../../assets/img/about_me/My-logo.png" alt="My Logo">
-        <h3>Ismail<br>Baris</h3>
-      </div>
+  <img class="bg-img" src="./../../../assets/img/background/background.png" alt="Background">
+
+  <!-- Navbar ist jetzt eigene Komponente -->
+  <app-navbar></app-navbar>
+
+  <div class="title">
+    <h2>Software Developer</h2>
+    <h1>Ismail Baris</h1>
+    <div class="title-btn">
+      <button (click)="scrollToSection('projects')">Check my work</button>
+      <button (click)="scrollToSection('contact-me')">Contact me</button>
     </div>
-  
-    <div class="title">
-      <h2>Software Developer</h2>
-      <h1>Ismail Baris</h1>
-      <div class="title-btn">
-        <button (click)="scrollToSection('projects')">Check my work</button>
-        <button (click)="scrollToSection('contact-me')">Contact me</button>
+  </div>
+
+  <div class="animation">
+    <div class="container-left">
+      <div class="arrow-frame">
+        <img src="./../../../assets/img/icon/arrow-down.png" alt="">
       </div>
+      <div class="left-line"></div>
     </div>
-  
-    <div class="animation">
-      <div class="container-left">
-        <div class="arrow-frame">
-          <img src="./../../../assets/img/icon/arrow-down.png" alt="">
+    <div>
+      <div class="container-links">
+        <p class="mail-address">
+          <a href="mailto:ismail.93.baris&#64;gmail.com">
+            ismail.93.baris&#64;gmail.com
+          </a>
+        </p>
+        <div class="container-img">
+          <a href="https://github.com/Ismail-B" target="_blank" rel="noopener noreferrer" class="icon-wrapper">
+            <img 
+              src="./../../../assets/img/icon/Github.png" 
+              alt="Github Logo" 
+              class="icon" 
+              onmouseover="this.src='./../../../assets/img/icon/Github (1).png'" 
+              onmouseout="this.src='./../../../assets/img/icon/Github.png'">
+          </a>
+          <a href="https://www.linkedin.com/in/ismail-baris-114668340/" target="_blank" rel="noopener noreferrer" class="icon-wrapper">
+            <img 
+              src="./../../../assets/img/icon/Linkedin.png" 
+              alt="LinkedIn Logo" 
+              class="icon" 
+              onmouseover="this.src='./../../../assets/img/icon/Linkedin (1).png'" 
+              onmouseout="this.src='./../../../assets/img/icon/Linkedin.png'">
+          </a>
         </div>
-        <div class="left-line"></div>
       </div>
-      <div>
-        <div class="container-links">
-          <p class="mail-address">
-            <a href="mailto:ismail.93.baris&#64;gmail.com">
-              ismail.93.baris&#64;gmail.com
-            </a>
-          </p>
-          <div class="container-img">
-            <a href="https://github.com/Ismail-B" target="_blank" rel="noopener noreferrer" class="icon-wrapper">
-              <img 
-                src="./../../../assets/img/icon/Github.png" 
-                alt="Github Logo" 
-                class="icon" 
-                onmouseover="this.src='./../../../assets/img/icon/Github (1).png'" 
-                onmouseout="this.src='./../../../assets/img/icon/Github.png'">
-            </a>
-            <a href="https://www.linkedin.com/in/ismail-baris-114668340/" target="_blank" rel="noopener noreferrer" class="icon-wrapper">
-              <img 
-                src="./../../../assets/img/icon/Linkedin.png" 
-                alt="LinkedIn Logo" 
-                class="icon" 
-                onmouseover="this.src='./../../../assets/img/icon/Linkedin (1).png'" 
-                onmouseout="this.src='./../../../assets/img/icon/Linkedin.png'">
-            </a>
-          </div>
-        </div>
-        
-        <div class="right-line"></div>
-      </div>
+      
+      <div class="right-line"></div>
     </div>
-  
-    <div class="banner">
-      <div class="track">
-        <span>Available for remote work</span><span>•</span>
-        <span>Developer</span><span>•</span>
-        <span>UI Designer</span><span>•</span>
-        <span>Based in Aachen</span><span>•</span>
-        <span>Open to work</span><span>•</span>
-        <!-- duplizieren für Endlos-Scroll -->
-        <span>Available for remote work</span><span>•</span>
-        <span>Developer</span><span>•</span>
-        <span>UI Designer</span><span>•</span>
-        <span>Based in Aachen</span><span>•</span>
-        <span>Open to work</span><span>•</span>
-                <!-- duplizieren für Endlos-Scroll -->
-        <span>Available for remote work</span><span>•</span>
-        <span>Developer</span><span>•</span>
-        <span>UI Designer</span><span>•</span>
-        <span>Based in Aachen</span><span>•</span>
-        <span>Open to work</span><span>•</span>
-                <!-- duplizieren für Endlos-Scroll -->
-        <span>Available for remote work</span><span>•</span>
-        <span>Developer</span><span>•</span>
-        <span>UI Designer</span><span>•</span>
-        <span>Based in Aachen</span><span>•</span>
-        <span>Open to work</span><span>•</span>
-                <!-- duplizieren für Endlos-Scroll -->
-        <span>Available for remote work</span><span>•</span>
-        <span>Developer</span><span>•</span>
-        <span>UI Designer</span><span>•</span>
-        <span>Based in Aachen</span><span>•</span>
-        <span>Open to work</span><span>•</span>
-      </div>
+  </div>
+
+  <div class="banner">
+    <div class="track">
+      <span>Available for remote work</span><span>•</span>
+      <span>Developer</span><span>•</span>
+      <span>UI Designer</span><span>•</span>
+      <span>Based in Aachen</span><span>•</span>
+      <span>Open to work</span><span>•</span>
+      <!-- Duplizieren für Endlos-Scroll -->
+      <span>Available for remote work</span><span>•</span>
+      <span>Developer</span><span>•</span>
+      <span>UI Designer</span><span>•</span>
+      <span>Based in Aachen</span><span>•</span>
+      <span>Open to work</span><span>•</span>
     </div>
-  </section>
-  
+  </div>
+</section>
