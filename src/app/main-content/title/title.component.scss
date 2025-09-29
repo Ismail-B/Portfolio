@@ -212,6 +212,11 @@ section {
       border-radius: 100px;
       height: 40px;
       width: 150px;
+      &:hover {
+        cursor: pointer;
+        border: 1px solid #3DCFB6;
+        color: #3DCFB6;
+      }
     }
   }
 }
