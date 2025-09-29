@@ -24,13 +24,15 @@ export class ContactMeComponent {
   };
 
   onSubmit() {
+    // Eingaben prüfen
     this.errors.name = !this.name;
     this.errors.email = !this.email;
     this.errors.message = !this.message;
     this.errors.privacy = !this.accepted;
-  
+
     if (this.name && this.email && this.message && this.accepted) {
-      // Daten an sendmail.php senden
+      console.log("Sende Daten an PHP:", this.name, this.email, this.message);
+
       fetch("https://ismail-baris.de/sendmail.php", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -42,9 +44,11 @@ export class ContactMeComponent {
       })
       .then(res => res.text())
       .then(result => {
+        console.log("Antwort von sendmail.php:", result);
+
         if (result.includes("success")) {
           alert("Danke! Deine Nachricht wurde verschickt ✅");
-          // Felder leeren
+          // Felder zurücksetzen
           this.name = "";
           this.email = "";
           this.message = "";
@@ -53,17 +57,14 @@ export class ContactMeComponent {
           alert("Fehler beim Senden ❌: " + result);
         }
       })
-      .catch(() => alert("Serverfehler – bitte später nochmal versuchen."));
+      .catch(err => {
+        console.error("Fetch-Fehler:", err);
+        alert("Serverfehler – bitte später nochmal versuchen.");
+      });
     }
   }
-  
 
   clearError(field: 'name' | 'email' | 'message' | 'privacy') {
     this.errors[field] = false;
-
-    // Feld leeren, falls gerade Fehlermeldung drinsteht
-    if (field === 'name' && !this.name) this.name = '';
-    if (field === 'email' && !this.email) this.email = '';
-    if (field === 'message' && !this.message) this.message = '';
   }
 }
