@@ -1,42 +1,46 @@
 <section id="projects">
+  <!-- Section Header -->
   <h3>{{ 'PROJECTS.PORTFOLIO' | translate }}</h3>
   <h2>{{ 'PROJECTS.FEATURED' | translate }}</h2>
   <p>{{ 'PROJECTS.INTRO' | translate }}</p>
 
+  <!-- Project: Join -->
   <div class="project join" (click)="openModal(0)">
     <span>
       Join
-      <img class="arrow" src="/assets/img/my_projects/arrow_outward.png" alt="">
+      <img class="arrow" src="/assets/img/my_projects/arrow_outward.png" alt="Arrow icon">
     </span>
     <p>{{ 'PROJECTS.JOIN.TECH' | translate }}</p>
-    <img class="bg-img" src="/assets/img/background/img-background.png" alt="">
-    <img class="preview-img" src="/assets/img/my_projects/join_preview.png" alt="">
+    <img class="bg-img" src="/assets/img/background/img-background.png" alt="Background">
+    <img class="preview-img" src="/assets/img/my_projects/join_preview.png" alt="Join project preview">
   </div>
 
+  <!-- Project: Shadow Shinobi -->
   <div class="project shadow-shinobi" (click)="openModal(1)">
     <span>
       Shadow Shinobi
-      <img class="arrow" src="/assets/img/my_projects/arrow_outward.png" alt="">
+      <img class="arrow" src="/assets/img/my_projects/arrow_outward.png" alt="Arrow icon">
     </span>
     <p>{{ 'PROJECTS.SHINOBI.TECH' | translate }}</p>
-    <img class="bg-img" src="/assets/img/background/img-background.png" alt="">
-    <img class="preview-img" src="/assets/img/my_projects/shadow_shinobi_preview.png" alt="">
+    <img class="bg-img" src="/assets/img/background/img-background.png" alt="Background">
+    <img class="preview-img" src="/assets/img/my_projects/shadow_shinobi_preview.png" alt="Shadow Shinobi project preview">
   </div>
 
+  <!-- Project: Pokedex -->
   <div class="project pokedex border-bottom" (click)="openModal(2)">
     <span>
       Pokedex
-      <img class="arrow" src="/assets/img/my_projects/arrow_outward.png" alt="">
+      <img class="arrow" src="/assets/img/my_projects/arrow_outward.png" alt="Arrow icon">
     </span>
     <p>{{ 'PROJECTS.POKEDEX.TECH' | translate }}</p>
-    <img class="bg-img" src="/assets/img/background/img-background.png" alt="">
-    <img class="preview-img" src="/assets/img/my_projects/pokedex_preview.png" alt="">
+    <img class="bg-img" src="/assets/img/background/img-background.png" alt="Background">
+    <img class="preview-img" src="/assets/img/my_projects/pokedex_preview.png" alt="Pokedex project preview">
   </div>
 
-  <!-- Modal -->
+  <!-- Project Modal -->
   <app-project-modal
     *ngIf="selectedProjectIndex !== null"
-    [project]="projects[selectedProjectIndex!] "
+    [project]="projects[selectedProjectIndex!]"
     [projectList]="projects"
     [currentIndex]="selectedProjectIndex!"
     (close)="closeModal()"

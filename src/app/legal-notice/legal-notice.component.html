@@ -1,37 +1,54 @@
 <section>
+  <!-- 🔹 Navbar -->
   <app-navbar></app-navbar>
-  <img class="bg-img" src="./../../../assets/img/background/background.png" alt="Background">
 
+  <!-- 🔹 Background image -->
+  <img
+    class="bg-img"
+    src="./../../../assets/img/background/background.png"
+    alt="Background"
+  />
+
+  <!-- 🔹 Main content -->
   <div class="content">
+    <!-- Page title -->
     <div class="title">
       <h1>{{ 'LEGAL.HEADER' | translate }}</h1>
     </div>
 
+    <!-- Address -->
     <h2>{{ 'LEGAL.INFO' | translate }}</h2>
     <p>
-      · Ismail Baris<br>
-      · Finkenstraße 2<br>
-      · 52531 Übach-Palenberg<br>
+      · Ismail Baris<br />
+      · Finkenstraße 2<br />
+      · 52531 Übach-Palenberg<br />
       · Germany
     </p>
 
+    <!-- Contact -->
     <h2>{{ 'LEGAL.CONTACT' | translate }}</h2>
     <p>
-      E-Mail: <a href="mailto:contact&#64;ismail-baris.de">contact&#64;ismail-baris.de</a><br>
+      E-Mail:
+      <a href="mailto:contact&#64;ismail-baris.de">contact&#64;ismail-baris.de</a>
     </p>
 
+    <!-- Responsible -->
     <h2>{{ 'LEGAL.RESPONSIBLE_HEADER' | translate }}</h2>
     <p>{{ 'LEGAL.RESPONSIBLE_TEXT' | translate }}</p>
 
+    <!-- Liability for content -->
     <h2>{{ 'LEGAL.LIABILITY_CONTENT_HEADER' | translate }}</h2>
     <p>{{ 'LEGAL.LIABILITY_CONTENT_TEXT' | translate }}</p>
 
+    <!-- Liability for links -->
     <h2>{{ 'LEGAL.LIABILITY_LINKS_HEADER' | translate }}</h2>
     <p>{{ 'LEGAL.LIABILITY_LINKS_TEXT' | translate }}</p>
 
+    <!-- Copyright -->
     <h2>{{ 'LEGAL.COPYRIGHT_HEADER' | translate }}</h2>
     <p>{{ 'LEGAL.COPYRIGHT_TEXT' | translate }}</p>
   </div>
 </section>
 
+<!-- 🔹 Footer -->
 <app-footer class="footer-legal"></app-footer>

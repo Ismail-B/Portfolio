@@ -3,7 +3,7 @@ import { importProvidersFrom } from '@angular/core';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { Observable } from 'rxjs';
 
-// Minimaler JSON-Loader: lädt ./assets/i18n/<lang>.json
+/* === JSON Translation Loader === */
 export function httpJsonLoaderFactory(http: HttpClient): TranslateLoader {
   return {
     getTranslation(lang: string): Observable<any> {
@@ -12,13 +12,14 @@ export function httpJsonLoaderFactory(http: HttpClient): TranslateLoader {
   };
 }
 
+/* === Translation Provider === */
 export const provideTranslation = () =>
   importProvidersFrom(
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
         useFactory: httpJsonLoaderFactory,
-        deps: [HttpClient],
+        deps: [HttpClient]
       }
     })
   );

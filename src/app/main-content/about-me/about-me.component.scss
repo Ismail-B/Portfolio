@@ -1,117 +1,117 @@
 @import './../../../styles.scss';
 
+/* === Layout: Section Wrapper === */
+section {
+  width: 100%;
+  height: 90vh;
+  background-color: #1c1c1c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 64px;
 
-section{
-    width: 100%;
-    height: 90vh;
-    background-color: #1c1c1c;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 64px;
-    >h2{
-        background-color: transparent;
-        color: rgb(172, 172, 172);
-    }
-    >div{
-        >h3{
-            margin-top: 200px;
-            font-family: 'Karla';
-            font-size: 24px;
-            font-weight: 500;
-            line-height: 28.06px;
-            text-align: left;
-            text-underline-position: from-font;
-            text-decoration-skip-ink: none;
-            color: #3DCFB6;
-        }
-    }
-}
+  > h2 {
+    background-color: transparent;
+    color: rgb(172, 172, 172);
+  }
 
-.img-box {
-    position: relative;
-    display: inline-block;
-  
-    .img-main {
-      width: 528px;
-      border-radius: 36px;
-      z-index: 2;
-      position: relative;
-      display: block;
-    }
-  
-    .img-background {
-      width: 536px;
-      height: 528px;
-      border-radius: 36px;
-      position: absolute;
-      top: 20px;
-      left: -14px;
-      z-index: 1;
-      opacity: 0;                // unsichtbar standard
-      transform: translate(0,0); // Ausgangsposition
-      transition: opacity 0.3s ease, transform 0.3s ease;
-    }
-  
-    &:hover .img-background {
-      opacity: 1;
-      transform: translate(-12px, 12px); // leicht nach links-unten verschoben
+  > div {
+    > h3 {
+      margin-top: 200px;
+      font-family: "Karla";
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 28px;
+      color: #3dcfb6;
     }
   }
-  
-
-.about-me{
-    background-color: #3DCFB61A;
-    border: 1px, solid #3DCFB6;
-    border-radius: 10px;
-    padding: 16px;
-    width: 500px;
-    margin-top: 20px;
-    >h2{
-        color: #3DCFB6;
-        font-family: Fira Code;
-        font-size: 64px;
-        font-weight: 700;
-        line-height: 64px;
-        letter-spacing: -0.03em;
-        text-align: left;
-        text-underline-position: from-font;
-        text-decoration-skip-ink: none; 
-        margin-bottom: 16px;
-    }
-    >p{
-        color:#FFFFFF;
-        cursor: default;
-        font-family: Karla;
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 21.6px;
-        text-align: left;
-        text-underline-position: from-font;
-        text-decoration-skip-ink: none;
-        margin-bottom: 24px;
-    }
-    >div{
-        >img{
-            width: 20px;
-            height: 20px;
-            padding: 8px;
-        }
-        >span{
-            margin-bottom: 16px;
-        }
-    }
 }
 
-.flex{
-    display: flex;
+/* === Profile Image Box === */
+.img-box {
+  position: relative;
+  display: inline-block;
+
+  .img-main {
+    width: 528px;
+    border-radius: 36px;
+    z-index: 2;
+    position: relative;
+    display: block;
+  }
+
+  .img-background {
+    width: 536px;
+    height: 528px;
+    border-radius: 36px;
+    position: absolute;
+    top: 20px;
+    left: -14px;
+    z-index: 1;
+    opacity: 0; /* initially hidden */
+    transform: translate(0, 0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  &:hover .img-background {
+    opacity: 1;
+    transform: translate(-12px, 12px); /* subtle hover shift */
+  }
 }
 
-.my-attributes{
-    color: #dbd8d8;
+/* === About Me Box === */
+.about-me {
+  background-color: #3dcfb61a;
+  border: 1px solid #3dcfb6;
+  border-radius: 10px;
+  padding: 16px;
+  width: 500px;
+  margin-top: 20px;
+
+  > h2 {
+    color: #3dcfb6;
+    font-family: "Fira Code";
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 64px;
+    letter-spacing: -0.03em;
+    margin-bottom: 16px;
+  }
+
+  > p {
+    color: #ffffff;
     cursor: default;
+    font-family: "Karla";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    margin-bottom: 24px;
+  }
 
-    &:hover{
-        color: whitesmoke;
+  > div {
+    > img {
+      width: 20px;
+      height: 20px;
+      padding: 8px;
     }
+
+    > span {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+/* === Attribute Row === */
+.flex {
+  display: flex;
+}
+
+/* === Attribute Text === */
+.my-attributes {
+  color: #dbd8d8;
+  cursor: default;
+
+  &:hover {
+    color: whitesmoke;
+  }
 }

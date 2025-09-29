@@ -1,49 +1,57 @@
-/* --- Layout: Footer immer unten --- */
+/* 🔹 Layout: Footer always at the bottom */
 :host {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: radial-gradient(circle at top left, #002a24, #0a2f2a 60%, #000 100%); 
-  /* Beispiel: anpassen an dein Background-Image */
+  background: radial-gradient(
+    circle at top left,
+    #002a24,
+    #0a2f2a 60%,
+    #000 100%
+  );
   background-attachment: fixed;
 }
 
-/* Inhalt füllt den Platz über dem Footer */
+/* 🔹 Section (main content area) */
 section {
-  flex: 1 0 auto;              /* nimmt restliche Höhe ein */
-  position: relative;          /* für das bg-img */
+  flex: 1 0 auto; /* fill remaining height above footer */
+  position: relative;
   margin: 0 auto;
   color: #fff;
   font-family: "Karla", sans-serif;
 
-  .content{
+  /* Content wrapper */
+  .content {
     padding-left: 140px;
     padding-right: 140px;
     margin-top: 48px;
-    margin-bottom: 0;          /* kein „Spalt“ vor dem Footer */
-    padding-bottom: 48px;      /* stattdessen Innenabstand */
+    margin-bottom: 0;
+    padding-bottom: 48px;
   }
 
-  .title{
+  /* Page title */
+  .title {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
+  /* Background image */
   .bg-img {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1;               /* Hintergrund hinter allem */
+    z-index: -1; /* behind content */
   }
 
+  /* Typography */
   h1 {
     font-family: Karla;
     font-size: 64px;
     margin-bottom: 64px;
-    color: #3DCFB6;
+    color: #3dcfb6;
   }
 
   h2 {
@@ -54,22 +62,22 @@ section {
     color: white;
   }
 
-  p, ul {
+  p,
+  ul {
     font-family: Karla;
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 16px;
-    color: #3DCFB6;
-
+    color: #3dcfb6;
   }
 
-  li{
+  li {
     font-family: Karla;
-    color: #3DCFB6;
+    color: #3dcfb6;
   }
 
   a {
-    color: #3DCFB6;
+    color: #3dcfb6;
     text-decoration: underline;
 
     &:hover {
@@ -78,8 +86,7 @@ section {
   }
 }
 
-/* --- Footer-Theme nur auf Legal Notice ---
-   (keine Linie, transparent, keine feste Höhe) */
+/* 🔹 Footer theme (only for Legal Notice page) */
 :host ::ng-deep app-footer.footer-legal section {
   background: transparent;
   border: none;
@@ -88,7 +95,7 @@ section {
   box-shadow: none;
 }
 
-/* optional, nur falls noch ein Restabstand oben bleibt */
+/* 🔹 Ensure footer sticks to bottom */
 app-footer {
-  margin-top: auto;            /* schiebt den Footer ans Seitenende */
+  margin-top: auto;
 }

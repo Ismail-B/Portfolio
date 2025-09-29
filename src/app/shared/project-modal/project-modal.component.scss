@@ -1,301 +1,197 @@
+/* 🔹 Modal backdrop */
 .modal-backdrop {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
-  
-  .modal-content {
-    padding: 32px;
-    border: 1px solid #3DCFB6;
-    border-radius: 32px;
-    display: flex;
-    gap: 32px;
-    max-width: 1000px;
-    width: 90%;
-    height: 60vh;
-    position: relative;   // wichtig: neuer stacking-context
-    color: #fff;
-    animation: fadeIn 0.3s ease;
-    z-index: 1;           // Inhalt über Hintergrund
-    overflow: hidden;     // damit bg-img nicht raussteht
-  }
-  
-  .bg-img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 32px;
-    z-index: -1;          // Hintergrund hinter allem
-  }
-  
-.left-content{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: start;
-    width: 520px;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
-.modal-subtitle{
-    color: #3DCFB6;
-    font-family: fira !important;
-    font-size: 24px;
+/* 🔹 Modal content */
+.modal-content {
+  padding: 32px;
+  border: 1px solid #3dcfb6;
+  border-radius: 32px;
+  display: flex;
+  gap: 32px;
+  max-width: 1000px;
+  width: 90%;
+  height: 60vh;
+  position: relative; /* new stacking context */
+  color: #fff;
+  animation: fadeIn 0.3s ease;
+  z-index: 1;
+  overflow: hidden; /* prevent bg-img from overflowing */
+}
+
+/* 🔹 Background image */
+.bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 32px;
+  z-index: -1;
+}
+
+/* 🔹 Left content */
+.left-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  width: 520px;
+}
+
+.modal-subtitle {
+  color: #3dcfb6;
+  font-family: fira !important;
+  font-size: 24px;
+  font-weight: bold;
+  max-width: 400px;
+  margin-bottom: 18px;
+}
+
+/* 🔹 Text content */
+.content {
+  h2 {
+    font-family: Karla;
+    font-size: 88px;
+    color: #3dcfb6;
+  }
+  h3 {
+    font-size: 48px;
     font-weight: bold;
-    max-width: 400px;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
+  }
+  p {
+    font-family: Karla;
+    max-width: 520px;
+  }
 }
 
-.content{
-    h2{
-        font-family: Karla;
-        font-size: 88px;
-        color: #3DCFB6;
-    }
-    h3{
-        font-size: 48px;
-        font-weight: bold;
-        margin-bottom: 20px;
-    }
-    p{
-        font-family: Karla;
-        max-width: 520px;
-    }
-}
-
-
+/* 🔹 Tech stack icons */
 .tech-icons {
-    margin-top: 16px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 32px;
-  
-    span {
-      display: inline-flex;
-      align-items: center;
-      font-family: Karla, sans-serif;
-      font-size: 16px;
-      color: white;
-  
-      img.tech-icon {
-        width: 24px;
-        height: 24px;
-        margin-right: 6px;
-      }
-    }
-  }
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 
-  .buttons {
-    display: flex;
-    justify-content: flex-start;
-    width: 500px;
-  
-    a {
-      font-size: 16px;
-      background-color: transparent;
-      border: 1px solid white;
-      width: 139px;
-      height: 32px;
-      text-decoration: none;
-      text-align: center;
-      border-radius: 100px;
-      margin: 24px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 4px; // etwas Abstand zwischen Text und Pfeil
-  
-      // Standardfarbe Pfeil grün
-      &::after {
-        content: "↗";
-        color: #3DCFB6;
-        display: inline-block;
-        transition: transform 0.2s ease;
-      }
-  
-      // Entfernt das extra "↗" im HTML, wenn du willst
-      // → Dann einfach im HTML "GitHub" / "Live Test" ohne den Pfeil schreiben
-  
-      &:hover {
-        cursor: pointer;
-        border: 1px solid #3DCFB6;
-        color: #3DCFB6;
-  
-        &::after {
-          transform: translate(3px, -3px); // nach rechts oben verschieben
-        }
-      }
+  span {
+    display: inline-flex;
+    align-items: center;
+    font-family: Karla, sans-serif;
+    font-size: 16px;
+    color: white;
+
+    img.tech-icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 6px;
     }
   }
-  
-.right-content{
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    justify-content: space-between;
-    width: 420px;
-    height: 570px;
-    img{
-        width: 420px;
-        border-radius: 32px;
-    }
 }
 
-.close-btn {
+/* 🔹 Buttons (GitHub / Live Demo) */
+.buttons {
+  display: flex;
+  justify-content: flex-start;
+  width: 500px;
+
+  a {
+    font-size: 16px;
     background-color: transparent;
-    border: none;
-    margin-top: 32px;
-    cursor: pointer;
-  
-    img {
-      width: 20px;
-      transition: all 0.2s ease; // Animation für Hover
+    border: 1px solid white;
+    width: 139px;
+    height: 32px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 100px;
+    margin: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+
+    /* arrow symbol */
+    &::after {
+      content: "↗";
+      color: #3dcfb6;
+      display: inline-block;
+      transition: transform 0.2s ease;
     }
-  
-    &:hover img {
+
+    &:hover {
       cursor: pointer;
-      transform: scale(1.2);   // leicht vergrößern
-      filter: invert(58%) sepia(88%) saturate(395%) hue-rotate(115deg) brightness(100%) contrast(92%);
-      // ergibt die Farbe #3DCFB6
+      border: 1px solid #3dcfb6;
+      color: #3dcfb6;
+
+      &::after {
+        transform: translate(3px, -3px);
+      }
     }
   }
-  
-  .forward-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: transparent;
-      border: none;
-      color: #3DCFB6;
-      cursor: pointer;
-  
-      img {
-        width: 18px;
-        margin-left: 12px;
-        transition: transform 0.2s ease; // Animation für Hover
-      }
-  
-      &:hover {
-        color: white;
-  
-        img {
-          transform: translateX(4px); // leicht nach rechts verschieben
-        }
-      }
+}
+
+/* 🔹 Right content */
+.right-content {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: space-between;
+  width: 420px;
+  height: 570px;
+
+  img {
+    width: 420px;
+    border-radius: 32px;
+  }
+}
+
+/* 🔹 Close button */
+.close-btn {
+  background-color: transparent;
+  border: none;
+  margin-top: 32px;
+  cursor: pointer;
+
+  img {
+    width: 20px;
+    transition: all 0.2s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.2);
+    filter: invert(58%) sepia(88%) saturate(395%) hue-rotate(115deg)
+      brightness(100%) contrast(92%);
+    /* results in color #3DCFB6 */
+  }
+}
+
+/* 🔹 Next project button */
+.forward-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  color: #3dcfb6;
+  cursor: pointer;
+
+  img {
+    width: 18px;
+    margin-left: 12px;
+    transition: transform 0.2s ease;
+  }
+
+  &:hover {
+    color: white;
+
+    img {
+      transform: translateX(4px);
     }
-  
-
-//   .close-btn {
-//     position: absolute;
-//     top: 16px;
-//     right: 16px;
-//     border: none;
-//     background: transparent;
-//     font-size: 28px;
-//     color: #fff;
-//     cursor: pointer;
-//   }
-  
-//   .modal-left {
-//     flex: 1;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: flex-start;
-//     }
-
-//   .title{
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: flex-start;
-//     h2 {
-//     font-size: 94px;
-//     color: #3DCFB6;
-//     margin: 0;
-//     }
-
-//     h3 {
-//     font-size: 48px;
-//     font-weight: bold;
-//     margin-bottom: 16px;
-//     }
-//   }
-
-//   .decription{
-//     .modal-subtitle {
-//         font-weight: bold;
-//         color: #3DCFB6;
-//       }
-//     p{
-
-//     }
-//   }
-
-//   .tech-icons {
-//     margin-top: 16px;
-//     span {
-//       margin-right: 8px;
-//       color: #3DCFB6;
-//     }
-//     }
-
-//     .buttons {
-//         display: flex;
-//         gap: 12px;
-//         margin-top: 24px;
-    
-//         a, button {
-//           padding: 10px 20px;
-//           border-radius: 6px;
-//           background: #222;
-//           color: #fff;
-//           border: 1px solid #3DCFB6;
-//           text-decoration: none;
-//           cursor: pointer;
-//           transition: all 0.3s;
-    
-//           &:hover {
-//             background: #3DCFB6;
-//             color: #111;
-//           }
-//         }
-//       }
-  
-//   .modal-right{
-//     display: flex;
-//     flex-direction: column;
-//     align-items: end;
-//     justify-content: space-between;
-//     border-radius: 8px;
-//     margin: 24px;
-
-//     button{
-//         background-color: transparent;
-//         height: 2rem;
-//         border-radius: 100px;
-    
-//         &:hover {
-//           cursor: pointer;
-//           border: 1px solid #3DCFB6;
-//           color: #3DCFB6;
-//         }
-//     }
-//   }
-
-//   .close-img{
-//     display: flex;
-//     flex-direction: column;
-//     align-items: end;
-//     justify-content: space-between;
-//     height: 60vh;
-//     margin: 24px;
-//     img{
-//         width: 400px;
-//         border-radius: 24px;
-//     }
-//   }
+  }
+}

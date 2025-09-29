@@ -1,45 +1,70 @@
+<!-- === Title Section === -->
 <section>
-  <img class="bg-img" src="./../../../assets/img/background/background.png" alt="Background">
+  <img class="bg-img" src="./../../../assets/img/background/background.png" alt="Background" />
 
+  <!-- === Navbar === -->
   <app-navbar></app-navbar>
 
+  <!-- === Title Content === -->
   <div class="title">
     <h2>{{ 'TITLE.SUBTITLE' | translate }}</h2>
     <h1>Ismail Baris</h1>
     <div class="title-btn">
-      <button (click)="scrollToSection('projects')">{{ 'TITLE.CTA_CHECK_WORK' | translate }}</button>
-      <button (click)="scrollToSection('contact-me')">{{ 'TITLE.CTA_CONTACT_ME' | translate }}</button>
+      <button (click)="scrollToSection('projects')">
+        {{ 'TITLE.CTA_CHECK_WORK' | translate }}
+      </button>
+      <button (click)="scrollToSection('contact-me')">
+        {{ 'TITLE.CTA_CONTACT_ME' | translate }}
+      </button>
     </div>
   </div>
 
+  <!-- === Animated Lines and Contact === -->
   <div class="animation">
     <div class="container-left">
       <div class="arrow-frame">
-        <img src="./../../../assets/img/icon/arrow-down.png" alt="">
+        <img src="./../../../assets/img/icon/arrow-down.png" alt="Arrow Down" />
       </div>
       <div class="left-line"></div>
     </div>
+
     <div>
       <div class="container-right">
         <p class="mail-address">
           <a href="mailto:contact&#64;ismail-baris.de">contact&#64;ismail-baris.de</a>
         </p>
+
         <div class="container-img">
-          <a href="https://github.com/Ismail-B" target="_blank" rel="noopener noreferrer" class="icon-wrapper">
-            <img 
-              src="./../../../assets/img/icon/Github.png" 
+          <!-- Github -->
+          <a
+            href="https://github.com/Ismail-B"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="icon-wrapper"
+          >
+            <img
+              src="./../../../assets/img/icon/Github.png"
               alt="Github Logo"
               class="icon"
               onmouseover="this.src='./../../../assets/img/icon/Github (1).png'"
-              onmouseout="this.src='./../../../assets/img/icon/Github.png'">
+              onmouseout="this.src='./../../../assets/img/icon/Github.png'"
+            />
           </a>
-          <a href="https://www.linkedin.com/in/ismail-baris-114668340/" target="_blank" rel="noopener noreferrer" class="icon-wrapper">
-            <img 
-              src="./../../../assets/img/icon/Linkedin.png" 
+
+          <!-- LinkedIn -->
+          <a
+            href="https://www.linkedin.com/in/ismail-baris-114668340/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="icon-wrapper"
+          >
+            <img
+              src="./../../../assets/img/icon/Linkedin.png"
               alt="LinkedIn Logo"
               class="icon"
               onmouseover="this.src='./../../../assets/img/icon/Linkedin (1).png'"
-              onmouseout="this.src='./../../../assets/img/icon/Linkedin.png'">
+              onmouseout="this.src='./../../../assets/img/icon/Linkedin.png'"
+            />
           </a>
         </div>
       </div>
@@ -47,6 +72,7 @@
     </div>
   </div>
 
+  <!-- === Banner Scrolling Text === -->
   <div class="banner">
     <div class="track">
       <span>{{ 'TITLE.BANNER.REMOTE' | translate }}</span><span>•</span>
@@ -55,7 +81,7 @@
       <span>{{ 'TITLE.BANNER.CITY' | translate }}</span><span>•</span>
       <span>{{ 'TITLE.BANNER.OPEN' | translate }}</span><span>•</span>
 
-      <!-- Wiederholung für Endlos-Scroll -->
+      <!-- Repeat for infinite scroll -->
       <span>{{ 'TITLE.BANNER.REMOTE' | translate }}</span><span>•</span>
       <span>{{ 'TITLE.BANNER.DEV' | translate }}</span><span>•</span>
       <span>{{ 'TITLE.BANNER.UI' | translate }}</span><span>•</span>

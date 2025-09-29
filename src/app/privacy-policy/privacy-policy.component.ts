@@ -8,9 +8,11 @@ import { TranslateModule } from '@ngx-translate/core';
   standalone: true,
   imports: [NavbarComponent, FooterComponent, TranslateModule],
   templateUrl: './privacy-policy.component.html',
-  styleUrl: './privacy-policy.component.scss'
+  styleUrls: ['./privacy-policy.component.scss']
 })
 export class PrivacyPolicyComponent implements OnInit {
+
+  // --- Scroll to Top on Init ---
   ngOnInit() {
     window.scrollTo(0, 0);
   }

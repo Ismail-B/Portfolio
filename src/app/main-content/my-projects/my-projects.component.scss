@@ -1,118 +1,124 @@
 section {
-    height: 70vh;
-    background-color: #1c1c1c;
-    padding: 48px;
-  
-    > h2 {
-      color: #3DCFB6;
-      font-family: Fira;
-      font-size: 64px;
-      font-weight: 700;
-      line-height: 64px;
-      margin-bottom: 24px;
-    }
-  
-    > h3 {
-      color: #3DCFB6;
-      font-family: Karla;
-      font-size: 24px;
-      font-weight: 700;
-      line-height: 28px;
-      margin-bottom: 24px;
-    }
-  
-    > p {
-      font-family: Karla;
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 22px;
-      margin-bottom: 24px;
-    }
+  height: 70vh;
+  background-color: #1c1c1c;
+  padding: 48px;
+
+  /* Section Titles */
+  > h2 {
+    color: #3DCFB6;
+    font-family: Fira;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 64px;
+    margin-bottom: 24px;
   }
-  
-  .border-bottom {
-    border-bottom: 1px solid #3DCFB6;
+
+  > h3 {
+    color: #3DCFB6;
+    font-family: Karla;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    margin-bottom: 24px;
   }
-  
-  .project {
-    border-top: 1px solid #3DCFB6;
-    width: 60%;
-    height: 6rem;
-    display: flex;
+
+  > p {
+    font-family: Karla;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    margin-bottom: 24px;
+  }
+}
+
+/* Border utility */
+.border-bottom {
+  border-bottom: 1px solid #3DCFB6;
+}
+
+/* Project Entry */
+.project {
+  border-top: 1px solid #3DCFB6;
+  width: 60%;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  position: relative;
+  cursor: pointer;
+
+  /* Project Title + Arrow */
+  > span {
+    font-family: Fira;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    display: inline-flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 16px;
-    position: relative;
-    cursor: pointer;
-  
-    > span {
-      font-family: Fira;
-      font-size: 24px;
-      font-weight: 700;
-      line-height: 29px;
-      display: inline-flex;
-      align-items: center;
-  
-      .arrow {
-        width: 20px;
-        height: 20px;
-        margin-left: 4px;
-        opacity: 0;
-        transform: translateX(-6px);
-        transition: all 0.3s ease;
-      }
+
+    .arrow {
+      width: 20px;
+      height: 20px;
+      margin-left: 4px;
+      opacity: 0;
+      transform: translateX(-6px);
+      transition: all 0.3s ease;
     }
-  
-    > p {
-      font-family: Karla;
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 22px;
-  
-      span.pipe {
-        color: #3DCFB6;
-        font-weight: bold;
-      }
+  }
+
+  /* Project Tech Text */
+  > p {
+    font-family: Karla;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+
+    span.pipe {
+      color: #3DCFB6;
+      font-weight: bold;
     }
-  
+  }
+
+  /* Hover Preview Images */
+  .bg-img,
+  .preview-img {
+    position: absolute;
+    top: 50%;
+    right: -60%;
+    transform: translateY(-50%) translateX(30px);
+    width: 350px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 16px;
+    opacity: 0;
+    transition: all 0.4s ease;
+    pointer-events: none;
+  }
+
+  .preview-img {
+    top: 40%;
+    right: -56%;
+    z-index: 2;
+  }
+
+  .bg-img {
+    z-index: 1;
+  }
+
+  /* Hover State */
+  &:hover {
+    background-color: rgba(61, 207, 182, 0.3);
+
+    > span .arrow {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
     .bg-img,
     .preview-img {
-      position: absolute;
-      top: 50%;
-      right: -60%;
-      transform: translateY(-50%) translateX(30px);
-      width: 350px;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 16px;
-      opacity: 0;
-      transition: all 0.4s ease;
-      pointer-events: none;
-    }
-  
-    .preview-img {
-      top: 40%;
-      right: -56%;
-      z-index: 2;
-    }
-  
-    .bg-img {
-      z-index: 1;
-    }
-  
-    &:hover {
-      background-color: rgba(61, 207, 182, 0.3);
-  
-      > span .arrow {
-        opacity: 1;
-        transform: translateX(0);
-      }
-  
-      .bg-img,
-      .preview-img {
-        opacity: 1;
-        transform: translateX(0);
-      }
+      opacity: 1;
+      transform: translateX(0);
     }
   }
-  
+}

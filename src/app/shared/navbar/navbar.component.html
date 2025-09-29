@@ -1,6 +1,6 @@
 <div class="navbar">
   <nav>
-    <!-- Sprachumschalter -->
+    <!-- 🔹 Language switch -->
     <div
       class="language-switch"
       [ngClass]="{ 'en-active': currentLang === 'en', 'de-active': currentLang === 'de' }"
@@ -10,13 +10,19 @@
       <div class="highlight"></div>
     </div>
 
-    <!-- Navigation -->
-    <a (click)="navigateToSection('about-me')">{{ 'NAV.ABOUT' | translate }}</a>
-    <a (click)="navigateToSection('skills')">{{ 'NAV.SKILLS' | translate }}</a>
-    <a (click)="navigateToSection('projects')">{{ 'NAV.PROJECTS' | translate }}</a>
+    <!-- 🔹 Navigation links -->
+    <a (click)="navigateToSection('about-me')">
+      {{ 'NAV.ABOUT' | translate }}
+    </a>
+    <a (click)="navigateToSection('skills')">
+      {{ 'NAV.SKILLS' | translate }}
+    </a>
+    <a (click)="navigateToSection('projects')">
+      {{ 'NAV.PROJECTS' | translate }}
+    </a>
   </nav>
 
-  <!-- Logo + Name -->
+  <!-- 🔹 Logo + Name -->
   <div>
     <img src="./../../../assets/img/about_me/My-logo.png" alt="My Logo" />
     <h3>Ismail<br />Baris</h3>

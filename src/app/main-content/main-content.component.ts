@@ -7,13 +7,20 @@ import { SkillSetComponent } from './skill-set/skill-set.component';
 import { TitleComponent } from './title/title.component';
 import { FooterComponent } from '../shared/footer/footer.component';
 
+/* === Main Content Component === */
 @Component({
   selector: 'app-main-content',
   standalone: true,
-  imports: [AboutMeComponent, ContactMeComponent, MyProjectsComponent, ReferencesComponent,SkillSetComponent,TitleComponent,FooterComponent],
+  imports: [
+    AboutMeComponent,
+    ContactMeComponent,
+    MyProjectsComponent,
+    ReferencesComponent,
+    SkillSetComponent,
+    TitleComponent,
+    FooterComponent
+  ],
   templateUrl: './main-content.component.html',
-  styleUrl: './main-content.component.scss'
+  styleUrls: ['./main-content.component.scss']
 })
-export class MainContentComponent {
-
-}
+export class MainContentComponent {}

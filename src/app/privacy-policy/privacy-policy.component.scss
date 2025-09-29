@@ -3,28 +3,24 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: radial-gradient(circle at top left, #002a24, #0a2f2a 60%, #000 100%); 
-  /* Beispiel: anpassen an dein Background-Image */
-  background-attachment: fixed;
+  background: radial-gradient(circle at top left, #002a24, #0a2f2a 60%, #000 100%);
+  background-attachment: fixed; /* Fixiert das Hintergrundbild */
 }
 
-/* Inhalt füllt den Platz über dem Footer */
+/* --- Section-Layout --- */
 section {
-  flex: 1 0 auto;              /* nimmt restliche Höhe ein */
-  position: relative;          /* für das bg-img */
+  flex: 1 0 auto; /* füllt alles über dem Footer */
+  position: relative;
   margin: 0 auto;
   color: #fff;
   font-family: "Karla", sans-serif;
 
-  .content{
-    padding-left: 140px;
-    padding-right: 140px;
+  .content {
+    padding: 0 140px 48px; /* links/rechts + unten gleichmäßig */
     margin-top: 48px;
-    margin-bottom: 0;          /* kein „Spalt“ vor dem Footer */
-    padding-bottom: 48px;      /* stattdessen Innenabstand */
   }
 
-  .title{
+  .title {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,35 +32,34 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1;               /* Hintergrund hinter allem */
+    z-index: -1; /* Hintergrund hinter allem */
   }
 
   h1 {
-    font-family: Karla;
+    font-family: Karla, sans-serif;
     font-size: 64px;
     margin-bottom: 64px;
     color: #3DCFB6;
   }
 
   h2 {
-    font-family: Karla;
+    font-family: Karla, sans-serif;
     font-size: 19px;
-    margin-top: 24px;
-    margin-bottom: 12px;
+    margin: 24px 0 12px;
     color: white;
   }
 
-  p, ul {
-    font-family: Karla;
+  p,
+  ul {
+    font-family: Karla, sans-serif;
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 16px;
     color: #3DCFB6;
-
   }
 
-  li{
-    font-family: Karla;
+  li {
+    font-family: Karla, sans-serif;
     color: #3DCFB6;
   }
 
@@ -78,8 +73,7 @@ section {
   }
 }
 
-/* --- Footer-Theme nur auf Legal Notice ---
-   (keine Linie, transparent, keine feste Höhe) */
+/* --- Footer für Legal Notice + Privacy Policy --- */
 :host ::ng-deep app-footer.footer-legal section {
   background: transparent;
   border: none;
@@ -88,7 +82,7 @@ section {
   box-shadow: none;
 }
 
-/* optional, nur falls noch ein Restabstand oben bleibt */
+/* Footer bleibt immer unten */
 app-footer {
-  margin-top: auto;            /* schiebt den Footer ans Seitenende */
+  margin-top: auto;
 }

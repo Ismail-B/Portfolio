@@ -1,15 +1,21 @@
 <div class="modal-backdrop" (click)="onBackdropClick()">
   <div class="modal-content" (click)="$event.stopPropagation()">
-    <img class="bg-img" src="./../../../assets/img/background/background.png" alt="Background">
+    <!-- 🔹 Background image -->
+    <img
+      class="bg-img"
+      src="./../../../assets/img/background/background.png"
+      alt="Background"
+    />
 
+    <!-- 🔹 Left content: Project details -->
     <div class="left-content">
       <div class="content">
-        <h2>{{ (currentIndex + 1) | number:'2.0' }}</h2>
+        <h2>{{ (currentIndex + 1) | number: '2.0' }}</h2>
         <h3>{{ project.title }}</h3>
         <p class="modal-subtitle">{{ 'PROJECTS.MODAL.ABOUT' | translate }}</p>
         <p>{{ project.descriptionKey | translate }}</p>
 
-
+        <!-- 🔹 Tech stack icons -->
         <div class="tech-icons">
           <span *ngFor="let tech of project.techStack">
             <img [src]="tech.icon" [alt]="tech.name" class="tech-icon" />
@@ -18,24 +24,39 @@
         </div>
       </div>
 
+      <!-- 🔹 Action buttons -->
       <div class="buttons">
         <a [href]="project.github" target="_blank" rel="noopener noreferrer">
           {{ 'PROJECTS.MODAL.GITHUB' | translate }}
         </a>
-        <a *ngIf="project.live" [href]="project.live" target="_blank" rel="noopener noreferrer">
+        <a
+          *ngIf="project.live"
+          [href]="project.live"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {{ 'PROJECTS.MODAL.LIVE' | translate }}
         </a>
       </div>
     </div>
 
+    <!-- 🔹 Right content: Image + navigation -->
     <div class="right-content">
+      <!-- Close button -->
       <button class="close-btn" (click)="close.emit()">
-        <img src="../../../assets/img/icon/close_small.png" alt="">
+        <img src="../../../assets/img/icon/close_small.png" alt="Close" />
       </button>
+
+      <!-- Project preview image -->
       <img [src]="project.image" [alt]="project.title" />
+
+      <!-- Next project button -->
       <button class="forward-btn" (click)="nextProject()">
         {{ 'PROJECTS.MODAL.NEXT' | translate }}
-        <img src="../../../assets/img/references/arrow-right-colored.png" alt="">
+        <img
+          src="../../../assets/img/references/arrow-right-colored.png"
+          alt="Next"
+        />
       </button>
     </div>
   </div>

@@ -1,6 +1,6 @@
 @import './../../../styles.scss';
 
-
+/* === Skills Section === */
 section {
   height: 70vh;
   padding: 48px;
@@ -8,7 +8,7 @@ section {
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  background-color: #1C1C1C;
+  background-color: #1c1c1c;
   position: relative;
   overflow: hidden;
 
@@ -32,9 +32,8 @@ section {
     font-size: 24px;
     font-weight: 700;
     line-height: 28.06px;
-    text-align: left;
     margin-bottom: 16px;
-    color: #3DCFB6;
+    color: #3dcfb6;
     z-index: 1;
   }
 
@@ -47,10 +46,11 @@ section {
   }
 }
 
+/* === Skill Set Box === */
 .skill-set {
-  background-color: #3DCFB61A;
+  background-color: #3dcfb61a;
   border-radius: 30px;
-  border: 1px solid #3DCFB6;
+  border: 1px solid #3dcfb6;
   padding: 32px;
   display: flex;
   justify-content: space-between;
@@ -61,7 +61,7 @@ section {
   z-index: 1;
 
   > h2 {
-    color: #3DCFB6;
+    color: #3dcfb6;
     font-family: Fira;
     font-size: 64px;
     font-weight: 700;
@@ -108,16 +108,18 @@ section {
 
     &:hover {
       cursor: pointer;
-      border: 1px solid #3DCFB6;
-      color: #3DCFB6;
+      border: 1px solid #3dcfb6;
+      color: #3dcfb6;
     }
   }
 }
 
+/* === Highlighted Skill === */
 .another_skill {
-  color: #3DCFB6;
+  color: #3dcfb6;
 }
 
+/* === Icons Grid === */
 .icons {
   width: 45%;
   display: grid;
@@ -146,6 +148,7 @@ section {
       cursor: default;
     }
 
+    /* === Tooltip === */
     .tooltip {
       position: absolute;
       bottom: 100%;
@@ -176,7 +179,7 @@ section {
       p {
         margin: 0 0 8px 0;
         font-size: 14px;
-        color: #3DCFB6;
+        color: #3dcfb6;
         text-align: center;
       }
 
@@ -197,7 +200,7 @@ section {
           span {
             font-size: 12px;
             margin-top: 4px;
-            color: #3DCFB6;
+            color: #3dcfb6;
           }
         }
       }

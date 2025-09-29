@@ -1,5 +1,6 @@
 @import './../../../styles.scss';
 
+/* === Title Section === */
 section {
   display: flex;
   flex-direction: column;
@@ -26,14 +27,16 @@ section {
   }
 }
 
+/* === Title Buttons === */
 .title-btn {
   > button:hover {
     cursor: pointer;
-    border: 1px solid #3DCFB6;
-    color: #3DCFB6;
+    border: 1px solid #3dcfb6;
+    color: #3dcfb6;
   }
 }
 
+/* === Animation Section === */
 .animation {
   height: 629px;
   display: flex;
@@ -45,10 +48,11 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative; /* macht jede Spalte zum Anker für absolute Kinder */
+    position: relative;
   }
 }
 
+/* === Contact Icons Container === */
 .container-img {
   display: flex;
   flex-direction: column;
@@ -63,6 +67,7 @@ section {
   }
 }
 
+/* === Banner === */
 .banner {
   width: 100%;
   height: 80px;
@@ -84,7 +89,7 @@ section {
     span {
       font-family: Karla, sans-serif;
       font-size: 32px;
-      color: #3DCFB6;
+      color: #3dcfb6;
       white-space: nowrap;
       padding-right: 64px;
     }
@@ -92,10 +97,15 @@ section {
 }
 
 @keyframes scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
+/* === Right Container (Email + Icons) === */
 .container-right {
   display: flex;
   flex-direction: column;
@@ -109,6 +119,7 @@ section {
   }
 }
 
+/* === Email Address === */
 .mail-address {
   position: relative;
   top: -120px;
@@ -118,15 +129,16 @@ section {
     color: white;
     text-decoration: none;
     display: inline-block;
-    white-space: nowrap;   // verhindert Zeilenumbruch
+    white-space: nowrap;
 
     &:hover {
       cursor: pointer;
-      color: #3DCFB6;
+      color: #3dcfb6;
     }
   }
 }
 
+/* === Left Container (Arrow + Line) === */
 .container-left {
   width: 80px;
 
@@ -136,9 +148,15 @@ section {
 }
 
 @keyframes floatY {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(10px); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .arrow-frame {
@@ -160,7 +178,7 @@ section {
   bottom: -69px;
   right: 0;
   width: 0;
-  border-right: 1px solid #3DCFB6;
+  border-right: 1px solid #3dcfb6;
   z-index: 1;
   pointer-events: none;
 }
@@ -176,6 +194,7 @@ section {
   pointer-events: none;
 }
 
+/* === Title Content === */
 .title {
   height: 60vh;
   display: flex;
@@ -187,7 +206,7 @@ section {
     font-size: 40px;
     font-weight: 400;
     line-height: 40px;
-    color: #D9D9D9;
+    color: #d9d9d9;
   }
 
   > h1 {
@@ -196,7 +215,7 @@ section {
     font-weight: 700;
     line-height: 128px;
     letter-spacing: -0.02em;
-    color: #D9D9D9;
+    color: #d9d9d9;
   }
 
   > div {
@@ -213,15 +232,17 @@ section {
       border-radius: 100px;
       height: 40px;
       width: 150px;
+
       &:hover {
         cursor: pointer;
-        border: 1px solid #3DCFB6;
-        color: #3DCFB6;
+        border: 1px solid #3dcfb6;
+        color: #3dcfb6;
       }
     }
   }
 }
 
+/* === Social Icons === */
 .icon-wrapper {
   position: relative;
   width: 50px;

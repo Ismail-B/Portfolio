@@ -3,12 +3,18 @@ import { NavbarComponent } from '../shared/navbar/navbar.component';
 import { FooterComponent } from '../shared/footer/footer.component';
 import { TranslateModule } from '@ngx-translate/core';
 
+/**
+ * Legal Notice Page
+ * - Displays legal information (Impressum)
+ * - Includes navbar, footer, and translations
+ * - Scrolls to top on load
+ */
 @Component({
   selector: 'app-legal-notice',
   standalone: true,
   imports: [NavbarComponent, FooterComponent, TranslateModule],
   templateUrl: './legal-notice.component.html',
-  styleUrl: './legal-notice.component.scss'
+  styleUrls: ['./legal-notice.component.scss']
 })
 export class LegalNoticeComponent implements OnInit {
   ngOnInit() {

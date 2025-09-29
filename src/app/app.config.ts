@@ -5,17 +5,17 @@ import { provideHttpClient } from '@angular/common/http';
 import { provideTranslation } from './translate.config';
 import { TranslateService } from '@ngx-translate/core';
 
+/* === Language Initialization === */
 function initLanguage(translate: TranslateService) {
   return () => {
     const saved = localStorage.getItem('lang') || 'en';
     translate.addLangs(['en', 'de']);
-    // setDefaultLang = Anzeige, falls ein Key fehlt
-    translate.setDefaultLang('en');
-    // aktive Sprache auf die gespeicherte setzen
-    translate.use(saved);
+    translate.setDefaultLang('en'); // fallback if key is missing
+    translate.use(saved); // use saved or default language
   };
 }
 
+/* === App Configuration === */
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
@@ -25,7 +25,7 @@ export const appConfig: ApplicationConfig = {
       provide: APP_INITIALIZER,
       deps: [TranslateService],
       useFactory: initLanguage,
-      multi: true,
-    },
-  ],
+      multi: true
+    }
+  ]
 };

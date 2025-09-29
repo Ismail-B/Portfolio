@@ -5,11 +5,13 @@ import { TranslateService } from '@ngx-translate/core';
 export class LanguageService {
   constructor(private translate: TranslateService) {}
 
+  // --- Set Language & Save to LocalStorage ---
   setLanguage(lang: string) {
     this.translate.use(lang);
     localStorage.setItem('lang', lang);
   }
 
+  // --- Get Current Language (Translate > LocalStorage > Default > 'en') ---
   getCurrentLanguage(): string {
     return (
       this.translate.currentLang ||

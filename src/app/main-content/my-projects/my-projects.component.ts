@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { ProjectModalComponent } from '../../shared/project-modal/project-modal.component';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
+import { ProjectModalComponent } from '../../shared/project-modal/project-modal.component';
 
 @Component({
   selector: 'app-my-projects',
@@ -11,6 +11,9 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrls: ['./my-projects.component.scss']
 })
 export class MyProjectsComponent {
+  /* --------------------------------------
+   * List of all featured projects
+   * -------------------------------------- */
   projects = [
     {
       title: 'Join',
@@ -53,16 +56,22 @@ export class MyProjectsComponent {
     }
   ];
 
+  /* --------------------------------------
+   * State for currently opened modal
+   * -------------------------------------- */
   selectedProjectIndex: number | null = null;
 
+  /* --------------------------------------
+   * Open / Close / Update modal
+   * -------------------------------------- */
   openModal(index: number) {
     this.selectedProjectIndex = index;
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden'; // disable scroll in background
   }
 
   closeModal() {
     this.selectedProjectIndex = null;
-    document.body.style.overflow = 'auto';
+    document.body.style.overflow = 'auto'; // re-enable scroll
   }
 
   updateProjectIndex(newIndex: number) {

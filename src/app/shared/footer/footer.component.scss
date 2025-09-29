@@ -1,75 +1,85 @@
-section{
-    background-color: #1c1c1c;
-    height: 20%;
-    padding: 32px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    >h4{
-        color: #3DCFB6;
+/* 🔹 Footer container */
+section {
+  background-color: #1c1c1c;
+  height: 20%;
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  > h4 {
+    color: #3dcfb6;
+  }
+
+  > div {
+    > div {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 16px;
+
+      > h3 {
+        color: whitesmoke;
+        font-family: "Karla", serif;
+        font-size: 24px;
+        font-weight: 900;
+        text-align: start;
+      }
     }
-    >div{
-        >div{
-            display: flex;
-            gap: 8px;
-            margin-bottom: 16px;
-            >h3{
-                color: whitesmoke;
-                font-family: "Karla", serif;
-                font-size: 24px;
-                font-weight: 900;
-                text-align: start;
-            }
-        }
-    }
+  }
 }
 
-.links{
-    display: flex;
-    flex-direction: column;
-    > a {
-        position: relative;           // wichtig, damit ::before relativ positioniert wird
-        text-decoration: none;
-        font-family: Karla;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 19.2px;
-        text-align: left;
-        text-underline-position: from-font;
-        text-decoration-skip-ink: none;
-        margin-bottom: 8px;
-        color: inherit;               // gleiche Textfarbe wie Eltern
-    
-        &::before {
-          content: "";
-          position: absolute;
-          left: -12px;                // Abstand links vom Text
-          top: 50%;
-          transform: translateY(-50%);
-          width: 6px;                 // Größe des Punkts
-          height: 6px;
-          border-radius: 50%;
-          background-color: #3DCFB6;
-          opacity: 0;                 // unsichtbar im Normalzustand
-          transition: opacity 0.2s ease;
-        }
-    
-        &:hover {
-          color: #3DCFB6;
-    
-          &::before {
-            opacity: 1;               // Punkt sichtbar beim Hover
-          }
-        }
-      }
-    >p{
-        font-family: Karla;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 19.2px;
-        text-align: left;
-        text-underline-position: from-font;
-        text-decoration-skip-ink: none;
-        margin-bottom: 8px;
+/* 🔹 Footer links (columns) */
+.links {
+  display: flex;
+  flex-direction: column;
+
+  /* 🔹 Link styling */
+  > a {
+    position: relative; /* required for ::before */
+    text-decoration: none;
+    font-family: Karla;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-bottom: 8px;
+    color: inherit;
+
+    /* 🔹 Dot before link (hover effect) */
+    &::before {
+      content: "";
+      position: absolute;
+      left: -12px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: #3dcfb6;
+      opacity: 0;
+      transition: opacity 0.2s ease;
     }
+
+    &:hover {
+      color: #3dcfb6;
+
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  /* 🔹 Text styling (non-links) */
+  > p {
+    font-family: Karla;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-bottom: 8px;
+  }
 }

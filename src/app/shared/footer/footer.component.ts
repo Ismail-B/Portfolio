@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
+/* 🔹 Footer component */
 @Component({
   selector: 'app-footer',
   standalone: true,
@@ -9,5 +10,5 @@ import { RouterModule } from '@angular/router';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-
+  // Currently no logic required
 }

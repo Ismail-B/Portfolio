@@ -1,4 +1,5 @@
 <section id="contact-me">
+  <!-- --- Left Column: Intro Text --- -->
   <div>
     <h3>{{ 'CONTACT.HEADER' | translate }}</h3>
     <h2 [innerHTML]="'CONTACT.SUBHEADER' | translate"></h2>
@@ -13,41 +14,42 @@
     </div>
   </div>
 
+  <!-- --- Right Column: Contact Form --- -->
   <div>
-    <!-- Name -->
+    <!-- --- Name Input --- -->
     <div class="input-box">
       <span class="title">{{ 'CONTACT.NAME_LABEL' | translate }}</span>
       <input type="text"
              [placeholder]="!errors.name ? ('CONTACT.NAME_PLACEHOLDER' | translate) : ''"
-             [ngClass]="{'error-input': errors.name}"
+             [ngClass]="{ 'error-input': errors.name }"
              [value]="errors.name ? ('CONTACT.NAME_ERROR' | translate) : name"
              (input)="name = $any($event.target).value"
              (focus)="clearError('name')">
     </div>
 
-    <!-- Email -->
+    <!-- --- Email Input --- -->
     <div class="input-box">
       <span class="title">{{ 'CONTACT.EMAIL_LABEL' | translate }}</span>
       <input type="text"
              [placeholder]="!errors.email ? ('CONTACT.EMAIL_PLACEHOLDER' | translate) : ''"
-             [ngClass]="{'error-input': errors.email}"
+             [ngClass]="{ 'error-input': errors.email }"
              [value]="errors.email ? (errors.emailInvalid ? ('CONTACT.EMAIL_INVALID' | translate) : ('CONTACT.EMAIL_ERROR' | translate)) : email"
              (input)="email = $any($event.target).value"
              (focus)="clearError('email')">
     </div>
 
-    <!-- Message -->
+    <!-- --- Message Input --- -->
     <div class="input-box">
       <span class="title">{{ 'CONTACT.MESSAGE_LABEL' | translate }}</span>
       <input type="text"
              [placeholder]="!errors.message ? ('CONTACT.MESSAGE_PLACEHOLDER' | translate) : ''"
-             [ngClass]="{'error-input': errors.message}"
+             [ngClass]="{ 'error-input': errors.message }"
              [value]="errors.message ? ('CONTACT.MESSAGE_ERROR' | translate) : message"
              (input)="message = $any($event.target).value"
              (focus)="clearError('message')">
     </div>
 
-    <!-- Checkbox -->
+    <!-- --- Privacy Checkbox --- -->
     <div class="input-box">
       <div class="checkbox">
         <input type="checkbox" [(ngModel)]="accepted" (change)="clearError('privacy')">
@@ -62,12 +64,12 @@
       </small>
     </div>
 
-    <!-- Button -->
+    <!-- --- Submit Button --- -->
     <div>
       <button (click)="onSubmit()">{{ 'CONTACT.BUTTON' | translate }}</button>
     </div>
 
-    <!-- Erfolgsmeldung -->
+    <!-- --- Success Message --- -->
     <div *ngIf="successMessage" class="success-message">
       {{ successMessage }}
     </div>

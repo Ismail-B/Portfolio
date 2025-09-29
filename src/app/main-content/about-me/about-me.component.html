@@ -1,26 +1,41 @@
 <section id="about-me">
+  <!-- Profile Images -->
   <div class="img-box">
-    <img class="img-main" src="./../../../assets/img/about_me/mein-foto.JPG" alt="Picture of Ismail Baris">
-    <img class="img-background" src="./../../../assets/img/background/img-background.png" alt="Background image">
+    <img
+      class="img-main"
+      src="./../../../assets/img/about_me/mein-foto.JPG"
+      alt="Picture of Ismail Baris"
+    />
+    <img
+      class="img-background"
+      src="./../../../assets/img/background/img-background.png"
+      alt="Background image"
+    />
   </div>
+
+  <!-- About Me Content -->
   <div>
     <h3>{{ 'ABOUT.WHO' | translate }}</h3>
+
     <div class="about-me">
       <h2>{{ 'ABOUT.HEADER' | translate }}</h2>
       <p>{{ 'ABOUT.INTRO' | translate }}</p>
 
+      <!-- Attribute: Location -->
       <div class="flex">
-        <img src="./../../../assets/img/highlights/location_on.png" alt="">
+        <img src="./../../../assets/img/highlights/location_on.png" alt="Location" />
         <span class="my-attributes">{{ 'ABOUT.ATTRIBUTES.LOCATION' | translate }}</span>
       </div>
 
+      <!-- Attribute: Problem Solving -->
       <div class="flex">
-        <img src="./../../../assets/img/highlights/cognition.png" alt="">
+        <img src="./../../../assets/img/highlights/cognition.png" alt="Problem Solving" />
         <span class="my-attributes">{{ 'ABOUT.ATTRIBUTES.PROBLEM_SOLVING' | translate }}</span>
       </div>
 
+      <!-- Attribute: Technical Foundation -->
       <div class="flex">
-        <img src="./../../../assets/img/highlights/new_releases.png" alt="">
+        <img src="./../../../assets/img/highlights/new_releases.png" alt="Technical Foundation" />
         <span class="my-attributes">{{ 'ABOUT.ATTRIBUTES.TECH_FOUNDATION' | translate }}</span>
       </div>
     </div>

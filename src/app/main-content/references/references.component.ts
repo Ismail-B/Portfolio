@@ -2,11 +2,13 @@ import { Component } from '@angular/core';
 import { NgFor, NgClass } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 
+/* === Reference Model === */
 interface Reference {
   textKey: string;
   authorKey: string;
 }
 
+/* === References Component === */
 @Component({
   selector: 'app-references',
   standalone: true,
@@ -15,6 +17,7 @@ interface Reference {
   styleUrls: ['./references.component.scss']
 })
 export class ReferencesComponent {
+  /* === Data === */
   references: Reference[] = [
     { textKey: 'REFERENCES.REF1.TEXT', authorKey: 'REFERENCES.REF1.AUTHOR' },
     { textKey: 'REFERENCES.REF2.TEXT', authorKey: 'REFERENCES.REF2.AUTHOR' },
@@ -23,6 +26,7 @@ export class ReferencesComponent {
 
   currentIndex = 0;
 
+  /* === Navigation Methods === */
   prev(): void {
     this.currentIndex =
       (this.currentIndex - 1 + this.references.length) % this.references.length;
@@ -36,6 +40,7 @@ export class ReferencesComponent {
     this.currentIndex = index;
   }
 
+  /* === State Helpers === */
   isActive(i: number): boolean {
     return i === this.currentIndex;
   }
