@@ -6,7 +6,7 @@ section{
     padding: 48px;
     gap: 52px;
     >div{
-        width: 50%;
+        width: 49%;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -199,41 +199,47 @@ section{
       }
 }
 
-.checkbox-text{
+.checkbox-text {
     display: flex;
+    flex-wrap: wrap;      // erlaubt Umbruch bei langen Texten
     margin-left: 12px;
-    >p{
-        font-family: Karla;
-        font-size: 15px;
-        font-weight: 400;
-        line-height: 18px;
-        text-align: left;
-        text-underline-position: from-font;
-        text-decoration-skip-ink: none;
-        white-space: nowrap;
+    gap: 4px;             // kleiner Abstand zwischen p und a
+  
+    > p {
+      font-family: Karla;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 18px;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      white-space: normal;      // ❌ statt nowrap → Texte dürfen umbrechen
+      margin: 0;                // optional: verhindert unerwünschte Abstände
     }
-    >a{
-        margin-left: 8px;
-        margin-right: 8px;
-        font-family: Fira;
-        font-size: 15px;
-        font-weight: 400;
-        line-height: 18px;
-        letter-spacing: -0.03em;
-        text-align: left;
-        text-underline-position: from-font;
-        text-decoration-skip-ink: none;
-        color: #3DCFB6;
-        text-decoration: none;
-        white-space: nowrap;
-        &:hover{
-            color: white;
-            text-decoration: underline;
-            text-decoration-color: #3DCFB6;
-            text-underline-offset: 8px;
-        }
+  
+    > a {
+      font-family: Fira;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 18px;
+      letter-spacing: -0.03em;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      color: #3DCFB6;
+      text-decoration: none;
+      white-space: nowrap;      // ✅ Link bleibt ein Block
+      margin: 0 4px;            // gleichmäßiger Abstand links/rechts
+  
+      &:hover {
+        color: white;
+        text-decoration: underline;
+        text-decoration-color: #3DCFB6;
+        text-underline-offset: 8px;
+      }
     }
-}
+  }
+  
 
 .error {
     color: #d17a7a;
