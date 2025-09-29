@@ -20,9 +20,10 @@
     <div class="input-box">
       <span class="title">What's your name?</span>
       <input type="text"
-             [placeholder]="errors.name ? '' : 'Your name goes here'"
+             [placeholder]="!errors.name ? 'Your name goes here' : ''"
              [ngClass]="{'error-input': errors.name}"
-             [(ngModel)]="name"
+             [value]="errors.name ? 'Oops! It seems your name is missing' : name"
+             (input)="name = $any($event.target).value"
              (focus)="clearError('name')">
     </div>
 
@@ -30,9 +31,10 @@
     <div class="input-box">
       <span class="title">What's your email?</span>
       <input type="text"
-             [placeholder]="errors.email ? '' : 'yourEmail@email.com'"
+             [placeholder]="!errors.email ? 'yourEmail@email.com' : ''"
              [ngClass]="{'error-input': errors.email}"
-             [(ngModel)]="email"
+             [value]="errors.email ? (errors.emailInvalid ? 'Hoppla! Your Email is invalid' : 'Hoppla! Your Email is required') : email"
+             (input)="email = $any($event.target).value"
              (focus)="clearError('email')">
     </div>
 
@@ -40,9 +42,10 @@
     <div class="input-box">
       <span class="title">How can I help you?</span>
       <input type="text"
-             [placeholder]="errors.message ? '' : 'Hello Ismail, I am interested in...'"
+             [placeholder]="!errors.message ? 'Hello Ismail, I am interested in...' : ''"
              [ngClass]="{'error-input': errors.message}"
-             [(ngModel)]="message"
+             [value]="errors.message ? 'What do you need to develop?' : message"
+             (input)="message = $any($event.target).value"
              (focus)="clearError('message')">
     </div>
 
@@ -64,6 +67,11 @@
     <!-- Button -->
     <div>
       <button (click)="onSubmit()">Say Hello ;)</button>
+    </div>
+
+    <!-- Erfolgsmeldung -->
+    <div *ngIf="successMessage" class="success-message">
+      {{ successMessage }}
     </div>
   </div>
 </section>

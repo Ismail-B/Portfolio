@@ -240,5 +240,13 @@ section{
   }
   
   input.error-input {
-    color: #d17a7a !important; // Fehlertexte rot
+    color: #d17a7a !important; // Rot für Fehlertexte
+  }
+
+  .success-message {
+    margin-top: 16px;
+    color: #3DCFB6;
+    font-family: Karla;
+    font-size: 16px;
+    font-weight: 600;
   }
