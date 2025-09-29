@@ -1,29 +1,38 @@
 <div class="modal-backdrop" (click)="onBackdropClick()">
     <div class="modal-content" (click)="$event.stopPropagation()">
-    <img class="bg-img" src="./../../../assets/img/background/background.png" alt="Background">
-    <div class="left-content">
+      <img class="bg-img" src="./../../../assets/img/background/background.png" alt="Background">
+  
+      <div class="left-content">
         <div class="content">
-            <h2>{{ (currentIndex + 1) | number:'2.0' }}</h2>
-            <h3>{{ project.title }}</h3>
-            <p class="modal-subtitle">What is this project about?</p>
-            <p>{{ project.description }}</p>
-            <div class="tech-icons">
-                <span *ngFor="let tech of project.techStack">
-                    <img [src]="tech.icon" [alt]="tech.name" class="tech-icon" />
-                    {{ tech.name }}
-                </span>
-            </div>
+          <h2>{{ (currentIndex + 1) | number:'2.0' }}</h2>
+          <h3>{{ project.title }}</h3>
+          <p class="modal-subtitle">What is this project about?</p>
+          <p>{{ project.description }}</p>
+  
+          <div class="tech-icons">
+            <span *ngFor="let tech of project.techStack">
+              <img [src]="tech.icon" [alt]="tech.name" class="tech-icon" />
+              {{ tech.name }}
+            </span>
+          </div>
         </div>
-    <div class="buttons">
-        <a [href]="project.github" target="_blank">GitHub </a>
-        <a [href]="project.live" target="_blank">Live Test </a>
-    </div>
-</div>
-<div class="right-content">
-    <button class="close-btn" (click)="close.emit()"><img src="../../../assets/img/icon/close_small.png" alt=""></button>
-    <img [src]="project.image" [alt]="project.title" />
-    <button class="forward-btn" (click)="nextProject()">Next project <img src="../../../assets/img/references/arrow-right-colored.png" alt=""></button>
-</div>
+  
+        <div class="buttons">
+          <a [href]="project.github" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a *ngIf="project.live" [href]="project.live" target="_blank" rel="noopener noreferrer">Live Test</a>
+        </div>
+      </div>
+  
+      <div class="right-content">
+        <button class="close-btn" (click)="close.emit()">
+          <img src="../../../assets/img/icon/close_small.png" alt="">
+        </button>
+        <img [src]="project.image" [alt]="project.title" />
+        <button class="forward-btn" (click)="nextProject()">
+          Next project 
+          <img src="../../../assets/img/references/arrow-right-colored.png" alt="">
+        </button>
+      </div>
     </div>
   </div>
   

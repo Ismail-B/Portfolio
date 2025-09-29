@@ -22,19 +22,19 @@ export class MyProjectsComponent {
         { name: 'TypeScript', icon: 'assets/img/icon/typescript-project-icon.png' }
       ],
       github: 'https://github.com/Ismail-B/join',
-      live: 'https://join-live-link.com',
+      live: 'https://join.ismail-baris.de',
       image: 'assets/img/my_projects/join_preview.png'
     },
     {
       title: 'Shadow Shinobi',
-      description: 'Jump & run ninja game with fun mechanics and pixel art style. asdadwd dsadolaj jasjdo asdjosadj dasj oid oiajosiadjodj jsao jdoiasj oij sdiajoijd iosaj dj jasoij oidj aoij.',
+      description: 'Jump & run ninja game with fun mechanics and pixel art style.',
       techStack: [
         { name: 'HTML', icon: 'assets/img/icon/html-project-icon.png' },
         { name: 'CSS', icon: 'assets/img/icon/css-project-icon.png' },
         { name: 'JavaScript', icon: 'assets/img/icon/javascript-project-icon.png' }
       ],
       github: 'https://github.com/Ismail-B/Shadow-Shinobi',
-      live: 'https://shadow-shinobi-live.com',
+      live: 'https://shadowshinobi.ismail-baris.de',
       image: 'assets/img/my_projects/shadow_shinobi_preview.png'
     },
     {
@@ -47,7 +47,7 @@ export class MyProjectsComponent {
         { name: 'JavaScript', icon: 'assets/img/icon/javascript-project-icon.png' }
       ],
       github: 'https://github.com/Ismail-B/Pokedex',
-      live: 'https://pokedex-live.com',
+      live: 'https://pokedex.ismail-baris.de',
       image: 'assets/img/my_projects/pokedex_preview.png'
     }
   ];
