@@ -64,6 +64,11 @@ section{
                 height: 40px;
                 width: 150px;
                 cursor: pointer;
+                &:hover {
+                    cursor: pointer;
+                    border: 1px solid #3DCFB6;
+                    color: #3DCFB6;
+                  }
             }
         }
     }

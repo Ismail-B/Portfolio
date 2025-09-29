@@ -96,7 +96,7 @@ section {
   to { transform: translateX(-50%); }
 }
 
-.container-links {
+.container-right {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -118,6 +118,7 @@ section {
     color: white;
     text-decoration: none;
     display: inline-block;
+    white-space: nowrap;   // verhindert Zeilenumbruch
 
     &:hover {
       cursor: pointer;
