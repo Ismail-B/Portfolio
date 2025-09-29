@@ -1,0 +1,149 @@
+{
+    "NAV": {
+      "ABOUT": "Über mich",
+      "SKILLS": "Fähigkeiten",
+      "PROJECTS": "Projekte"
+    },
+    "TITLE": {
+      "HEADLINE": "Softwareentwickler",
+      "HELLO": "Willkommen in meinem Portfolio!",
+      "SUBTITLE": "Softwareentwickler",
+      "CTA_CHECK_WORK": "Zu meinen Projekten",
+      "CTA_CONTACT_ME": "Kontaktiere mich",
+      "BANNER": {
+        "REMOTE": "Verfügbar für Remote-Arbeit",
+        "DEV": "Entwickler",
+        "UI": "UI-Designer",
+        "CITY": "Mit Sitz in Aachen",
+        "OPEN": "Offen für Neues"
+      }
+    },
+    "LEGAL": {
+  "HEADER": "Impressum",
+  "INFO": "Angaben gemäß § 5 TMG",
+  "CONTACT": "Kontakt",
+  "RESPONSIBLE_HEADER": "Verantwortlich für den Inhalt",
+  "RESPONSIBLE_TEXT": "Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV: Ismail Baris, [Adresse wie oben]",
+  "LIABILITY_CONTENT_HEADER": "Haftung für Inhalte",
+  "LIABILITY_CONTENT_TEXT": "Die Inhalte dieser Website wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann ich jedoch keine Gewähr übernehmen.",
+  "LIABILITY_LINKS_HEADER": "Haftung für Links",
+  "LIABILITY_LINKS_TEXT": "Mein Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte ich keinen Einfluss habe. Deshalb kann ich für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.",
+  "COPYRIGHT_HEADER": "Urheberrecht",
+  "COPYRIGHT_TEXT": "Die durch mich erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Beiträge Dritter sind als solche gekennzeichnet. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen meiner schriftlichen Zustimmung."
+}
+,
+"PRIVACY": {
+  "HEADER": "Datenschutzerklärung",
+  "SECTION1": {
+    "TITLE": "1. Allgemeine Hinweise",
+    "TEXT": "Der Schutz Ihrer persönlichen Daten ist mir sehr wichtig. Diese Website kann in der Regel ohne Angabe personenbezogener Daten genutzt werden. Soweit personenbezogene Daten (z. B. Name, Adresse oder E-Mail-Adresse) erhoben werden, erfolgt dies stets auf freiwilliger Basis, soweit möglich."
+  },
+  "SECTION2": {
+    "TITLE": "2. Erhebung und Nutzung von Daten",
+    "TEXT": "Beim Besuch dieser Website können bestimmte Daten (z. B. Browsertyp, Betriebssystem, Referrer-URL und Zeitpunkt des Zugriffs) automatisch in Server-Logfiles gespeichert werden. Diese Daten sind nicht unmittelbar bestimmten Personen zuordenbar und werden nicht mit anderen Datenquellen zusammengeführt."
+  },
+  "SECTION3": {
+    "TITLE": "3. Kontakt",
+    "TEXT": "Wenn Sie mich per E-Mail kontaktieren, werden die von Ihnen angegebenen Daten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen gespeichert. Diese Daten werden nicht ohne Ihre Einwilligung weitergegeben."
+  },
+  "SECTION4": {
+    "TITLE": "4. Cookies",
+    "TEXT": "Diese Website kann Cookies verwenden, um die Benutzerfreundlichkeit zu verbessern. Cookies sind kleine Textdateien, die auf Ihrem Gerät gespeichert werden. Sie können Ihren Browser so konfigurieren, dass Cookies abgelehnt oder angezeigt werden, wenn Cookies gesetzt werden."
+  },
+  "SECTION5": {
+    "TITLE": "5. Ihre Rechte",
+    "TEXT": "Sie haben jederzeit das Recht, unentgeltlich Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger sowie den Zweck der Datenverarbeitung zu erhalten. Außerdem haben Sie das Recht, die Berichtigung, Sperrung oder Löschung dieser Daten zu verlangen."
+  },
+  "SECTION6": {
+    "TITLE": "6. Verantwortliche Stelle",
+    "TEXT": "Verantwortlich für die Datenverarbeitung auf dieser Website: Ismail Baris, Finkenstraße 2, 52531 Übach-Palenberg, Deutschland, E-Mail: contact@ismail-baris.de"
+  }
+}
+,
+    "ABOUT": {
+      "WHO": "Wer ich bin",
+      "HEADER": "Über mich",
+      "INTRO": "Hallo, ich bin ein deutschsprachiger Softwareentwickler aus Aachen. Begeistert von den grenzenlosen Möglichkeiten der IT, freue ich mich darauf, visuell ansprechende und intuitive Webseiten und Anwendungen zu entwickeln.",
+      "ATTRIBUTES": {
+        "LOCATION": "Ansässig in Aachen, Deutschland\nMit Wurzeln im Herzen Europas habe ich eine internationale Perspektive und schätze die Verbindung lokaler Kultur mit globalen Chancen in der IT-Branche.",
+        "PROBLEM_SOLVING": "Leidenschaft für kreatives Problemlösen\nIch habe Freude daran, komplexe Herausforderungen in elegante, benutzerfreundliche Lösungen zu verwandeln – durch die Kombination von technischer Expertise und einem Gespür für Design und Usability.",
+        "TECH_FOUNDATION": "Starke technische Basis\nErfahren in modernen Webtechnologien und Frameworks, erweitere ich mein Wissen kontinuierlich, um skalierbare, effiziente und zukunftssichere Anwendungen zu liefern."
+      }
+    },
+    "SKILLS": {
+      "TECHNOLOGIES": "Technologien",
+      "HEADER": "Fähigkeiten",
+      "INTRO": "Mein Werdegang umfasste die Arbeit an verschiedenen Projekten mit einer Vielzahl von Frontend-Technologien und -Konzepten. Ich bin offen für neue Technologien und Methoden, um meine Fähigkeiten kontinuierlich zu erweitern und in der sich ständig wandelnden Welt der Webentwicklung einen Schritt voraus zu sein.",
+      "YOU_NEED": "Du brauchst",
+      "ANOTHER": "eine andere Fähigkeit?",
+      "CONTACT_TEXT": "Kontaktiere mich gerne. Ich freue mich darauf, mein Wissen weiter auszubauen.",
+      "CTA": "Lass uns reden",
+      "GROWTH": "Wachstums­mentalität",
+      "TOOLTIP": "Ich habe ein besonderes Interesse am Lernen"
+    },
+    "PROJECTS": {
+      "PORTFOLIO": "Portfolio",
+      "FEATURED": "Ausgewählte Projekte",
+      "INTRO": "Hier findest du eine Auswahl meiner Arbeiten – interagiere mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+      "JOIN": {
+        "DESCRIPTION": "Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu.",
+        "TECH": "Angular | TypeScript | HTML | CSS | Firebase"
+      },
+      "SHINOBI": {
+        "DESCRIPTION": "Jump-&-Run-Ninja-Spiel mit unterhaltsamen Mechaniken und Pixel-Art-Stil.",
+        "TECH": "HTML | CSS | JavaScript"
+      },
+      "POKEDEX": {
+        "DESCRIPTION": "Einfache App zum Durchstöbern von Pokémon mithilfe einer API.",
+        "TECH": "HTML | CSS | API | JavaScript"
+      },
+      "MODAL": {
+        "ABOUT": "Worum geht es in diesem Projekt?",
+        "GITHUB": "GitHub",
+        "LIVE": "Live-Demo",
+        "NEXT": "Nächstes Projekt"
+      }
+    },
+    "REFERENCES": {
+      "HEADER": "Was meine Kollegen über mich sagen",
+      "REF1": {
+        "TEXT": "Lukas hat sich als zuverlässiger Gruppenpartner erwiesen. Seine technischen Fähigkeiten und sein proaktiver Ansatz waren entscheidend für den Erfolg unseres Projekts.",
+        "AUTHOR": "H.Janisch – Team Partner"
+      },
+      "REF2": {
+        "TEXT": "Ich hatte das Glück, mit Lukas an einem Projekt an der Developer Akademie zu arbeiten. Er blieb stets ruhig, kompetent und war angenehm in der Zusammenarbeit.",
+        "AUTHOR": "T.Schulz – Frontend Entwickler"
+      },
+      "REF3": {
+        "TEXT": "Die Zusammenarbeit mit Lukas war inspirierend. Seine strukturierte Denkweise half unserem Team, fokussiert und effizient zu bleiben.",
+        "AUTHOR": "M.Müller – Fullstack Entwickler"
+      }
+    },
+    "CONTACT": {
+      "HEADER": "Kontaktiere mich",
+      "SUBHEADER": "Lass uns <br> zusammenarbeiten",
+      "PROBLEM": "Hast du ein Problem zu lösen?",
+      "INTRO": "Kontaktiere mich über dieses Formular. Ich freue mich, von dir zu hören, deine Ideen kennenzulernen und mit meiner Arbeit zu deinen Projekten beizutragen.",
+      "NEED_DEV": "Brauchst du einen Frontend-Entwickler?",
+      "CTA": "Lass uns reden!",
+      "NAME_LABEL": "Wie heißt du?",
+      "NAME_PLACEHOLDER": "Dein Name hier",
+      "NAME_ERROR": "Hoppla! Dein Name fehlt",
+      "EMAIL_LABEL": "Wie lautet deine E-Mail?",
+      "EMAIL_PLACEHOLDER": "deineEmail@email.com",
+      "EMAIL_ERROR": "Hoppla! Deine E-Mail ist erforderlich",
+      "EMAIL_INVALID": "Hoppla! Deine E-Mail ist ungültig",
+      "MESSAGE_LABEL": "Wobei kann ich helfen?",
+      "MESSAGE_PLACEHOLDER": "Hallo Ismail, ich interessiere mich für...",
+      "MESSAGE_ERROR": "Was möchtest du entwickeln?",
+      "CHECKBOX1": "Ich habe die",
+      "CHECKBOX_LINK": "Datenschutzerklärung",
+      "CHECKBOX2": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+      "CHECKBOX_ERROR": "Bitte akzeptiere die Datenschutzerklärung.",
+      "BUTTON": "Sag Hallo ;)",
+      "SUCCESS": "Danke! Deine Nachricht wurde verschickt ✅",
+      "ERROR": "Fehler beim Senden ❌. Bitte versuche es später erneut.",
+      "SERVER": "Serverfehler ❌ – bitte später nochmal versuchen."
+    }
+  }
+  

@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact-me',
   standalone: true,
-  imports: [FormsModule, CommonModule, RouterModule],
+  imports: [FormsModule, CommonModule, RouterModule, TranslateModule],
   templateUrl: './contact-me.component.html',
   styleUrls: ['./contact-me.component.scss']
 })
@@ -26,8 +27,9 @@ export class ContactMeComponent {
     privacy: false
   };
 
+  constructor(private translate: TranslateService) {}
+
   onSubmit() {
-    // Validierung
     this.errors.name = !this.name;
 
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -50,7 +52,6 @@ export class ContactMeComponent {
       return;
     }
 
-    // Alles ok → Mail senden
     fetch("https://ismail-baris.de/sendmail.php", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -63,19 +64,17 @@ export class ContactMeComponent {
     .then(res => res.text())
     .then(result => {
       if (result.includes("success")) {
-        this.successMessage = "Danke! Deine Nachricht wurde verschickt ✅";
-
-        // Felder zurücksetzen
+        this.successMessage = this.translate.instant('CONTACT.SUCCESS');
         this.name = "";
         this.email = "";
         this.message = "";
         this.accepted = false;
       } else {
-        this.successMessage = "Fehler beim Senden ❌. Bitte versuche es später erneut.";
+        this.successMessage = this.translate.instant('CONTACT.ERROR');
       }
     })
     .catch(() => {
-      this.successMessage = "Serverfehler ❌ – bitte später nochmal versuchen.";
+      this.successMessage = this.translate.instant('CONTACT.SERVER');
     });
   }
 
@@ -83,9 +82,5 @@ export class ContactMeComponent {
     this.errors[field] = false;
 
     if (field === 'email') this.errors.emailInvalid = false;
-
-    if (field === 'name' && this.name.startsWith('Your Name')) this.name = '';
-    if (field === 'email' && (this.email.startsWith('Your Email'))) this.email = '';
-    if (field === 'message' && this.message.startsWith('Your Content')) this.message = '';
   }
 }

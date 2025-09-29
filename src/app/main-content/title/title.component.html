@@ -1,15 +1,14 @@
 <section>
   <img class="bg-img" src="./../../../assets/img/background/background.png" alt="Background">
 
-  <!-- Navbar ist jetzt eigene Komponente -->
   <app-navbar></app-navbar>
 
   <div class="title">
-    <h2>Software Developer</h2>
+    <h2>{{ 'TITLE.SUBTITLE' | translate }}</h2>
     <h1>Ismail Baris</h1>
     <div class="title-btn">
-      <button (click)="scrollToSection('projects')">Check my work</button>
-      <button (click)="scrollToSection('contact-me')">Contact me</button>
+      <button (click)="scrollToSection('projects')">{{ 'TITLE.CTA_CHECK_WORK' | translate }}</button>
+      <button (click)="scrollToSection('contact-me')">{{ 'TITLE.CTA_CONTACT_ME' | translate }}</button>
     </div>
   </div>
 
@@ -23,47 +22,45 @@
     <div>
       <div class="container-right">
         <p class="mail-address">
-          <a href="mailto:contact&#64;ismail-baris.de">
-            contact&#64;ismail-baris.de
-          </a>
+          <a href="mailto:contact&#64;ismail-baris.de">contact&#64;ismail-baris.de</a>
         </p>
         <div class="container-img">
           <a href="https://github.com/Ismail-B" target="_blank" rel="noopener noreferrer" class="icon-wrapper">
             <img 
               src="./../../../assets/img/icon/Github.png" 
-              alt="Github Logo" 
-              class="icon" 
-              onmouseover="this.src='./../../../assets/img/icon/Github (1).png'" 
+              alt="Github Logo"
+              class="icon"
+              onmouseover="this.src='./../../../assets/img/icon/Github (1).png'"
               onmouseout="this.src='./../../../assets/img/icon/Github.png'">
           </a>
           <a href="https://www.linkedin.com/in/ismail-baris-114668340/" target="_blank" rel="noopener noreferrer" class="icon-wrapper">
             <img 
               src="./../../../assets/img/icon/Linkedin.png" 
-              alt="LinkedIn Logo" 
-              class="icon" 
-              onmouseover="this.src='./../../../assets/img/icon/Linkedin (1).png'" 
+              alt="LinkedIn Logo"
+              class="icon"
+              onmouseover="this.src='./../../../assets/img/icon/Linkedin (1).png'"
               onmouseout="this.src='./../../../assets/img/icon/Linkedin.png'">
           </a>
         </div>
       </div>
-      
       <div class="right-line"></div>
     </div>
   </div>
 
   <div class="banner">
     <div class="track">
-      <span>Available for remote work</span><span>•</span>
-      <span>Developer</span><span>•</span>
-      <span>UI Designer</span><span>•</span>
-      <span>Based in Aachen</span><span>•</span>
-      <span>Open to work</span><span>•</span>
-      <!-- Duplizieren für Endlos-Scroll -->
-      <span>Available for remote work</span><span>•</span>
-      <span>Developer</span><span>•</span>
-      <span>UI Designer</span><span>•</span>
-      <span>Based in Aachen</span><span>•</span>
-      <span>Open to work</span><span>•</span>
+      <span>{{ 'TITLE.BANNER.REMOTE' | translate }}</span><span>•</span>
+      <span>{{ 'TITLE.BANNER.DEV' | translate }}</span><span>•</span>
+      <span>{{ 'TITLE.BANNER.UI' | translate }}</span><span>•</span>
+      <span>{{ 'TITLE.BANNER.CITY' | translate }}</span><span>•</span>
+      <span>{{ 'TITLE.BANNER.OPEN' | translate }}</span><span>•</span>
+
+      <!-- Wiederholung für Endlos-Scroll -->
+      <span>{{ 'TITLE.BANNER.REMOTE' | translate }}</span><span>•</span>
+      <span>{{ 'TITLE.BANNER.DEV' | translate }}</span><span>•</span>
+      <span>{{ 'TITLE.BANNER.UI' | translate }}</span><span>•</span>
+      <span>{{ 'TITLE.BANNER.CITY' | translate }}</span><span>•</span>
+      <span>{{ 'TITLE.BANNER.OPEN' | translate }}</span><span>•</span>
     </div>
   </div>
 </section>

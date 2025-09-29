@@ -1,16 +1,14 @@
 <section id="contact-me">
   <div>
-    <h3>Contact me</h3>
-    <h2>Let's work <br> together</h2>
-    <p>Got a problem to solve?</p>
+    <h3>{{ 'CONTACT.HEADER' | translate }}</h3>
+    <h2 [innerHTML]="'CONTACT.SUBHEADER' | translate"></h2>
+    <p>{{ 'CONTACT.PROBLEM' | translate }}</p>
+
     <div class="contact-text">
-      <span>
-        Contact me through this form, I am interested in hearing from you, 
-        knowing your ideas and contributing to your projects with my work.
-      </span>
+      <span>{{ 'CONTACT.INTRO' | translate }}</span>
       <div>
-        <span>Need a Frontend developer?</span>
-        <span class="green">Let’s talk!</span>
+        <span>{{ 'CONTACT.NEED_DEV' | translate }}</span>
+        <span class="green">{{ 'CONTACT.CTA' | translate }}</span>
       </div>
     </div>
   </div>
@@ -18,33 +16,33 @@
   <div>
     <!-- Name -->
     <div class="input-box">
-      <span class="title">What's your name?</span>
+      <span class="title">{{ 'CONTACT.NAME_LABEL' | translate }}</span>
       <input type="text"
-             [placeholder]="!errors.name ? 'Your name goes here' : ''"
+             [placeholder]="!errors.name ? ('CONTACT.NAME_PLACEHOLDER' | translate) : ''"
              [ngClass]="{'error-input': errors.name}"
-             [value]="errors.name ? 'Oops! It seems your name is missing' : name"
+             [value]="errors.name ? ('CONTACT.NAME_ERROR' | translate) : name"
              (input)="name = $any($event.target).value"
              (focus)="clearError('name')">
     </div>
 
     <!-- Email -->
     <div class="input-box">
-      <span class="title">What's your email?</span>
+      <span class="title">{{ 'CONTACT.EMAIL_LABEL' | translate }}</span>
       <input type="text"
-             [placeholder]="!errors.email ? 'yourEmail@email.com' : ''"
+             [placeholder]="!errors.email ? ('CONTACT.EMAIL_PLACEHOLDER' | translate) : ''"
              [ngClass]="{'error-input': errors.email}"
-             [value]="errors.email ? (errors.emailInvalid ? 'Hoppla! Your Email is invalid' : 'Hoppla! Your Email is required') : email"
+             [value]="errors.email ? (errors.emailInvalid ? ('CONTACT.EMAIL_INVALID' | translate) : ('CONTACT.EMAIL_ERROR' | translate)) : email"
              (input)="email = $any($event.target).value"
              (focus)="clearError('email')">
     </div>
 
     <!-- Message -->
     <div class="input-box">
-      <span class="title">How can I help you?</span>
+      <span class="title">{{ 'CONTACT.MESSAGE_LABEL' | translate }}</span>
       <input type="text"
-             [placeholder]="!errors.message ? 'Hello Ismail, I am interested in...' : ''"
+             [placeholder]="!errors.message ? ('CONTACT.MESSAGE_PLACEHOLDER' | translate) : ''"
              [ngClass]="{'error-input': errors.message}"
-             [value]="errors.message ? 'What do you need to develop?' : message"
+             [value]="errors.message ? ('CONTACT.MESSAGE_ERROR' | translate) : message"
              (input)="message = $any($event.target).value"
              (focus)="clearError('message')">
     </div>
@@ -54,19 +52,19 @@
       <div class="checkbox">
         <input type="checkbox" [(ngModel)]="accepted" (change)="clearError('privacy')">
         <div class="checkbox-text">
-          <p>I've read the</p>
-          <a routerLink="/privacy-policy">privacy policy</a>
-          <p>and agree to the processing of my data as outlined.</p>
+          <p>{{ 'CONTACT.CHECKBOX1' | translate }}</p>
+          <a routerLink="/privacy-policy">{{ 'CONTACT.CHECKBOX_LINK' | translate }}</a>
+          <p>{{ 'CONTACT.CHECKBOX2' | translate }}</p>
         </div>
       </div>
       <small *ngIf="errors.privacy" class="error">
-        Please accept the privacy policy.
+        {{ 'CONTACT.CHECKBOX_ERROR' | translate }}
       </small>
     </div>
 
     <!-- Button -->
     <div>
-      <button (click)="onSubmit()">Say Hello ;)</button>
+      <button (click)="onSubmit()">{{ 'CONTACT.BUTTON' | translate }}</button>
     </div>
 
     <!-- Erfolgsmeldung -->

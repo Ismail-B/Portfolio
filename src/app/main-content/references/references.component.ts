@@ -1,40 +1,31 @@
 import { Component } from '@angular/core';
 import { NgFor, NgClass } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 interface Reference {
-  text: string;
-  author: string;
+  textKey: string;
+  authorKey: string;
 }
 
 @Component({
   selector: 'app-references',
   standalone: true,
-  imports: [NgFor, NgClass],
+  imports: [NgFor, NgClass, TranslateModule],
   templateUrl: './references.component.html',
   styleUrls: ['./references.component.scss']
 })
 export class ReferencesComponent {
   references: Reference[] = [
-    {
-      text: 'Lukas has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project.',
-      author: 'H.Janisch – Team Partner'
-    },
-    {
-      text: 'I had the good fortune of working with Lukas on a project at the Developer Akademie. He always stayed calm, knowledgeable, and easy to work with.',
-      author: 'T.Schulz – Frontend Developer'
-    },
-    {
-      text: 'Working with Lukas was inspiring. His structured way of thinking helped our team to stay focused and efficient.',
-      author: 'M.Müller – Fullstack Developer'
-    }
+    { textKey: 'REFERENCES.REF1.TEXT', authorKey: 'REFERENCES.REF1.AUTHOR' },
+    { textKey: 'REFERENCES.REF2.TEXT', authorKey: 'REFERENCES.REF2.AUTHOR' },
+    { textKey: 'REFERENCES.REF3.TEXT', authorKey: 'REFERENCES.REF3.AUTHOR' }
   ];
 
   currentIndex = 0;
 
   prev(): void {
     this.currentIndex =
-      (this.currentIndex - 1 + this.references.length) %
-      this.references.length;
+      (this.currentIndex - 1 + this.references.length) % this.references.length;
   }
 
   next(): void {

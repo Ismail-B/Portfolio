@@ -1,0 +1,149 @@
+{
+    "NAV": {
+      "ABOUT": "About me",
+      "SKILLS": "Skills",
+      "PROJECTS": "Projects"
+    },
+    "TITLE": {
+      "HEADLINE": "Software Developer",
+      "HELLO": "Welcome to my portfolio!",
+      "SUBTITLE": "Software Developer",
+      "CTA_CHECK_WORK": "Check my work",
+      "CTA_CONTACT_ME": "Contact me",
+      "BANNER": {
+        "REMOTE": "Available for remote work",
+        "DEV": "Developer",
+        "UI": "UI Designer",
+        "CITY": "Based in Aachen",
+        "OPEN": "Open to work"
+      }
+    },
+    "LEGAL": {
+  "HEADER": "Legal Notice",
+  "INFO": "Information according to § 5 TMG",
+  "CONTACT": "Contact",
+  "RESPONSIBLE_HEADER": "Responsible for the content",
+  "RESPONSIBLE_TEXT": "Responsible for the content according to § 55 para. 2 RStV: Ismail Baris, [Address as above]",
+  "LIABILITY_CONTENT_HEADER": "Liability for content",
+  "LIABILITY_CONTENT_TEXT": "The contents of this website have been created with the greatest care. However, I cannot guarantee the accuracy, completeness, or timeliness of the content.",
+  "LIABILITY_LINKS_HEADER": "Liability for links",
+  "LIABILITY_LINKS_TEXT": "My website contains links to external third-party websites, the content of which I have no influence over. Therefore, I cannot assume any liability for these external contents. The respective provider or operator of the linked pages is always responsible for their content.",
+  "COPYRIGHT_HEADER": "Copyright",
+  "COPYRIGHT_TEXT": "The content and works created by me on this website are subject to German copyright law. Contributions by third parties are marked as such. The reproduction, editing, distribution, and any kind of use beyond the limits of copyright law require my written consent."
+}
+,
+"PRIVACY": {
+  "HEADER": "Privacy Policy",
+  "SECTION1": {
+    "TITLE": "1. General information",
+    "TEXT": "The protection of your personal data is very important to me. This website can generally be used without providing personal data. If personal data (such as name, address, or e-mail address) is collected, this is always done on a voluntary basis whenever possible."
+  },
+  "SECTION2": {
+    "TITLE": "2. Collection and use of data",
+    "TEXT": "When you visit this website, certain data (such as browser type, operating system, referrer URL, and time of access) may be automatically stored in server log files. This data cannot be directly associated with individual persons and will not be merged with other data sources."
+  },
+  "SECTION3": {
+    "TITLE": "3. Contact",
+    "TEXT": "If you contact me by e-mail, the data you provide will be stored for the purpose of processing your inquiry and in case of follow-up questions. This data will not be shared without your consent."
+  },
+  "SECTION4": {
+    "TITLE": "4. Cookies",
+    "TEXT": "This website may use cookies to improve user experience. Cookies are small text files that are stored on your device. You can configure your browser to refuse cookies or to notify you when cookies are used."
+  },
+  "SECTION5": {
+    "TITLE": "5. Your rights",
+    "TEXT": "You have the right to request information about the personal data stored about you, its origin, recipients, and the purpose of storage at any time, free of charge. You also have the right to request correction, blocking, or deletion of this data."
+  },
+  "SECTION6": {
+    "TITLE": "6. Responsible party",
+    "TEXT": "Responsible for data processing on this website: Ismail Baris, Finkenstraße 2, 52531 Übach-Palenberg, Germany, E-Mail: contact@ismail-baris.de"
+  }
+}
+,
+    "ABOUT": {
+      "WHO": "Who I Am",
+      "HEADER": "About me",
+      "INTRO": "Hi, I'm a German-speaking Software Developer based in Aachen. Motivated by the limitless opportunities within IT, I am excited about crafting visually captivating and intuitive websites and applications.",
+      "ATTRIBUTES": {
+        "LOCATION": "Based in Aachen, Germany\nRooted in the heart of Europe, I embrace an international perspective and value the blend of local culture with global opportunities in the IT field.",
+        "PROBLEM_SOLVING": "Passion for Creative Problem-Solving\nI enjoy turning complex challenges into elegant, user-friendly solutions by combining technical expertise with a strong sense for design and usability.",
+        "TECH_FOUNDATION": "Strong Technical Foundation\nSkilled in modern web technologies and frameworks, I continuously expand my knowledge to deliver scalable, efficient, and future-proof applications."
+      }
+    },
+    "SKILLS": {
+      "TECHNOLOGIES": "Technologies",
+      "HEADER": "Skill Set",
+      "INTRO": "My journey has involved working on diverse projects, employing a range of frontend technologies and concepts. I am open to embracing new technologies and methodologies to continuously enhance my skills and stay ahead in the ever-evolving landscape of web development.",
+      "YOU_NEED": "You need",
+      "ANOTHER": "another skill?",
+      "CONTACT_TEXT": "Feel free to contact me. I look forward to expanding on my previous knowledge.",
+      "CTA": "Let's Talk",
+      "GROWTH": "Growth mindset",
+      "TOOLTIP": "I have a special interest in learning"
+    },
+    "PROJECTS": {
+      "PORTFOLIO": "Portfolio",
+      "FEATURED": "Featured Projects",
+      "INTRO": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+      "JOIN": {
+        "DESCRIPTION": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+        "TECH": "Angular | TypeScript | HTML | CSS | Firebase"
+      },
+      "SHINOBI": {
+        "DESCRIPTION": "Jump & run ninja game with fun mechanics and pixel art style.",
+        "TECH": "HTML | CSS | JavaScript"
+      },
+      "POKEDEX": {
+        "DESCRIPTION": "Simple app to browse Pokémon using an API.",
+        "TECH": "HTML | CSS | API | JavaScript"
+      },
+      "MODAL": {
+        "ABOUT": "What is this project about?",
+        "GITHUB": "GitHub",
+        "LIVE": "Live Test",
+        "NEXT": "Next project"
+      }
+    },
+    "REFERENCES": {
+      "HEADER": "What my colleagues say about me",
+      "REF1": {
+        "TEXT": "Lukas has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project.",
+        "AUTHOR": "H.Janisch – Team Partner"
+      },
+      "REF2": {
+        "TEXT": "I had the good fortune of working with Lukas on a project at the Developer Akademie. He always stayed calm, knowledgeable, and easy to work with.",
+        "AUTHOR": "T.Schulz – Frontend Developer"
+      },
+      "REF3": {
+        "TEXT": "Working with Lukas was inspiring. His structured way of thinking helped our team to stay focused and efficient.",
+        "AUTHOR": "M.Müller – Fullstack Developer"
+      }
+    },
+    "CONTACT": {
+      "HEADER": "Contact me",
+      "SUBHEADER": "Let's work <br> together",
+      "PROBLEM": "Got a problem to solve?",
+      "INTRO": "Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
+      "NEED_DEV": "Need a Frontend developer?",
+      "CTA": "Let’s talk!",
+      "NAME_LABEL": "What's your name?",
+      "NAME_PLACEHOLDER": "Your name goes here",
+      "NAME_ERROR": "Oops! It seems your name is missing",
+      "EMAIL_LABEL": "What's your email?",
+      "EMAIL_PLACEHOLDER": "yourEmail@email.com",
+      "EMAIL_ERROR": "Oops! Your email is required",
+      "EMAIL_INVALID": "Oops! Your email is invalid",
+      "MESSAGE_LABEL": "How can I help you?",
+      "MESSAGE_PLACEHOLDER": "Hello Ismail, I am interested in...",
+      "MESSAGE_ERROR": "What do you need to develop?",
+      "CHECKBOX1": "I've read the",
+      "CHECKBOX_LINK": "privacy policy",
+      "CHECKBOX2": "and agree to the processing of my data as outlined.",
+      "CHECKBOX_ERROR": "Please accept the privacy policy.",
+      "BUTTON": "Say Hello ;)",
+      "SUCCESS": "Thank you! Your message has been sent ✅",
+      "ERROR": "Error sending ❌. Please try again later.",
+      "SERVER": "Server error ❌ – please try again later."
+    }
+  }
+  

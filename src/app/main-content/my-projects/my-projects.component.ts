@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { ProjectModalComponent } from '../../shared/project-modal/project-modal.component';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-my-projects',
   standalone: true,
-  imports: [CommonModule, ProjectModalComponent],
+  imports: [CommonModule, ProjectModalComponent, TranslateModule],
   templateUrl: './my-projects.component.html',
   styleUrls: ['./my-projects.component.scss']
 })
@@ -13,7 +14,7 @@ export class MyProjectsComponent {
   projects = [
     {
       title: 'Join',
-      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+      descriptionKey: 'PROJECTS.JOIN.DESCRIPTION',
       techStack: [
         { name: 'CSS', icon: 'assets/img/icon/css-project-icon.png' },
         { name: 'HTML', icon: 'assets/img/icon/html-project-icon.png' },
@@ -27,7 +28,7 @@ export class MyProjectsComponent {
     },
     {
       title: 'Shadow Shinobi',
-      description: 'Jump & run ninja game with fun mechanics and pixel art style.',
+      descriptionKey: 'PROJECTS.SHINOBI.DESCRIPTION',
       techStack: [
         { name: 'HTML', icon: 'assets/img/icon/html-project-icon.png' },
         { name: 'CSS', icon: 'assets/img/icon/css-project-icon.png' },
@@ -39,7 +40,7 @@ export class MyProjectsComponent {
     },
     {
       title: 'Pokedex',
-      description: 'Simple app to browse Pokémon using an API.',
+      descriptionKey: 'PROJECTS.POKEDEX.DESCRIPTION',
       techStack: [
         { name: 'HTML', icon: 'assets/img/icon/html-project-icon.png' },
         { name: 'CSS', icon: 'assets/img/icon/css-project-icon.png' },
@@ -56,12 +57,12 @@ export class MyProjectsComponent {
 
   openModal(index: number) {
     this.selectedProjectIndex = index;
-    document.body.style.overflow = 'hidden';   // Scrollen deaktivieren
+    document.body.style.overflow = 'hidden';
   }
-  
+
   closeModal() {
     this.selectedProjectIndex = null;
-    document.body.style.overflow = 'auto';     // Scrollen wieder aktivieren
+    document.body.style.overflow = 'auto';
   }
 
   updateProjectIndex(newIndex: number) {

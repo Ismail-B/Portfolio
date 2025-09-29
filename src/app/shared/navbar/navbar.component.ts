@@ -1,32 +1,33 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
+import { LanguageService } from '../services/language.service';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
+  imports: [CommonModule, TranslateModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-  constructor(private router: Router) {}
+  currentLang = this.languageService.getCurrentLanguage();
+
+  constructor(private router: Router, private languageService: LanguageService) {}
 
   navigateToSection(sectionId: string) {
     if (this.router.url === '/') {
-      // Wir sind auf der Startseite -> scrollen
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     } else {
-      // Wir sind auf einer Unterseite -> zuerst zur Startseite
-      this.router.navigate(['/']).then(() => {
-        setTimeout(() => {
-          const element = document.getElementById(sectionId);
-          if (element) {
-            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
-        }, 100); // kleiner Delay bis die Seite geladen ist
-      });
+      this.router.navigate(['/']).then(() =>
+        setTimeout(() => document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100)
+      );
     }
+  }
+
+  useLanguage(lang: 'en' | 'de') {
+    this.languageService.setLanguage(lang);
+    this.currentLang = lang;
   }
 }

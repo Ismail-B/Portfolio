@@ -1,22 +1,19 @@
 <section id="skills">
   <img class="bg-img" src="./../../../assets/img/background/Background_2.png" alt="Background">
-  <h3>Technologies</h3>
+
+  <h3>{{ 'SKILLS.TECHNOLOGIES' | translate }}</h3>
   <div>
     <div class="skill-set">
-      <h2>Skill Set</h2>
-      <p>
-        My journey has involved working on diverse projects, employing a range of frontend
-        technologies and concepts. I am open to embracing new technologies and methodologies to
-        Continously enhance my skills and stay ahead in the ever-evolving landscape of web development.
-      </p>
+      <h2>{{ 'SKILLS.HEADER' | translate }}</h2>
+      <p>{{ 'SKILLS.INTRO' | translate }}</p>
+
       <div>
-        <h3>You need</h3>
-        <h3 class="another_skill">another skill?</h3>
+        <h3>{{ 'SKILLS.YOU_NEED' | translate }}</h3>
+        <h3 class="another_skill">{{ 'SKILLS.ANOTHER' | translate }}</h3>
       </div>
-      <span>
-        Feel free to contact me. I look forward to <br>expanding on my previous knowledge.
-      </span>
-      <button (click)="scrollToSection('contact-me')">Let's Talk</button>
+
+      <span>{{ 'SKILLS.CONTACT_TEXT' | translate }}</span>
+      <button (click)="scrollToSection('contact-me')">{{ 'SKILLS.CTA' | translate }}</button>
     </div>
 
     <div class="icons">
@@ -54,10 +51,10 @@
       </div>
       <div>
         <img src="./../../../assets/img/skill_set/growth_mindset.png" alt="Education Icon">
-        <span>Growth<br>mindset</span>
+        <span>{{ 'SKILLS.GROWTH' | translate }}</span>
 
         <div class="tooltip">
-          <p>I have a special<br>interest in learning</p>
+          <p>{{ 'SKILLS.TOOLTIP' | translate }}</p>
           <div class="tooltip-icons">
             <div>
               <img src="./../../../assets/img/skill_set/react.png" alt="React Icon">
