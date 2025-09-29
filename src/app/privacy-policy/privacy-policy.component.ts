@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavbarComponent } from '../shared/navbar/navbar.component'; 
 import { FooterComponent } from '../shared/footer/footer.component';
 
@@ -9,6 +9,8 @@ import { FooterComponent } from '../shared/footer/footer.component';
   templateUrl: './privacy-policy.component.html',
   styleUrl: './privacy-policy.component.scss'
 })
-export class PrivacyPolicyComponent {
-
+export class PrivacyPolicyComponent implements OnInit {
+  ngOnInit() {
+    window.scrollTo(0, 0);
+  }
 }
