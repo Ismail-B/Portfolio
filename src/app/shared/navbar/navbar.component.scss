@@ -131,3 +131,62 @@
     }
   }
 }
+
+
+/* -------------------------------
+   Responsive Anpassungen
+-------------------------------- */
+
+@media (max-width: 950px) {
+  .navbar {
+    nav a {
+      font-size: 14px;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+
+    .language-switch {
+      width: 70px;
+      height: 24px;
+
+      span.lang {
+        font-size: 12px;
+      }
+    }
+
+    /* Logo + Name kleiner machen */
+    > div {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+
+      img {
+        width: 28px;
+        height: auto;
+      }
+
+      h3 {
+        font-size: 16px;   // kleiner als vorher
+        line-height: 1.2;  // enger
+      }
+    }
+  }
+}
+
+
+@media (max-width: 576px){
+  .navbar{
+      padding-right: 2px;
+      padding-left: 2px;
+      >div{
+        padding-right: 4px;
+      }
+      >nav{
+        padding-left: 4px;
+      }
+    }
+}
+
+@media (max-width: 500px){
+  
+}
