@@ -31,6 +31,7 @@ section {
 .img-box {
   position: relative;
   display: inline-block;
+  margin-left: 24px;
 
   .img-main {
     width: 528px;
@@ -63,14 +64,15 @@ section {
 .about-me {
   background-color: #3dcfb61a;
   border: 1px solid #3dcfb6;
-  border-radius: 10px;
+  border-radius: 24px;
   padding: 16px;
-  width: 500px;
+  max-width: 500px;
   margin-top: 20px;
+  margin-right: 30px;
 
   > h2 {
     color: #3dcfb6;
-    font-family: "Fira Code";
+    font-family: "Karla";
     font-size: 64px;
     font-weight: 700;
     line-height: 64px;
@@ -113,5 +115,122 @@ section {
 
   &:hover {
     color: whitesmoke;
+  }
+}
+
+
+/* -------------------------------
+   Responsive Anpassungen
+-------------------------------- */
+
+@media (max-width: 1170px){
+  section{
+    gap: 30px;
+  }
+  .about-me{
+    h2{
+      font-size: 56px;
+    }
+    p{
+      font-size: 16px;
+    }
+    .flex{
+      .my-attributes{
+        font-size: 14px;
+      }
+    }
+  }
+  .img-box{
+    margin-left: 24px;
+    .img-background{
+      width: 474px;
+      height: 467px;
+      top: 8px;
+      left: -5px;
+    }
+    .img-main{
+      width: 464px;
+    }
+  }
+}
+
+@media (max-width: 960px){
+  section{
+    height: 110vh;
+    flex-direction: column;
+    >div{
+      h3{
+        margin-top: 10px;
+        margin-left: 24px;
+      }
+    }
+  }
+  .img-box{
+    margin: 0;
+    .img-main{
+      width: 400px;
+    }
+    .img-background{
+      width: 408px;
+      height: 396px;
+    }
+  }
+  .about-me{
+    max-width: 790px;
+    margin: 24px;
+  }
+}
+
+@media (max-width: 700px){
+  section{
+    >div{
+      h3{
+        margin-top: 10px;
+      }
+    }
+  }
+  .img-box{
+    .img-main{
+      width: 400px;
+      margin-top: 100px;
+    }
+    .img-background{
+      width: 408px;
+      height: 396px;
+      margin-top: 100px;
+    }
+  }
+  .about-me{
+    padding-top: 8px;
+    padding-right: 8px;
+    padding-left: 8px;
+    margin-top: 12px;
+    margin-bottom: 24px;
+    h2{
+      font-size: 32px;
+      margin-bottom: 0;
+    }
+    p{
+      font-size: 12px;
+      margin-bottom: 4px;
+    }
+    .flex{
+      .my-attributes{
+        font-size: 10px;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 450px){
+  .img-box{
+    .img-main{
+      width: 280px;
+      margin-top: 0;
+    }
+    .img-background{
+      display: none;
+    }
   }
 }
