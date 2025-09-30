@@ -99,3 +99,45 @@ section {
 app-footer {
   margin-top: auto;
 }
+
+
+
+/* -------------------------------
+   Responsive Anpassungen
+-------------------------------- */
+
+@media (max-width: 950px) {
+  section{
+    padding-left: 64px;
+    padding-right: 64px;
+    .content{
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+@media (max-width: 490px) {
+  section{
+    padding-left: 0;
+    padding-right: 0;
+    .content{
+      padding-left: 32px;
+      padding-right:32px;
+    }
+  }
+}
+
+@media (max-width: 430px){
+  section{
+    position: static;
+    h1{
+      font-size: 50px;
+      margin-bottom: 24px;
+    }
+    .content{
+      padding-left: 14px;
+      padding-right: 14px;
+    }
+  }
+}
