@@ -50,7 +50,7 @@ section {
 
       > span {
         font-family: Karla;
-        font-size: 16px;
+        font-size: 24px;
         font-weight: 700;
         line-height: 19.2px;
       }
@@ -75,7 +75,7 @@ section {
 /* --- Titles --- */
 .title {
   font-family: Fira !important;
-  font-size: 24px !important;
+  font-size: 24px;
   font-weight: 500 !important;
   line-height: 28.8px;
   color: #3DCFB6;
@@ -122,13 +122,14 @@ section {
     border-bottom: 1px solid #3DCFB680;
     padding: 32px;
     font-family: Karla;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 400;
     line-height: 21.6px;
     color: rgba(255, 255, 255, 0.8);
     transition: border-color 0.3s ease, color 0.3s ease;
 
     &::placeholder {
+      font-size: 24px;
       color: rgb(213, 213, 213);
       transition: color 0.3s ease;
     }
@@ -251,4 +252,129 @@ input.error-input {
   font-family: Karla;
   font-size: 16px;
   font-weight: 600;
+}
+
+
+/* -------------------------------
+   Responsive Anpassungen
+-------------------------------- */
+
+@media (max-width: 1100px){
+  section{
+    div{
+      h3{
+        font-size: 20px;
+      }
+      h2{
+        font-size: 44px;
+      }
+      p{
+        font-size: 20px;
+      }
+      div{
+        span{
+          font-size: 20px;
+        }
+        div{
+          span{
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  #contact-me .checkbox-text p {
+    font-size: 15px;
+    display: inline;   /* damit Checkbox-Text und Link in einer Zeile bleiben */
+  }
+  .input-box{
+    input{
+      font-size: 18px;
+    }
+    input::placeholder{
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 900px){
+  section{
+    height: 100vh;
+    div{
+      width: 100%;
+      h2{
+        margin-top: 0;
+        margin-bottom: 12px;
+      }
+    }
+  }
+  #contact-me{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 550px){
+  section{
+    div{
+      h2{
+        font-size: 30px;
+        margin-bottom: 0;
+      }
+      p{
+        font-size: 16px;
+        margin-bottom: 0;
+      }
+      div{
+        span{
+          padding-top: 12px;
+          padding-left: 0;
+          padding-right: 0;
+          font-size: 16px;
+        }
+        button{
+          width: 130px;
+          height: 35px;
+        }
+        div{
+          span{
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  #contact-me{
+    gap: 16px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .input-box{
+    input{
+      padding-top: 12px;
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 12px;
+      font-size: 15px;
+    }
+  }
+  #contact-me .checkbox-text p {
+    font-size: 13px;
+  }
+  .checkbox-text{
+    a{
+      font-size: 13px;
+      margin-left: 0;
+    }
+  }
+  .contact-text{
+    div{
+      margin-top: 0;
+    }
+  }
+  .checkbox{
+    input{
+      padding: 8px;
+    }
+  }
 }
