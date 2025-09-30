@@ -24,21 +24,26 @@
         </div>
       </div>
 
-      <!-- 🔹 Action buttons -->
-      <div class="buttons">
-        <a [href]="project.github" target="_blank" rel="noopener noreferrer">
-          {{ 'PROJECTS.MODAL.GITHUB' | translate }}
-        </a>
-        <a
-          *ngIf="project.live"
-          [href]="project.live"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {{ 'PROJECTS.MODAL.LIVE' | translate }}
-        </a>
-      </div>
-    </div>
+
+  <!-- 🔹 Action buttons -->
+  <div class="buttons">
+    <a [href]="project.github" target="_blank" rel="noopener noreferrer">
+      {{ 'PROJECTS.MODAL.GITHUB' | translate }}
+    </a>
+    <a *ngIf="project.live"
+       [href]="project.live"
+       target="_blank"
+       rel="noopener noreferrer">
+      {{ 'PROJECTS.MODAL.LIVE' | translate }}
+    </a>
+  </div>
+
+  <!-- 🔹 Forward Button Kopie NUR für Mobile -->
+  <button class="forward-btn forward-btn-mobile" (click)="nextProject()">
+    {{ 'PROJECTS.MODAL.NEXT' | translate }}
+    <img src="../../../assets/img/references/arrow-right-colored.png" alt="Next" />
+  </button>
+</div>
 
     <!-- 🔹 Right content: Image + navigation -->
     <div class="right-content">

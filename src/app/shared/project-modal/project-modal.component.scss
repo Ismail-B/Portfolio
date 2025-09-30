@@ -195,3 +195,112 @@
     }
   }
 }
+
+.forward-btn-mobile { display: none; }
+.forward-btn-desktop { display: flex; }
+/* -------------------------------
+   Responsive Anpassungen
+-------------------------------- */
+
+@media (max-width: 1050px){
+  .left-content{
+    min-width: 330px;
+  }
+}
+
+@media (max-width: 850px){
+  .right-content .forward-btn { display: none; } /* Desktop-Button verstecken */
+  .forward-btn-mobile {
+    display: flex;
+    justify-content: flex-end;  /* rechtsbündig */
+    width: 100%;
+    margin-top: 16px;
+  }
+  .modal-content {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 95%;
+    height: auto;
+    padding: 24px;
+    gap: 24px;
+    margin-right: 12px;
+    margin-left: 12px;
+    position: relative;  /* wichtig, damit forward-btn absolut positioniert werden kann */
+  }
+
+  .right-content {
+    order: -1; /* Bild nach oben */
+    width: 100%;
+    align-items: center;
+    height: auto;
+
+    img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      border-radius: 16px;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 16px;
+      margin: 0;
+    }
+
+    /* Button innerhalb right-content ausblenden */
+    .forward-btn {
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+      margin-top: 0;
+    }
+  }
+
+  .left-content {
+    order: 0;
+    width: 100%;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .content {
+    h2 { font-size: 48px; }
+    h3 { font-size: 28px; margin-bottom: 12px; }
+    p  { font-size: 14px; max-width: 100%; }
+    .modal-subtitle { font-size: 18px; margin-bottom: 12px; }
+  }
+
+  .tech-icons { 
+    justify-content: flex-start; 
+    margin-bottom: 24px;
+  }
+
+  .buttons {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 16px;
+
+    a {
+      margin: 0;
+      width: 120px;
+      height: 36px;
+      font-size: 14px;
+    }
+  }
+}
+
+
+@media (max-width: 600px){
+  .right-content{
+    img{
+      width: 90%;
+    }
+  }
+}
+
+@media (max-width: 400px){
+  .left-content{
+    min-width: 250px;
+  }
+}
