@@ -163,6 +163,8 @@ section {
   }
   .project{
     width: calc(100% - 25px);
+    margin-left: 0;
+    margin-right: auto;
     span{
       font-size: 32px;
     }
@@ -223,5 +225,23 @@ section {
       font-size: 22px;
       margin-bottom: 8px;
     }
+  }
+}
+
+@media (max-width: 580px){
+  .project{
+    width: 90%;
+  }
+}
+
+@media (max-width: 400px){
+  .project{
+    width: 85%;
+  }
+}
+
+@media (max-width: 350px){
+  .project{
+    width: 82%;
   }
 }
