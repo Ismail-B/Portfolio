@@ -105,13 +105,13 @@ app-footer {
 
 @media (max-width: 830px) {
   section{
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 0;
+    padding-right: 0;
     h1{
       font-size: 40px;
     }
     .content{
-      padding: 0 0 48px;
+      padding: 0 24px 48px;
     }
   }
 }
@@ -120,9 +120,13 @@ app-footer {
   section{
     h1{
       font-size: 24px;
+      margin-bottom: 30px;
     }
     h2{
       font-size: 20px;
+    }
+    .content{
+      padding: 0 18px 48px;
     }
   }
 }

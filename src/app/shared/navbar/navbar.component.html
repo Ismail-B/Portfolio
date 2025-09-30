@@ -1,6 +1,9 @@
+<!-- ===============================
+     Navbar Container
+=============================== -->
 <div class="navbar">
   <nav>
-    <!-- 🔹 Language switch -->
+    <!-- Language Switch -->
     <div
       class="language-switch"
       [ngClass]="{ 'en-active': currentLang === 'en', 'de-active': currentLang === 'de' }"
@@ -10,7 +13,7 @@
       <div class="highlight"></div>
     </div>
 
-    <!-- 🔹 Navigation links -->
+    <!-- Navigation Links -->
     <a (click)="navigateToSection('about-me')">
       {{ 'NAV.ABOUT' | translate }}
     </a>
@@ -22,9 +25,51 @@
     </a>
   </nav>
 
-  <!-- 🔹 Logo + Name -->
+  <!-- Logo + Name -->
   <div>
     <img src="./../../../assets/img/about_me/My-logo.png" alt="My Logo" />
     <h3>Ismail<br />Baris</h3>
+  </div>
+
+  <!-- Hamburger Icon -->
+  <img
+    [class.active]="isMenuOpen"
+    (click)="toggleMenu($event)"
+    class="hamburgermenu"
+    src="../../../assets/img/icon/menu.png"
+    alt="Menu Icon"
+  />
+</div>
+
+<!-- ===============================
+     Mobile Dropdown Menu
+=============================== -->
+<div
+  class="mobile-menu-backdrop"
+  *ngIf="isMenuOpen"
+  (click)="closeMenu()"
+>
+  <div class="mobile-menu" (click)="$event.stopPropagation()">
+    <!-- Background Image -->
+    <img
+      class="menu-bg-img"
+      src="../../../assets/img/background/background.png"
+      alt="Menu Background"
+    />
+
+    <!-- Menu Content -->
+    <a (click)="onMenuItemClick('about-me')">{{ 'NAV.ABOUT' | translate }}</a>
+    <a (click)="onMenuItemClick('skills')">{{ 'NAV.SKILLS' | translate }}</a>
+    <a (click)="onMenuItemClick('projects')">{{ 'NAV.PROJECTS' | translate }}</a>
+
+    <!-- Language Switch inside dropdown -->
+    <div
+      class="language-switch"
+      [ngClass]="{ 'en-active': currentLang === 'en', 'de-active': currentLang === 'de' }"
+    >
+      <span class="lang en" (click)="useLanguage('en')">EN</span>
+      <span class="lang de" (click)="useLanguage('de')">DE</span>
+      <div class="highlight"></div>
+    </div>
   </div>
 </div>

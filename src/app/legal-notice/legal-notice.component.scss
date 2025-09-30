@@ -108,11 +108,11 @@ app-footer {
 
 @media (max-width: 950px) {
   section{
-    padding-left: 64px;
-    padding-right: 64px;
+    padding-left: 0;
+    padding-right: 0;
     .content{
-      padding-left: 0;
-      padding-right: 0;
+      padding-left: 24px;
+      padding-right: 24px;
     }
   }
 }
@@ -122,8 +122,8 @@ app-footer {
     padding-left: 0;
     padding-right: 0;
     .content{
-      padding-left: 32px;
-      padding-right:32px;
+      padding-left: 18px;
+      padding-right:18px;
     }
   }
 }

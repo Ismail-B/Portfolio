@@ -6,7 +6,7 @@ section {
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  height: 100vh;
+  height: 100vh; 
   position: relative;
   overflow: hidden;
 
@@ -58,7 +58,7 @@ section {
   flex-direction: column;
   width: 84px;
   margin-right: 50px;
-  margin-bottom: 150px;
+  margin-bottom: 160px;
 
   > img {
     width: 30px;
@@ -161,7 +161,7 @@ section {
 
 .arrow-frame {
   margin-left: 80px;
-  margin-bottom: 64px;
+  margin-bottom: 130px;
   width: 30px;
   height: 64px;
   border: 1px solid rgba(61, 207, 182, 1);

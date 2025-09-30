@@ -2,7 +2,9 @@
 
 /* === Skills Section === */
 section {
-  height: 100vh;
+  height: auto;          
+  min-height: 100vh;      
+  min-height: 100dvh; 
   padding: 48px;
   display: flex;
   align-items: center;
