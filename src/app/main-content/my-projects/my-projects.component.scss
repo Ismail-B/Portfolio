@@ -2,6 +2,7 @@ section {
   height: 70vh;
   background-color: #1c1c1c;
   padding: 48px;
+  overflow: hidden;
 
   /* Section Titles */
   > h2 {
@@ -144,7 +145,7 @@ section {
   .project{
     width: 50%;
     span{
-      font-size: 38px;
+      font-size: 24px;
     }
     p{
       font-size: 15px;

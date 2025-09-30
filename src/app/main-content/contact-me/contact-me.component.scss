@@ -1,7 +1,7 @@
 @import './../../../styles.scss';
 
 section {
-  height: 60vh;
+  height: 70vh;
   background-color: #1c1c1c;
   display: flex;
   align-items: flex-start;
@@ -316,6 +316,7 @@ input.error-input {
 
 @media (max-width: 550px){
   section{
+    height: 80vh;
     div{
       h2{
         font-size: 30px;

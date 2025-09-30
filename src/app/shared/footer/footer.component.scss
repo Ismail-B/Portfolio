@@ -83,3 +83,66 @@ section {
     margin-bottom: 8px;
   }
 }
+
+
+/* -------------------------------
+   Responsive Anpassungen
+-------------------------------- */
+
+@media (max-width: 800px){
+  section{
+    align-items: flex-end;
+  }
+}
+
+@media (max-width: 600px){
+  section{
+    display: grid;
+    grid-template-columns: auto 1fr; /* linke Spalte so breit wie nötig, rechte nimmt Rest */
+    grid-template-areas:
+      "left  right"
+      "copy  copy";
+    column-gap: 0;         /* kein fixer Abstand */
+    row-gap: 24px;
+    align-items: start;
+    height: auto;
+    padding: 32px 24px 24px;
+  }
+
+  .links.left{
+    grid-area: left;
+    align-items: flex-start;
+    text-align: left;
+    min-width: 150px;
+    width: calc(100vw - 154px);
+  }
+
+  .links.right{
+    grid-area: right;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .name{
+    grid-area: copy;
+    display: block;
+    justify-self: center;
+    margin-top: 8px;
+    color: #3dcfb6;
+  }
+}
+
+
+@media (max-width: 450px){
+  section{
+    height: 40%;
+  }
+  .links{
+    a{
+      font-size: 14px;
+    }
+    p{
+      font-size: 14px;
+    }
+  }
+}
