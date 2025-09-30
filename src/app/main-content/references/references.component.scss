@@ -173,11 +173,11 @@ section {
     }
     .card{
       &.left {
-        transform: translateX(-105%) scale(0.9);
+        transform: translateX(-110%) scale(0.9);
       }
       
       &.right {
-        transform: translateX(105%) scale(0.9);
+        transform: translateX(110%) scale(0.9);
       }
     }
   }
@@ -186,20 +186,52 @@ section {
 @media (max-width: 600px){
   section{
     h2{
-      font-size: 22px;
+      font-size: 20px;
+      margin-bottom: 0;
     }
     .card{
       min-height: 200px;
+      width: 300px;
       p{
-        font-size: 15px;
+        font-size: 13px;
       }
       &.left {
-        transform: translateX(-103%) scale(0.9);
+        transform: translateX(-104%) scale(0.9);
       }
       
       &.right {
-        transform: translateX(103%) scale(0.9);
+        transform: translateX(104%) scale(0.9);
       }
+    }
+  }
+}
+
+@media (max-width: 450px){
+  section{
+    h2{
+      font-size: 16px;
+    }
+  .card{
+    min-height: 150px;
+    width: 250px;
+    padding: 15px;
+    padding-top: 35px;
+    p{
+      font-size: 12px;
+    }
+    .author{
+      span{
+        font-size: 10px;
+      }
+    }
+  }
+}
+}
+
+@media (max-width: 400px){
+  section{
+    h2{
+      font-size: 14px;
     }
   }
 }
