@@ -146,3 +146,60 @@ section {
     }
   }
 }
+
+
+/* -------------------------------
+   Responsive Anpassungen
+-------------------------------- */
+
+@media (max-width: 800px){
+  section{
+    .card{
+      &.left {
+        transform: translateX(-110%) scale(0.9);
+      }
+      
+      &.right {
+        transform: translateX(110%) scale(0.9);
+      }
+    }
+  }
+}
+
+@media (max-width: 700px){
+  section{
+    h2{
+      font-size: 26px;
+    }
+    .card{
+      &.left {
+        transform: translateX(-105%) scale(0.9);
+      }
+      
+      &.right {
+        transform: translateX(105%) scale(0.9);
+      }
+    }
+  }
+}
+
+@media (max-width: 600px){
+  section{
+    h2{
+      font-size: 22px;
+    }
+    .card{
+      min-height: 200px;
+      p{
+        font-size: 15px;
+      }
+      &.left {
+        transform: translateX(-103%) scale(0.9);
+      }
+      
+      &.right {
+        transform: translateX(103%) scale(0.9);
+      }
+    }
+  }
+}
