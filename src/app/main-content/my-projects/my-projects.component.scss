@@ -122,3 +122,106 @@ section {
     }
   }
 }
+
+
+/* -------------------------------
+   Responsive Anpassungen
+-------------------------------- */
+
+@media (max-width: 1100px){
+  .project{
+    width: 50%;
+    .preview-img{
+      right: -86%;
+    }
+    .bg-img{
+      right: -90%;
+    }
+  }
+}
+
+@media (max-width: 1000px){
+  .project{
+    width: 50%;
+    span{
+      font-size: 38px;
+    }
+    p{
+      font-size: 15px;
+    }
+  }
+}
+
+@media (max-width: 900px){
+  section{
+    h2{
+      font-size: 50px;
+    }
+    p{
+      font-size: 16px;
+    }
+  }
+  .project{
+    width: calc(100% - 25px);
+    span{
+      font-size: 32px;
+    }
+    p{
+      font-size: 15px;
+    }
+    .preview-img{
+      display: none;
+    }
+    .bg-img{
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 750px){
+  section{
+    width: 89.361%;
+    padding-left: 25px;
+    margin-right: 25px;
+    h2{
+      font-size: 48px;
+    }
+    h3{
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+    p{
+      font-size: 14px;
+    }
+  }
+  .project{
+    span{
+      font-size: 28px;
+    }
+  }
+}
+
+@media (max-width: 580px){
+  section{
+    h2{
+      font-size: 36px;
+      margin-bottom: 8px;
+    }
+    h3{
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    p{
+      font-size: 12px;
+    }
+  }
+  .project{
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    span{
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+  }
+}
