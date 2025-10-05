@@ -82,7 +82,7 @@ section {
       }
 
       span {
-        font-size: 14px;
+        font-size: 16px;
         color: #ccc;
       }
     }
@@ -186,14 +186,14 @@ section {
 @media (max-width: 600px){
   section{
     h2{
-      font-size: 20px;
+      font-size: 24px;
       margin-bottom: 0;
     }
     .card{
       min-height: 200px;
       width: 300px;
       p{
-        font-size: 13px;
+        font-size: 16px;
       }
       &.left {
         transform: translateX(-104%) scale(0.9);
@@ -209,7 +209,7 @@ section {
 @media (max-width: 450px){
   section{
     h2{
-      font-size: 16px;
+      font-size: 24px;
     }
   .card{
     min-height: 150px;
@@ -217,11 +217,11 @@ section {
     padding: 15px;
     padding-top: 35px;
     p{
-      font-size: 12px;
+      font-size: 16px;
     }
     .author{
       span{
-        font-size: 10px;
+        font-size: 16px;
       }
     }
   }
@@ -231,7 +231,7 @@ section {
 @media (max-width: 400px){
   section{
     h2{
-      font-size: 14px;
+      font-size: 24px;
     }
   }
 }

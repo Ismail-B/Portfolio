@@ -19,7 +19,7 @@ section {
       margin-bottom: 24px;
       color: #3DCFB6;
       font-family: Fira;
-      font-size: 56px;
+      font-size: 64px;
       font-weight: 700;
       line-height: 64px;
       letter-spacing: -0.03em;
@@ -56,6 +56,7 @@ section {
       }
 
       > button {
+        font-size: 18px;
         background-color: transparent;
         border: 2px solid grey;
         border-radius: 100px;
@@ -118,6 +119,7 @@ section {
 
   > input {
     background-color: transparent;
+    cursor: pointer;
     border: none;
     border-bottom: 1px solid #3DCFB680;
     padding: 32px;
@@ -203,7 +205,7 @@ section {
 
   > p {
     font-family: Karla;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 18px;
     white-space: normal;
@@ -212,7 +214,7 @@ section {
 
   > a {
     font-family: Fira;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 18px;
     letter-spacing: -0.03em;
@@ -220,6 +222,7 @@ section {
     text-decoration: none;
     white-space: nowrap;
     margin: 0 4px;
+    cursor: pointer;
 
     &:hover {
       color: white;
@@ -234,7 +237,7 @@ section {
 .error {
   color: #d17a7a;
   font-family: Karla;
-  font-size: 14px;
+  font-size: 16px;
   margin-left: 32px;
   margin-top: -24px;
   margin-bottom: 12px;
@@ -263,10 +266,10 @@ input.error-input {
   section{
     div{
       h3{
-        font-size: 20px;
+        font-size: 18px;
       }
       h2{
-        font-size: 44px;
+        font-size: 56px;
       }
       p{
         font-size: 20px;
@@ -277,14 +280,14 @@ input.error-input {
         }
         div{
           span{
-            font-size: 14px;
+            font-size: 16px;
           }
         }
       }
     }
   }
   #contact-me .checkbox-text p {
-    font-size: 15px;
+    font-size: 16px;
     display: inline;   /* damit Checkbox-Text und Link in einer Zeile bleiben */
   }
   .input-box{
@@ -319,11 +322,11 @@ input.error-input {
     height: 80vh;
     div{
       h2{
-        font-size: 30px;
+        font-size: 56px;
         margin-bottom: 0;
       }
       p{
-        font-size: 16px;
+        font-size: 20px;
         margin-bottom: 0;
       }
       div{
@@ -336,10 +339,11 @@ input.error-input {
         button{
           width: 130px;
           height: 35px;
+          font-size: 18px;
         }
         div{
           span{
-            font-size: 12px;
+            font-size: 16px;
           }
         }
       }
@@ -356,15 +360,15 @@ input.error-input {
       padding-left: 0;
       padding-right: 0;
       padding-bottom: 12px;
-      font-size: 15px;
+      font-size: 16px;
     }
   }
   #contact-me .checkbox-text p {
-    font-size: 13px;
+    font-size: 16px;
   }
   .checkbox-text{
     a{
-      font-size: 13px;
+      font-size: 16px;
       margin-left: 0;
     }
   }

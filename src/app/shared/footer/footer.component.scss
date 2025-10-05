@@ -46,6 +46,7 @@ section {
     text-decoration-skip-ink: none;
     margin-bottom: 8px;
     color: inherit;
+    cursor: pointer;
 
     /* 🔹 Dot before link (hover effect) */
     &::before {
@@ -139,10 +140,10 @@ section {
   }
   .links{
     a{
-      font-size: 14px;
+      font-size: 16px;
     }
     p{
-      font-size: 14px;
+      font-size: 16px;
     }
   }
 }

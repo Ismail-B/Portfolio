@@ -156,11 +156,11 @@
   background-color: transparent;
   border: none;
   margin-top: 32px;
-  cursor: pointer;
 
   img {
     width: 20px;
     transition: all 0.2s ease;
+    cursor: pointer;
   }
 
   &:hover img {
