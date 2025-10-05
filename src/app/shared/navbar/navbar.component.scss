@@ -6,30 +6,15 @@
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding: 0 8px;
   position: relative;
   z-index: 1001;
-
-  > div {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding-right: 16px;
-
-    > h3 {
-      color: whitesmoke;
-      font-family: "Karla", serif;
-      font-size: 24px;
-      font-weight: 900;
-      text-align: start;
-    }
-  }
 
   > nav {
     display: flex;
     align-items: center;
     padding: 16px;
+    position: relative;
 
     > a {
       position: relative;
@@ -60,6 +45,64 @@
         opacity: 1;
       }
     }
+  }
+
+  > .brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-right: 16px;
+    position: relative;
+
+    > h3 {
+      color: whitesmoke;
+      font-family: "Karla", serif;
+      font-size: 24px;
+      font-weight: 900;
+      text-align: start;
+    }
+  }
+}
+
+/** ===============================
+ * Language Switch Area
+ * =============================== */
+.language-area {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/** ===============================
+ * To Start Button – Desktop
+ * =============================== */
+.toStart {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+
+  &:hover {
+    transform: translateX(-50%) translateX(-4px);
+    filter: brightness(0) saturate(100%) invert(68%) sepia(96%) saturate(324%)
+      hue-rotate(117deg) brightness(92%) contrast(90%);
+  }
+}
+
+/** ===============================
+ * To Start Button – Mobile
+ * =============================== */
+.toStart--mobile {
+  display: none;
+  transition: filter 0.2s ease;
+
+  &:hover {
+    filter: brightness(0) saturate(100%) invert(68%) sepia(96%) saturate(324%)
+      hue-rotate(117deg) brightness(92%) contrast(90%);
   }
 }
 
@@ -172,16 +215,15 @@
   transform: translateY(-20px);
   opacity: 0;
   animation: dropdownSlide 0.3s forwards;
-  overflow: hidden; // wichtig, damit das Bild nicht raussteht
+  overflow: hidden;
 
-  /* Hintergrundbild */
   .menu-bg-img {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1; // hinter allem
+    z-index: -1;
     border-radius: 20px;
   }
 
@@ -210,58 +252,72 @@
 }
 
 /** ===============================
- * Responsive Adjustments
+ * Responsive
  * =============================== */
- 
- @media (max-width: 850px) {
-   .navbar {
-     nav a {
-       font-size: 16px;
-       margin-right: 10px;
-       margin-left: 10px;
-     }
- 
-     .language-switch {
-       width: 70px;
-       height: 24px;
- 
-       span.lang {
-         font-size: 16px;
-       }
-     }
- 
-     /* Logo + Name kleiner machen */
-     > div {
-       display: flex;
-       align-items: center;
-       gap: 4px;
- 
-       img {
-         width: 28px;
-         height: auto;
-       }
- 
-       h3 {
-         font-size: 16px;   // kleiner als vorher
-         line-height: 1.2;  // enger
-       }
-     }
+@media (max-width: 850px) {
+  .navbar {
+    nav a {
+      font-size: 16px;
+      margin: 0 10px;
+    }
+
+    .language-switch {
+      width: 70px;
+      height: 24px;
+
+      span.lang {
+        font-size: 16px;
+      }
+    }
+
+    > .brand {
+      gap: 4px;
+
+      img {
+        width: 28px;
+        height: auto;
+      }
+
+      h3 {
+        font-size: 16px;
+        line-height: 1.2;
+      }
     }
   }
+}
 
-
-@media (max-width: 500px) {
+/** ===============================
+ * Mobile (≤ 515px)
+ * =============================== */
+@media (max-width: 515px) {
   .navbar nav {
     display: none;
   }
-  .navbar div h3 {
+
+  .navbar .brand h3 {
     display: none;
   }
-  .navbar div img {
+
+  .navbar .brand img {
     margin-top: 34px;
     margin-left: 20px;
   }
+
   .hamburgermenu {
     display: block;
+  }
+
+  .language-area .toStart {
+    display: none;
+  }
+
+  .toStart--mobile {
+    display: block;
+    position: absolute;
+    top: calc(100% - 16px);
+    left: 15px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
   }
 }

@@ -3,32 +3,46 @@
 =============================== -->
 <div class="navbar">
   <nav>
-    <!-- Language Switch -->
-    <div
-      class="language-switch"
-      [ngClass]="{ 'en-active': currentLang === 'en', 'de-active': currentLang === 'de' }"
-    >
-      <span class="lang en" (click)="useLanguage('en')">EN</span>
-      <span class="lang de" (click)="useLanguage('de')">DE</span>
-      <div class="highlight"></div>
+    <!-- Language Switch + Desktop-Pfeil -->
+    <div class="language-area">
+      <div
+        class="language-switch"
+        [ngClass]="{ 'en-active': currentLang === 'en', 'de-active': currentLang === 'de' }"
+      >
+        <span class="lang en" (click)="useLanguage('en')">EN</span>
+        <span class="lang de" (click)="useLanguage('de')">DE</span>
+        <div class="highlight"></div>
+      </div>
+
+      <!-- Desktop: Pfeil unter Language Switch -->
+      <img
+        *ngIf="router.url !== '/'"
+        class="toStart"
+        src="../../../assets/img/overlay/arrow_back (1).png"
+        alt="Go to startpage"
+        (click)="goToStartpage()"
+      />
     </div>
 
     <!-- Navigation Links -->
-    <a (click)="navigateToSection('about-me')">
-      {{ 'NAV.ABOUT' | translate }}
-    </a>
-    <a (click)="navigateToSection('skills')">
-      {{ 'NAV.SKILLS' | translate }}
-    </a>
-    <a (click)="navigateToSection('projects')">
-      {{ 'NAV.PROJECTS' | translate }}
-    </a>
+    <a (click)="navigateToSection('about-me')">{{ 'NAV.ABOUT' | translate }}</a>
+    <a (click)="navigateToSection('skills')">{{ 'NAV.SKILLS' | translate }}</a>
+    <a (click)="navigateToSection('projects')">{{ 'NAV.PROJECTS' | translate }}</a>
   </nav>
 
-  <!-- Logo + Name -->
-  <div>
+  <!-- Logo + Name (+ Mobile-Pfeil) -->
+  <div class="brand">
     <img src="./../../../assets/img/about_me/My-logo.png" alt="My Logo" />
     <h3>Ismail<br />Baris</h3>
+
+    <!-- Mobile: Pfeil unter dem Logo -->
+    <img
+      *ngIf="router.url !== '/'"
+      class="toStart toStart--mobile"
+      src="../../../assets/img/overlay/arrow_back (1).png"
+      alt="Go to startpage"
+      (click)="goToStartpage()"
+    />
   </div>
 
   <!-- Hamburger Icon -->
@@ -44,25 +58,12 @@
 <!-- ===============================
      Mobile Dropdown Menu
 =============================== -->
-<div
-  class="mobile-menu-backdrop"
-  *ngIf="isMenuOpen"
-  (click)="closeMenu()"
->
+<div class="mobile-menu-backdrop" *ngIf="isMenuOpen" (click)="closeMenu()">
   <div class="mobile-menu" (click)="$event.stopPropagation()">
-    <!-- Background Image -->
-    <img
-      class="menu-bg-img"
-      src="../../../assets/img/background/background.png"
-      alt="Menu Background"
-    />
-
-    <!-- Menu Content -->
+    <img class="menu-bg-img" src="../../../assets/img/background/background.png" alt="Menu Background" />
     <a (click)="onMenuItemClick('about-me')">{{ 'NAV.ABOUT' | translate }}</a>
     <a (click)="onMenuItemClick('skills')">{{ 'NAV.SKILLS' | translate }}</a>
     <a (click)="onMenuItemClick('projects')">{{ 'NAV.PROJECTS' | translate }}</a>
-
-    <!-- Language Switch inside dropdown -->
     <div
       class="language-switch"
       [ngClass]="{ 'en-active': currentLang === 'en', 'de-active': currentLang === 'de' }"
