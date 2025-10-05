@@ -1,7 +1,8 @@
 @import './../../../styles.scss';
 
 section {
-  height: 70vh;
+  min-height: 60dvh; 
+  min-height: 60vh; 
   background-color: #1c1c1c;
   display: flex;
   align-items: flex-start;
@@ -270,7 +271,7 @@ input.error-input {
         font-size: 18px;
       }
       h2{
-        font-size: 56px;
+        font-size: 48px;
       }
       p{
         font-size: 20px;
@@ -303,7 +304,6 @@ input.error-input {
 
 @media (max-width: 900px){
   section{
-    height: 100vh;
     div{
       width: 100%;
       h2{
@@ -320,10 +320,11 @@ input.error-input {
 
 @media (max-width: 550px){
   section{
-    height: 80vh;
+    min-height: 80dvh; 
+    min-height: 80vh; 
     div{
       h2{
-        font-size: 56px;
+        font-size: 30px;
         margin-bottom: 0;
       }
       p{
@@ -338,7 +339,7 @@ input.error-input {
           font-size: 16px;
         }
         button{
-          width: 130px;
+          width: auto;
           height: 35px;
           font-size: 18px;
         }

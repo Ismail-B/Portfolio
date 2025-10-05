@@ -365,13 +365,20 @@ section {
   
 }
 
-@media (max-width: 576px){
+@media (max-width: 620px){
   .title{
     h1{
       font-size: 74px;
     }
     h2{
       font-size: 28px;
+    }
+    >div{
+      button{
+        white-space: wrap;
+        min-height: 42px;
+        height: auto;
+      }
     }
   }
   .mail-address{
