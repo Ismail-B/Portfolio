@@ -2,8 +2,8 @@
 
 /* === Layout: Section Wrapper === */
 section {
-  width: 100%;
-  height: auto;          
+  width: 100%; 
+  height: auto;         
   min-height: 100vh;      
   min-height: 100dvh; 
   background-color: #1c1c1c;
@@ -11,6 +11,7 @@ section {
   justify-content: center;
   align-items: center;
   gap: 64px;
+  padding-top: clamp(80px, 10vh, 140px);
 
   > h2 {
     background-color: transparent;
@@ -158,7 +159,6 @@ section {
 
 @media (max-width: 960px){
   section{
-    height: 100vh;
     flex-direction: column;
     >div{
       h3{
