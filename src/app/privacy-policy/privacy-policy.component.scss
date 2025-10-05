@@ -44,7 +44,7 @@ section {
 
   h2 {
     font-family: Karla, sans-serif;
-    font-size: 19px;
+    font-size: 23px;
     margin: 24px 0 12px;
     color: white;
   }
@@ -108,7 +108,7 @@ app-footer {
     padding-left: 0;
     padding-right: 0;
     h1{
-      font-size: 40px;
+      font-size: 32px;
     }
     .content{
       padding: 0 24px 48px;
@@ -119,11 +119,11 @@ app-footer {
 @media (max-width: 500px){
   section{
     h1{
-      font-size: 24px;
+      font-size: 32px;
       margin-bottom: 30px;
     }
     h2{
-      font-size: 20px;
+      font-size: 23px;
     }
     .content{
       padding: 0 18px 48px;
