@@ -189,14 +189,18 @@
     transition: transform 0.2s ease;
   }
 
-  &:hover {
-    color: white;
+  /* ✅ Hover-Effekt nur auf Geräten mit Maus */
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: white;
 
-    img {
-      transform: translateX(4px);
+      img {
+        transform: translateX(4px);
+      }
     }
   }
 }
+
 
 .forward-btn-mobile { display: none; }
 .forward-btn-desktop { display: flex; }

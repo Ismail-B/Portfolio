@@ -120,14 +120,17 @@ section {
       }
     }
 
-    .prev:hover img {
-      filter: brightness(0) saturate(100%) invert(67%) sepia(57%) saturate(444%) hue-rotate(115deg) brightness(95%) contrast(90%);
-      transform: translateX(-4px);
-    }
+    /* ✅ Hover-Effekt nur auf Geräten mit Maus */
+    @media (hover: hover) and (pointer: fine) {
+      .prev:hover img {
+        filter: brightness(0) saturate(100%) invert(67%) sepia(57%) saturate(444%) hue-rotate(115deg) brightness(95%) contrast(90%);
+        transform: translateX(-4px);
+      }
 
-    .next:hover img {
-      filter: brightness(0) saturate(100%) invert(67%) sepia(57%) saturate(444%) hue-rotate(115deg) brightness(95%) contrast(90%);
-      transform: translateX(4px);
+      .next:hover img {
+        filter: brightness(0) saturate(100%) invert(67%) sepia(57%) saturate(444%) hue-rotate(115deg) brightness(95%) contrast(90%);
+        transform: translateX(4px);
+      }
     }
 
     .dots {
