@@ -31,10 +31,14 @@ section {
 /* === Title Buttons === */
 .title-btn {
   font-size: 18px;
-  > button:hover {
-    cursor: pointer;
-    border: 1px solid #3dcfb6;
-    color: #3dcfb6;
+
+  /* ✅ Hover nur bei Maus */
+  @media (hover: hover) and (pointer: fine) {
+    > button:hover {
+      cursor: pointer;
+      border: 1px solid #3dcfb6;
+      color: #3dcfb6;
+    }
   }
 }
 
@@ -133,9 +137,12 @@ section {
     display: inline-block;
     white-space: nowrap;
 
-    &:hover {
-      cursor: pointer;
-      color: #3dcfb6;
+    /* ✅ Hover nur bei Maus */
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        cursor: pointer;
+        color: #3dcfb6;
+      }
     }
   }
 }
@@ -237,10 +244,14 @@ section {
       padding-left: 20px;
       padding-right: 20px;
       white-space: nowrap;
-      &:hover {
-        cursor: pointer;
-        border: 1px solid #3dcfb6;
-        color: #3dcfb6;
+
+      /* ✅ Hover nur mit Maus */
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          cursor: pointer;
+          border: 1px solid #3dcfb6;
+          color: #3dcfb6;
+        }
       }
     }
   }
@@ -266,8 +277,11 @@ section {
     transition: opacity 0.3s ease;
   }
 
-  &:hover::after {
-    opacity: 1;
+  /* ✅ Hover nur auf Desktop */
+  @media (hover: hover) and (pointer: fine) {
+    &:hover::after {
+      opacity: 1;
+    }
   }
 }
 
@@ -293,8 +307,11 @@ section {
     transition: opacity 0.3s ease;
   }
 
-  &:hover::after {
-    opacity: 1;
+  /* ✅ Hover nur mit Maus */
+  @media (hover: hover) and (pointer: fine) {
+    &:hover::after {
+      opacity: 1;
+    }
   }
 }
 
@@ -307,7 +324,6 @@ section {
   height: auto;
   object-fit: contain;
 }
-
 
 
 /* -------------------------------

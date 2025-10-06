@@ -66,9 +66,13 @@ section {
         padding-right: 20px;
         white-space: nowrap;
         cursor: pointer;
-        &:hover {
-          border: 1px solid #3DCFB6;
-          color: #3DCFB6;
+
+        /* ✅ Hover nur auf Geräten mit Maus */
+        @media (hover: hover) and (pointer: fine) {
+          &:hover {
+            border: 1px solid #3DCFB6;
+            color: #3DCFB6;
+          }
         }
       }
     }
@@ -226,11 +230,14 @@ section {
     margin: 0 4px;
     cursor: pointer;
 
-    &:hover {
-      color: white;
-      text-decoration: underline;
-      text-decoration-color: #3DCFB6;
-      text-underline-offset: 8px;
+    /* ✅ Hover nur bei Maus */
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: white;
+        text-decoration: underline;
+        text-decoration-color: #3DCFB6;
+        text-underline-offset: 8px;
+      }
     }
   }
 }
@@ -259,6 +266,26 @@ input.error-input {
   font-weight: 600;
 }
 
+/* ==========================================
+   🔧 Mobile-Fix: Hover/Fokus/Active entfernen
+   ========================================== */
+@media (hover: none), (pointer: coarse) {
+  button,
+  a,
+  input,
+  label {
+    -webkit-tap-highlight-color: transparent !important;
+    outline: none !important;
+  }
+
+  button:focus,
+  button:active,
+  button:hover {
+    color: inherit !important;
+    border-color: grey !important;
+    background: none !important;
+  }
+}
 
 /* -------------------------------
    Responsive Anpassungen
@@ -290,7 +317,7 @@ input.error-input {
   }
   #contact-me .checkbox-text p {
     font-size: 16px;
-    display: inline;   /* damit Checkbox-Text und Link in einer Zeile bleiben */
+    display: inline;
   }
   .input-box{
     input{

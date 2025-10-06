@@ -2,9 +2,9 @@
 
 /* === Skills Section === */
 section {
-  height: auto;          
-  min-height: 50vh;      
-  min-height: 50dvh; 
+  height: auto;
+  min-height: 50vh;
+  min-height: 50dvh;
   padding: 48px;
   display: flex;
   align-items: center;
@@ -106,11 +106,16 @@ section {
     max-width: 10rem;
     height: 2rem;
     border-radius: 100px;
+    color: inherit;
+    transition: border-color 0.3s ease, color 0.3s ease, transform 0.15s ease;
 
-    &:hover {
-      cursor: pointer;
-      border: 1px solid #3dcfb6;
-      color: #3dcfb6;
+    /* ✅ Hover nur auf Desktop */
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        cursor: pointer;
+        border: 1px solid #3dcfb6;
+        color: #3dcfb6;
+      }
     }
   }
 }
@@ -121,12 +126,13 @@ section {
   gap: 64px;
   width: auto;
   z-index: 1;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 
 .skills-text {
-  flex: 1; // enthält Title + Skill-Set
-  h3{
+  flex: 1;
+
+  h3 {
     font-family: Karla;
     font-size: 24px;
     font-weight: 700;
@@ -139,9 +145,8 @@ section {
 
 .skills-icons {
   margin-top: 42px;
-  flex: 1; // enthält nur die Icons
+  flex: 1;
 }
-
 
 /* === Highlighted Skill === */
 .another_skill {
@@ -195,7 +200,7 @@ section {
       max-width: 250px;
 
       &::after {
-        content: "";
+        content: '';
         position: absolute;
         top: 100%;
         left: 50%;
@@ -242,156 +247,218 @@ section {
   }
 }
 
+/* ==========================================
+   🔧 Mobile Fixes + Tap Animation
+   ========================================== */
+@media (hover: none) and (pointer: coarse) {
+  button,
+  a,
+  input,
+  label {
+    -webkit-tap-highlight-color: transparent !important;
+    outline: none !important;
+  }
+
+  /* ❌ Keine dauerhaften Hover-Zustände */
+  button:focus,
+  button:active,
+  button:hover {
+    box-shadow: none !important;
+    outline: none !important;
+  }
+
+  /* ✅ Tap-Animation für mobile Buttons */
+  .skill-set > button {
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+  }
+
+  .skill-set > button:active {
+    background-color: rgba(61, 207, 182, 0.15);
+    transform: scale(0.96);
+  }
+}
 
 /* -------------------------------
    Responsive Anpassungen
 -------------------------------- */
 
-@media (max-width: 1250px){
-  .icons{
-    div{
-        img{
-          width: 50px;
-        }
-        span{
-          font-size: 16px;
-        }
+@media (max-width: 1250px) {
+  .icons {
+    div {
+      img {
+        width: 50px;
+      }
+
+      span {
+        font-size: 16px;
+      }
     }
   }
-  .skill-set{
-    h2{
+
+  .skill-set {
+    h2 {
       font-size: 56px;
       margin-bottom: 12px;
     }
-    p{
+
+    p {
       font-size: 16px;
     }
-    span{
+
+    span {
       font-size: 16px;
     }
-    div{
-      h3{
+
+    div {
+      h3 {
         font-size: 18px;
       }
     }
   }
 }
 
-@media (max-width: 1000px){
-  section{
-    h3{
+@media (max-width: 1000px) {
+  section {
+    h3 {
       font-size: 20px;
     }
   }
-  .skill-set{
+
+  .skill-set {
     padding: 24px;
-    h2{
+
+    h2 {
       font-size: 56px;
       margin-bottom: 10px;
     }
-    p{
+
+    p {
       font-size: 16px;
     }
-    span{
+
+    span {
       font-size: 16px;
     }
-    div{
-      h3{
+
+    div {
+      h3 {
         font-size: 20px;
       }
     }
   }
-  .skills-wrapper{
+
+  .skills-wrapper {
     flex-direction: column;
   }
-  .icons{
+
+  .icons {
     width: 100%;
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media (max-width: 910px){
-  section{
+@media (max-width: 910px) {
+  section {
     padding-left: 24px;
     padding-right: 24px;
-    div{
+
+    div {
       gap: 0;
     }
   }
-  .skills-icons{
+
+  .skills-icons {
     display: flex;
     justify-content: center;
   }
-  .icons{
+
+  .icons {
     width: 100%;
     grid-template-columns: repeat(3, 1fr);
     height: 40vh;
-    div{
-      .tooltip{
+
+    div {
+      .tooltip {
         max-width: 300px;
-        p{
+
+        p {
           white-space: normal;
         }
       }
-      img{
+
+      img {
         width: 60px;
       }
     }
   }
 }
 
-@media (max-width: 470px){
-  section{
-    h3{
+@media (max-width: 470px) {
+  section {
+    h3 {
       font-size: 16px;
     }
   }
-  .skills-text{
-    h3{
+
+  .skills-text {
+    h3 {
       font-size: 18px;
     }
   }
+
   .skills-wrapper {
     margin: 0 auto;
   }
-  .skill-set{
-    h2{
+
+  .skill-set {
+    h2 {
       font-size: 34px;
     }
-    p{
+
+    p {
       font-size: 16px;
       margin-bottom: 0;
     }
-    span{
+
+    span {
       font-size: 16px;
       margin-bottom: 10px;
     }
-    button{
+
+    button {
       font-size: 16px;
     }
-    div{
-      h3{
+
+    div {
+      h3 {
         font-size: 20px;
       }
     }
   }
-  .skills-icons{
+
+  .skills-icons {
     margin-top: 10px;
   }
-  .icons{
+
+  .icons {
     width: 100%;
     grid-template-columns: repeat(3, 1fr);
     height: 40vh;
-    div{
-      span{
+
+    div {
+      span {
         font-size: 16px;
       }
-      img{
+
+      img {
         width: 40px;
       }
     }
   }
-  .bg-img{
+
+  .bg-img {
     height: 60%;
   }
 }
