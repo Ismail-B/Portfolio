@@ -107,7 +107,7 @@ section {
     height: 2rem;
     border-radius: 100px;
     color: inherit;
-    transition: border-color 0.3s ease, color 0.3s ease, transform 0.15s ease;
+    transition: border-color 0.3s ease, color 0.3s ease;
 
     /* ✅ Hover nur auf Desktop */
     @media (hover: hover) and (pointer: fine) {
@@ -248,9 +248,9 @@ section {
 }
 
 /* ==========================================
-   🔧 Mobile Fixes + Tap Animation
+   🔧 Mobile-Fix: Hover/Fokus/Active entfernen
    ========================================== */
-@media (hover: none) and (pointer: coarse) {
+@media (hover: none), (pointer: coarse) {
   button,
   a,
   input,
@@ -259,24 +259,13 @@ section {
     outline: none !important;
   }
 
-  /* ❌ Keine dauerhaften Hover-Zustände */
   button:focus,
   button:active,
   button:hover {
+    color: inherit !important;
+    border-color: white !important;
+    background: none !important;
     box-shadow: none !important;
-    outline: none !important;
-  }
-
-  /* ✅ Tap-Animation für mobile Buttons */
-  .skill-set > button {
-    position: relative;
-    overflow: hidden;
-    transition: background-color 0.2s ease, transform 0.15s ease;
-  }
-
-  .skill-set > button:active {
-    background-color: rgba(61, 207, 182, 0.15);
-    transform: scale(0.96);
   }
 }
 
